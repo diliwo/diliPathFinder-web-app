@@ -1,0 +1,61 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+th.mat-column-actions {
+  width: 110px;
+}
+
+.button-style {
+  margin-top: 6px;
+}
+
+.boutton {
+  background-color: rgb(141, 187, 68, 0.90);
+  //rgba(3, 57, 82, 0.15);
+}
+
+.card-style {
+  padding: 24px !important;
+  transition: none !important;
+  box-shadow: none !important;
+}
+.green-icon {
+  color: rgb(141, 187, 68, 0.90);
+}
+.title-bloc {
+  display: flex;
+  flex-wrap: wrap;
+  background: #4CAF50; /* Green */
+  border-radius: 5px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.title{
+  color: white;
+  margin: 6px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.buttoListJobOffers{
+  color: white;
+}
+
+.spinner{
+  color: white;
+}
+
+.table-style {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}

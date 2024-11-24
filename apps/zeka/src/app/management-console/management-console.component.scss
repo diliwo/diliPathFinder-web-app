@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+mat-card-header {
+    background: rgba(3, 57, 82, 0.15);
+}
+
+.mat-grid-tile {
+    vertical-align: middle;
+}
+
+.mat-grid-tile-style {
+    background: rgba(3, 57, 82, 0.15);
+}
+
+.card-style {
+    transition: none !important;
+    box-shadow: none !important;
+}
+
+mat-tab-group {
+    margin-top: 50px;
+    width: 70%;
+}
+.title {
+    //border: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mat-adresse {
+    position: absolute;
+    left: 2px;
+}
+
+.mat-icon {
+    font-size: 50px;
+}

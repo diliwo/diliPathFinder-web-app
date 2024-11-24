@@ -1,0 +1,64 @@
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+    <h1 class="title-bloc">{{ (isReadonly ? 'Afficher les détails d\'un' : !isNew ? 'Modifier le' : 'Ajouter un') + ' suivi' }}</h1>
+    <mat-tab-group mat-stretch-tabs dynamicHeight>
+        <mat-tab label="Action">
+            <div>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Action</mat-label>
+                    <mat-select matInput placeholder="Action" formControlName="monitoringActionId">
+                        <mat-option *ngFor="let action of listOfActions" [value]="action.actionId">
+                            {{ action.actionLabel }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="f['monitoringActionId'].hasError('required')">
+                        La sélection d'une action est obligatoire.
+                    </mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Travailleur social</mat-label>
+                    <mat-select placeholder="Travailleur social" formControlName="referentId">
+                          <input
+                            placeholder="Chercher..."
+                            matInput
+                            type="text"
+                            (keyup)="onSearch($event.target.value)"
+                            class="search-box"
+                            oninput="this.value"
+                            #chercher
+                        />
+                        <mat-option *ngFor="let referent of filteredlistOfRefernts" [value]="referent.referentId">
+                            {{ referent.lastname + ' ' + referent.firstname }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="f['referentId'].hasError('required')">
+                        La sélection d'un travailleur est obligatoire.
+                    </mat-error>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Date</mat-label>
+                    <input matInput placeholder="Date" formControlName="actionDate" [matDatepicker]="startdatepicker" [readonly]="isReadonly">
+                    <mat-datepicker-toggle matIconSuffix [for]="startdatepicker" [disabled]="isReadonly"></mat-datepicker-toggle>
+                    <mat-datepicker #startdatepicker></mat-datepicker>
+                    <mat-error *ngIf="f['actionDate'].hasError('invalidDate')">
+                        La date sélectionnée est non valide.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Commentaire">
+            <div class="form">
+                <div class="editor">
+                    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar" outputFormat="html"></ngx-editor-menu>
+                    <ngx-editor [editor]="editor" formControlName="actionComment" placeholder="Commentaire"></ngx-editor>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <div class="footer">
+      <button type="reset" mat-button (click)="cancel()">Annuler</button>
+      <button *ngIf="!isReadonly" type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Enregistrer'}}</button>
+    </div>
+</form>

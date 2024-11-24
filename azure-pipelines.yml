@@ -1,0 +1,28 @@
+trigger:
+- master
+- main
+- develop
+- feature/*
+- release/*
+- bug/*
+
+pool: build
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: 'build-templates'
+      ref: refs/heads/main
+
+stages:
+- template: ng/template.yaml@templates
+  parameters:
+    packageName: "zeka-web-app"
+    frontEndAppPath: "."
+    frontEndDistPath: "dist/apps/zeka"
+    gitVersionFolderPath: "apps/zeka"
+    ngBuildParameters: "--prod"
+    runSonarQubeAnalysis: false
+    karmaConfigPath: ""
+    ngPath: "node_modules/.bin/nx"

@@ -1,0 +1,10 @@
+<form class="form">
+  <h1 class="title-bloc">{{data.title}}</h1>
+    <div mat-dialog-content>
+      <p>{{data.message}} </p>
+    </div>
+  <div class="footer">
+    <button mat-button [mat-dialog-close]="false">Annuler</button>
+    <button mat-button [mat-dialog-close]="true">Confirmer</button>
+  </div>
+</form>

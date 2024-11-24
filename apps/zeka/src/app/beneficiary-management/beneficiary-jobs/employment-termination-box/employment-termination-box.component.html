@@ -1,0 +1,42 @@
+<!-- "startdate","enddate" -->
+<form id="frm" class="form" [formGroup]="frm" novalidate style="transform: none;width: 548px;">
+  <h1 class="title-bloc">Fin de contrat anticipée</h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Type de fin de contrat</mat-label>
+        <mat-select [formControl]="ctlEmploymentTerminationType" required>
+            <mat-option *ngFor="let type of listOfTypes" [value]="type.id">
+                {{type.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Raison de la clôture</mat-label>
+      <mat-select [formControl]="ctlEmploymentTerminationReasons" multiple>
+        <mat-select-trigger>
+          {{ ctlEmploymentTerminationReasons.value?.[0] !== undefined ? getSelectedReasonName(ctlEmploymentTerminationReasons.value?.[0]) : '' }}
+          <span *ngIf="(ctlEmploymentTerminationReasons.value?.length || 0) > 1" class="example-additional-selection">
+            (+{{(ctlEmploymentTerminationReasons.value?.length || 0) - 1}} {{ctlEmploymentTerminationReasons.value?.length === 2 ? 'autre' : 'autres'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let reason of listOfReasons" [value]="reason.id" [disabled]="containsNonCumulativesValues(reason.id)">{{reason.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Date de fin</mat-label>
+        <input matInput placeholder="Date fin" #appDateInput="ngForm" [formControl]="ctlOccupiedTo" [matDatepicker]="appdatepicker" required name="appDate" [afterDate]="employmentStartDate">
+        <mat-datepicker-toggle matIconSuffix [for]="appdatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #appdatepicker></mat-datepicker>
+        <mat-error class="field-error" *ngIf="appDateInput.errors?.afterDate">Doit être postérieure à la date de début du contrat : ({{ employmentStartDate | date:'dd/MM/yyyy'}}) !</mat-error>
+    </mat-form-field>
+    <div class="footer">
+      <button type="reset" mat-button (click)="cancel()">Annuler</button>
+      <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="terminate()">Cloturer</button>
+    </div>
+</form>
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->
+

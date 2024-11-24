@@ -1,0 +1,164 @@
+<div class="container">
+  <h3 class="title-bloc">
+    Situation personnelle <mat-icon>person_search</mat-icon>
+  </h3>
+  <ng-container *ngIf="bilansList">
+    <div class="row card-style">
+      <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel
+          [expanded]="step === 0"
+          (opened)="setStep(0)"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Famille </mat-panel-title>
+            <mat-panel-description>
+              Contraintes liées aux enfants, au couple, soutien de la famille,
+              +pistes de solution
+            </mat-panel-description>
+            <mat-icon>family_restroom</mat-icon>
+          </mat-expansion-panel-header>
+
+          <div class="family">
+            <mat-form-field appearance="fill">
+              <mat-label>Famille</mat-label>
+              <textarea
+                matInput
+                rows="5"
+                cols="40"
+                placeholder="..."
+                [formControl]="ctlPersonalSituationFamily"
+              ></textarea>
+            </mat-form-field>
+          </div>
+
+          <!-- <mat-divider></mat-divider>
+          <ng-container *ngIf="bilansList">
+            <frontend-personal-situation-list
+              [listOfBilans]="bilansList"
+            ></frontend-personal-situation-list>
+          </ng-container> -->
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          [expanded]="step === 1"
+          (opened)="setStep(1)"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Logement </mat-panel-title>
+            <mat-panel-description>
+              Logement insalubre reconnu ? Procédure en cours ?
+              Expulsions/préavis ? Confort/sécurité ?
+            </mat-panel-description>
+            <mat-icon>house</mat-icon>
+          </mat-expansion-panel-header>
+          <div class="family">
+            <mat-form-field appearance="fill">
+              <mat-label>Logement</mat-label>
+              <textarea
+                matInput
+                rows="5"
+                cols="40"
+                placeholder="..."
+                [formControl]="ctlPersonalSituationHousing"
+              ></textarea>
+            </mat-form-field>
+          </div>
+
+          <!-- <mat-divider></mat-divider>
+          <frontend-personal-situation-housing-list
+            [listOfBilans]="bilansList"
+          ></frontend-personal-situation-housing-list> -->
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          [expanded]="step === 2"
+          (opened)="setStep(2)"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Santé </mat-panel-title>
+            <mat-panel-description>
+              Freins/points d’attention? Difficultés physiques et/ou
+              psychologiques ?
+            </mat-panel-description>
+            <mat-icon>health_and_safety</mat-icon>
+          </mat-expansion-panel-header>
+          <div class="family">
+            <mat-form-field appearance="fill">
+              <mat-label>Santé</mat-label>
+              <textarea
+                matInput
+                rows="5"
+                cols="40"
+                placeholder="..."
+                [formControl]="ctlPersonalSituationHealth"
+              ></textarea>
+            </mat-form-field>
+          </div>
+          <!-- <mat-divider></mat-divider>
+          <frontend-personal-situation-health-list [listOfBilans]="bilansList"></frontend-personal-situation-health-list> -->
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          [expanded]="step === 3"
+          (opened)="setStep(3)"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Situation financière </mat-panel-title>
+            <mat-panel-description>
+              Besoin financier ? Dettes ? Suivi en médiation de dettes ? Niveau
+              de confort/inconfort ?
+            </mat-panel-description>
+            <mat-icon>euro</mat-icon>
+          </mat-expansion-panel-header>
+          <div class="family">
+            <mat-form-field appearance="fill">
+              <mat-label>Situation financière</mat-label>
+              <textarea
+                matInput
+                rows="5"
+                cols="40"
+                placeholder="..."
+                [formControl]="ctlPersonalSituationFinancialSituation"
+              ></textarea>
+            </mat-form-field>
+          </div>
+          <!-- <mat-divider></mat-divider>
+          <frontend-personal-situation-financial-status-list [listOfBilans]="bilansList"></frontend-personal-situation-financial-status-list> -->
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          [expanded]="step === 4"
+          (opened)="setStep(4)"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Situation administratif </mat-panel-title>
+            <mat-panel-description>
+              Type de séjour ? Accès limité (emploi/formation) ? Générateur de
+              stress ? Casier judiciaire ? Mutuelle ?
+            </mat-panel-description>
+            <mat-icon>settings_accessibility</mat-icon>
+          </mat-expansion-panel-header>
+          <div class="family">
+            <mat-form-field appearance="fill">
+              <mat-label>Situation administratif</mat-label>
+              <textarea
+                matInput
+                rows="5"
+                cols="40"
+                placeholder="..."
+                [formControl]="ctlPersonalSituationAdministrativeStatus"
+              ></textarea>
+            </mat-form-field>
+          </div>
+          <!-- <mat-divider></mat-divider>
+          <frontend-personal-situation-administrative-status-list [listOfBilans]="bilansList"></frontend-personal-situation-administrative-status-list> -->
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </ng-container>
+</div>

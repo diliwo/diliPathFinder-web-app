@@ -1,0 +1,24 @@
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+  <h1 class="header">{{(!isNew ? 'Modifier l\'' : 'Ajouter une ') + 'offre'}}</h1>
+  <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Ouvert à partir de</mat-label>
+          <input matInput placeholder="Ouvert à partir de" [formControl]="ctlVacancyDate" [matDatepicker]="datepicker" required>
+          <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+          <mat-datepicker #datepicker></mat-datepicker>
+      </mat-form-field>
+      <br>
+  <br>
+  <mat-checkbox *ngIf="!isNew" [formControl]="ctlStatusOfJobOffer">Clôturer l'offre</mat-checkbox>
+</div>
+  <div class="footer">
+      <button type="reset" mat-button (click)="cancel()">Annuler</button>
+      <button type="submit" mat-button form="frm" [disabled]="frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Ajouter'}}</button>
+  </div>
+</form>
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->

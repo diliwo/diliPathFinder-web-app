@@ -1,0 +1,143 @@
+.assigned-chip{
+  background-color: blue;
+}
+.search-input-style{
+  width: 100%;
+}
+.form .form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.add {
+  height: 40px;
+}
+
+.delete {
+  display: grid;
+  justify-items: center;
+}
+
+.footer {
+  display: grid;
+  justify-items: stretch;
+  align-items: center;
+  grid-template-columns: auto auto;
+  margin-top: 15px;
+}
+
+.num-address-style{
+  width: 500px;
+}
+
+.title-bloc {
+color: white;
+//background: rgb(23, 90, 117);
+background: #4CAF50; /* Green */
+font-size: 20px;
+margin-left: 10px;
+padding: 1%;
+text-align: center;
+}
+
+.docs-list-style{
+height: 177px;
+}
+
+.title-bloc {
+  color: white;
+  //background: rgb(23, 90, 117);
+  background: #4CAF50; /* Green */
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 1%;
+  text-align: center;
+  }
+
+
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .mat-form-field{
+    width: 100%;
+  }
+
+  .form-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title-bloc {
+    color: white;
+    //background: rgb(23, 90, 117);
+    background: #4CAF50; /* Green */
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 1%;
+    text-align: center;
+    width: 97%;
+  }
+
+  .objectifs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .style-form{
+    margin-top: 10px;
+    //min-width: 150px;
+    max-width: 600px;
+    width: 100%;
+  }
+  .table-style {
+    width: 60%;
+  }
+
+  .job-form {
+    min-width: 50%;
+    max-width: 60%;
+  }
+
+
+  .title-bloc-exp {
+    color: white;
+    background: #4CAF50; /* Green */
+    font-size: 20px;
+    padding: 0.5%;
+    text-align: center;
+  }
+
+  .add-button-div {
+    position: relative;
+  }
+  .add-button {
+    position: absolute;
+    top: -11px;
+    left: 94%;
+    right: 0;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+  }
+  .box{
+    margin-top: 30px;
+  }
+
+  button:hover {
+    transform: scale(0.9);
+  }

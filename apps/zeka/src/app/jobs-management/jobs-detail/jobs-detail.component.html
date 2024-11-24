@@ -1,0 +1,136 @@
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+    <h1 class="title-bloc">{{(!isNew ? 'Modifier le' : 'Ajouter un nouveau') + ' poste'}}</h1>
+    <mat-tab-group mat-stretch-tabs dynamicHeight>
+        <mat-tab label="Infos générales">
+            <div>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Profil</mat-label>
+                    <input matInput placeholder="Profil" [formControl]="ctlJobTitle" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Numéro poste</mat-label>
+                    <input type="number" matInput placeholder="Numéro poste" [formControl]="ctlJobNumber" required>
+                    <div *ngIf="frm.get('jobNumber').hasError('tooManyDigits')">
+                      Le numéro contient beaucoup trop de chiffre !
+                    </div>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Intervention Financière</mat-label>
+                    <mat-select placeholder="Intervention Financière" [formControl]="ctlReward" required>
+                        <mat-option *ngFor="let reward of rewards" [value]="reward.type">
+                            {{reward.type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill" class="full-width">
+                    <mat-label>Type de poste</mat-label>
+                    <mat-select placeholder="Type poste" [formControl]="ctlTypeOfJob" required>
+                        <mat-option *ngFor="let type of typeOfJob" [value]="type.id">
+                            {{type.value}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </mat-tab>
+        <mat-tab label="Infos spécifiques">
+            <div class="form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Etat</mat-label>
+                    <mat-select placeholder="Etat" [formControl]="ctlStatusOfJobOffer" required>
+                        <mat-option *ngFor="let status of statusOfJobOffer" [value]="status.id">
+                            {{status.value}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Catégorie</mat-label>
+                    <mat-select placeholder="Catégorie" [formControl]="ctlCategoryOfJob" required>
+                        <mat-option [value]="0">Ouvrier</mat-option>
+                        <mat-option [value]="1">Employé</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Partenaire</mat-label>
+                    <mat-select placeholder="Partenaires" [formControl]="ctlPartnerId" required>
+                      <input
+                      placeholder="Chercher..."
+                      matInput
+                      type="text"
+                      (keyup)="onSearch($event.target.value)"
+                      class="search-box"
+                      oninput="this.value"
+                      #chercher
+                    />
+                        <mat-option *ngFor="let item of filteredListOfPartners" [value]="item.partnerId">
+                            {{item.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Commentaire</mat-label>
+                    <input matInput placeholder="Commentaire" [formControl]="ctlComment">
+                </mat-form-field>
+            </div>
+        </mat-tab>
+        <mat-tab label="Fermetures annuelles">
+                <div style="display: flex;flex-direction: row;justify-content:space-between;">
+                    <div style="padding-top: 20px;color: #4CAF50;">Du:</div>
+                    <mat-form-field appearance="fill" class="formFieldWidth40">
+                        <mat-label>Mois</mat-label>
+                        <mat-select placeholder="Mois" [formControl]="ctlStartMonth">
+                            <mat-option *ngFor="let month of months" [value]="month.id">
+                                {{month.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="formFieldWidth40">
+                        <mat-label>Jour</mat-label>
+                        <mat-select placeholder="Jour" [formControl]="ctlStartDay">
+                            <mat-option *ngFor="let day of startDays" [value]="day">
+                                {{padDay(day)}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div style="display: flex;flex-direction: row;justify-content:space-between;">
+                    <div style="padding-top: 20px;color: #4CAF50;">Au:</div>
+                    <mat-form-field appearance="fill" class="formFieldWidth40">
+                        <mat-label>Mois</mat-label>
+                        <mat-select placeholder="Mois" [formControl]="ctlEndMonth">
+                            <mat-option *ngFor="let month of months" [value]="month.id">
+                                {{month.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="formFieldWidth40">
+                        <mat-label>Jour</mat-label>
+                        <mat-select placeholder="Jour" [formControl]="ctlEndDay">
+                            <mat-option *ngFor="let day of endDays" [value]="day">
+                                {{padDay(day)}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="add-closure">
+                    <button mat-raised-button color="green" (click)="closureAdd()" [disabled]="annualClosureFrm.pristine || annualClosureFrm.invalid || annualClosureFrm.pending">Ajouter</button>
+                </div>
+            <div style="display: flex;flex-direction: row;justify-content:center;" *ngFor="let closure of annualClosures">
+                <div style="padding-top: 10px;"><p></p>{{closuerToString(closure)}}</div>
+                <div style="padding-left: 10px;"><button mat-icon-button (click)="closureDelete(closure)"><mat-icon color="warn">delete</mat-icon>
+                            </button>
+                </div>
+            </div>
+            <br />
+        </mat-tab>
+    </mat-tab-group>
+    <div class="footer">
+        <button type="reset" mat-button (click)="cancel()">Annuler</button>
+        <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Ajouter'}}</button>
+    </div>
+</form>

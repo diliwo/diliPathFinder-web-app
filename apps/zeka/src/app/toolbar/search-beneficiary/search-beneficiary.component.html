@@ -1,0 +1,16 @@
+<div style="display:flex; width: 100%;">
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Saisissez le niss, le nom ou le n° de dossier du bénéficiaire </mat-label>
+        <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of (allBeneficiariesLookUp$ | async)?.beneficiariesLookUp" [value]="option" (click)="onSelectBeneficiary()">
+                <a>{{option.name}} | {{option.referenceNumber}} ({{option.niss}})</a>
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
+<span>
+  <mat-spinner class="green-spinner" style="margin-top: 15px;" [diameter]="30" *ngIf="beneficiaryLoading"></mat-spinner>
+</span>
+</div>

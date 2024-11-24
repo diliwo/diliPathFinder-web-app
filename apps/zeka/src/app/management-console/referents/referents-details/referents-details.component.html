@@ -1,0 +1,42 @@
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+    <h1 class="title-bloc">{{(!isNew ? 'Modifier le' : 'Ajouter un') + ' référent'}}</h1>
+    <span>
+      <mat-spinner class="green-spinner" style="margin-top: 15px;" [diameter]="30" *ngIf="usersLoading"></mat-spinner>
+    </span>
+    <div>
+      <mat-form-field appearance="outline" class="w-100">
+        <input matInput placeholder="Chercher le référent..." [formControl]="ctlUser" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayUserFn"
+          (optionSelected)='onUserSelect($event.option.value)' panelWidth="auto">
+          <mat-option *ngFor="let user of (users$ | async)?.users" [value]="user">
+            {{ user.lastname }} {{ user.firstname }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+        <mat-form-field appearance="fill" class="w-100">
+            <input [readonly]="true" matInput placeholder="Prénom" [formControl]="ctlFirstname" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="w-100">
+            <input  [readonly]="true" matInput placeholder="Nom" [formControl]="ctlLastname" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-select placeholder="Service" [formControl]="ctlServiceId" required>
+                <mat-option *ngFor="let service of listServices" [value]="service.serviceId">
+                    {{service.name}} ({{service.acronym}})
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="footer">
+        <button type="reset" mat-button (click)="cancel()">Annuler</button>
+        <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Enregistrer'}}</button>
+    </div>
+</form>
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->

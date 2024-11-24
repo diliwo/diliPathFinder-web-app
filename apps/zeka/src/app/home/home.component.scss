@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.logos {
+    margin-top: 35px;
+    width: 500px;
+    height: 300px;
+}
+
+.img-responsive1 {
+    width: 100%;
+}
+
+.img-responsive2 {
+    width: 100%;
+}
+
+.buttons{
+  width: 16%;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #4CAF50;
+  }

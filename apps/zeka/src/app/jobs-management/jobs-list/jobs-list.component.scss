@@ -1,0 +1,127 @@
+p {
+  font-size: 14px;
+}
+strong {
+  font-size: 14px;
+}
+.action-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60px !important;
+    min-width: 55px !important;
+    //border: 1px solid black;
+  }
+
+  .info{
+    display: flex;
+    align-content: space-around;
+    flex-direction: row;
+  }
+
+  .job-card-title {
+    display: flex;
+    // align-content: space-around;
+    flex-direction: row;
+  }
+
+.card-style{
+    margin: 15px;
+}
+.startOfferDate{
+  font-size: 10px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    // background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot.true { background-color : red; }
+  .dot.false { background-color : green; }
+
+  .false { color: white; background-color: green;border-radius: 50%;line-height: 25px; text-align: center; height: 100%; width: 100%;font-size: 15px;}
+  .true{ color: white; background-color: green;border-radius: 50%;line-height: 25px; text-align: center; height: 100%; width: 100%;font-size: 15px;}
+  .noOffer { line-height: 48px; height: 48px; width: 48px; font-size: 48px; color: green;}
+
+  .mat-mdc-card-header {
+    padding: 14px 14px 0 !important;
+  }
+.icons{
+  font-size: 10px
+}
+
+.add-button-style {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+}
+
+.sTable {
+      display: block;
+      text-align: center;
+      height: 15px;
+      margin-left: auto;
+      margin-top: 5px;
+  }
+
+  .offer-style {
+    border: 2px solid black;
+    border-radius: 15px;
+  }
+
+  p .isOccupied{
+    white-space: pre-line;
+  }
+
+  .numOffer{
+    font-size: 12px;
+  }
+  .sTd{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+  .sHr{
+    padding: 0px;
+    margin: 0px;
+    height: 10px;
+  }
+
+  .add-joboffer-button {
+    color: #d9e1e5;
+}
+
+th, td {
+  padding:0px 14px;
+}
+
+.icon-status{
+  font-size: 25px;
+}
+
+.edit-job{
+  color: green;
+}
+.delete-job{
+  font-size: 20px;
+  color: red;
+}
+.load-more{
+  color: green;
+  font-size: 40px;
+}
+
+.job-title-style{
+  width: 190px;
+  padding-top: 15px;
+}
+
+.right-buttons{
+  width: 25px;
+}

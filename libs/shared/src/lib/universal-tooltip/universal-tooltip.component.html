@@ -1,0 +1,19 @@
+<ng-container *ngIf="showsTooltip">
+  <div class="tooltip"
+  [style.top]="topPosition + 'px'"
+  [style.left]="leftPosition + 'px'"
+  >
+    <div>
+      <p><strong>Numéro : </strong> {{item.jobNumber}} <br>
+        <strong>Nom</strong> :  {{ item.partnerName }} <br>
+        <strong>Job coach</strong> :  {{ item.jobCoachName }}</p>
+       <p><u> Personnes de contact </u><br><br>
+      <span *ngFor="let p of item.contactPersons">
+        <strong>{{p.contactName}} </strong> : {{p.phoneNumber}} <br>
+      </span>
+      <!-- <br>
+      <span class="hint">*Double cliquez sur la carte du poste pour supprimer l'info bulle !</span> -->
+    </p>
+    </div>
+  </div>
+</ng-container>

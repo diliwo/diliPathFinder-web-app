@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["**/*.ts", "src/app/sharedTem/shared.module.ts"],
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  },
+  "exclude": ["jest.config.ts"]
+}

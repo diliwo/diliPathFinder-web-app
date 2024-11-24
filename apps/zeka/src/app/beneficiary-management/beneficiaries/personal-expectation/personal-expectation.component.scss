@@ -1,0 +1,32 @@
+.title-bloc {
+  color: white;
+  //background: rgb(23, 90, 117);
+  background: #4CAF50; /* Green */
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 1%;
+  text-align: center;
+  width: 97%;
+}
+
+.objectifs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.style-form{
+  margin-top: 10px;
+  min-width: 150px;
+  max-width: 600px;
+  width: 100%;
+}
+.table-style {
+  width: 50%;
+}
+
+.job-form {
+  min-width: 50%;
+  max-width: 60%;
+}

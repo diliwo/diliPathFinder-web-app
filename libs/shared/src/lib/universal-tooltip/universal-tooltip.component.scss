@@ -1,0 +1,16 @@
+.tooltip {
+  position: absolute; // enables it to appear where we want it later
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px 10px;
+  background-color: #fffffffb;
+  color: black;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: 4px 6px 12px #00000020;
+  z-index: 1;
+}
+
+.hint{
+  font-size: x-small;
+}

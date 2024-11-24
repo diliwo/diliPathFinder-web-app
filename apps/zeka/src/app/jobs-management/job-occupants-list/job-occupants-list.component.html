@@ -1,0 +1,38 @@
+<div class="row card-style" card-style>
+  <div class="col-sm-12">
+    <div class="add-button-div">
+      <h3 class="title-bloc">Bénéficiaires ayant occupé le poste</h3>
+    </div>
+      <mat-form-field class="mat-form-field">
+        <input matInput placeholder="Chercher des occupants" #input>
+      </mat-form-field>
+      <div class="mat-elevation-z2">
+          <table mat-table [dataSource]="dataSource" matSort matSortActive="fullName" matSortDirection="asc" matSortDisableClear>
+              <ng-container matColumnDef="fullName">
+                  <th mat-header-cell *matHeaderCellDef> Nom et Prénom</th>
+                  <td mat-cell *matCellDef="let row"> {{row.lastName | uppercase }} {{row.firstName | uppercase }} </td>
+              </ng-container>
+              <ng-container matColumnDef="referenceNumber">
+                  <th mat-header-cell *matHeaderCellDef> N° Dossier </th>
+                  <td mat-cell *matCellDef="let row"> {{row.referenceNumber | uppercase }} </td>
+              </ng-container>
+              <ng-container matColumnDef="startOccupationDate">
+                <th mat-header-cell *matHeaderCellDef> Début</th>
+                <td mat-cell *matCellDef="let row"> {{row.startOccupationDate | date:'dd/MM/yyyy' }} </td>
+            </ng-container>
+            <ng-container matColumnDef="endOccupationDate">
+                <th mat-header-cell *matHeaderCellDef> Fin</th>
+                <td mat-cell *matCellDef="let row"> {{row.endOccupationDate | date:'dd/MM/yyyy' }} </td>
+            </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+              </tr>
+          </table>
+            <mat-paginator [length]="nbOfOccupants" [pageSize]="10" [pageSizeOptions]="[3, 5, 10, 25, 100]"></mat-paginator>
+      </div>
+  </div>
+</div>
+
+
+<!-- {{ (row.numOffer | date: 'dd/MM/yyyy') || '-' }} -->

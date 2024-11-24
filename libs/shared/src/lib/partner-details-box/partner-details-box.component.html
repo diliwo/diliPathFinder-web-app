@@ -1,0 +1,229 @@
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+  <h1 class="title-bloc">
+    {{ (!readonly ? (!isNew ? 'Modifier le' : 'Ajouter un') : 'Fiche') + ' partenaire' }}
+  </h1>
+  <mat-tab-group mat-stretch-tabs dynamicHeight>
+    <mat-tab label="Infos générales">
+      <div class="form">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Numéro d'identifiant</mat-label>
+          <input matInput placeholder="PartnerNumber" [formControl]="ctlPartnerNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Nom</mat-label>
+          <input matInput placeholder="Nom" [formControl]="ctlName" required />
+        </mat-form-field>
+
+        <table>
+          <tr>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="100">
+                <mat-label>Numéro</mat-label>
+                <input
+                  type="number"
+                  matInput
+                  placeholder="Numéro"
+                  [formControl]="ctlAddressNumber"
+                  required
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="100">
+                <mat-label>Boite</mat-label>
+                <input
+                  matInput
+                  placeholder="Boite"
+                  [formControl]="ctlAddressBoxNumber"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="300">
+                <mat-label>Adresse</mat-label>
+                <input
+                  matInput
+                  placeholder="Adresse"
+                  [formControl]="ctlAddressStreet"
+                  required
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="350">
+                <mat-label>Commune</mat-label>
+                <input
+                  matInput
+                  placeholder="Commune"
+                  [formControl]="ctlAddressCity"
+                  required
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="150">
+                <mat-label>Code postal</mat-label>
+                <input
+                  type="number"
+                  matInput
+                  placeholder="Code postal"
+                  [formControl]="ctlAddressPostalCode"
+                  required
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Remarque</mat-label>
+          <textarea
+            matInput
+            placeholder="Remarque"
+            [formControl]="ctlNote"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </mat-tab>
+    <mat-tab label="Infos spécifiques">
+      <div class="form">
+        <mat-form-field appearance="fill">
+          <mat-label>Job coach</mat-label>
+          <mat-select
+            matInput
+            placeholder="Job coach"
+            [formControl]="ctlJobCoachId"
+            required
+          >
+            <mat-option
+              *ngFor="let refJobCoach of listRefJobCoach"
+              [value]="refJobCoach.referentId"
+            >
+              {{ refJobCoach.lastname | uppercase }} {{ refJobCoach.firstname }} ({{refJobCoach.serviceAcronymName}})
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Catégorie</mat-label>
+          <mat-select
+            placeholder="Catégorie"
+            [formControl]="ctlCategoryOfPartner"
+            required
+          >
+            <mat-option
+              *ngFor="let category of categories"
+              [value]="category.id"
+            >
+              {{ category.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Statut</mat-label>
+          <mat-select
+            placeholder="Statut"
+            [formControl]="ctlStatusOfPartner"
+            required
+          >
+            <mat-option *ngFor="let element of status" [value]="element.id">
+              {{ element.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Date signature convention</mat-label>
+          <input matInput placeholder="Date signature convention"  name="startDate" [formControl]="ctlDateOfAgreementSignature" [matDatepicker]="startdatepicker" required>
+          <mat-datepicker-toggle matIconSuffix [for]="startdatepicker"></mat-datepicker-toggle>
+          <mat-datepicker  [dateClass]="" #startdatepicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Date fin convention</mat-label>
+          <input matInput placeholder="Date signature convention" #endDateInput="ngForm" [formControl]="ctlDateOfConclusion" name="endDate" [matDatepicker]="enddatepicker" [afterDate]="ctlDateOfAgreementSignature.value">
+          <mat-datepicker-toggle matIconSuffix [for]="enddatepicker"></mat-datepicker-toggle>
+          <mat-datepicker [dateClass]="" #enddatepicker></mat-datepicker>
+          <mat-error class="field-error" *ngIf="endDateInput.errors?.afterDate">Doit être postérieure à la date de début !</mat-error>
+        </mat-form-field>
+        <section class="example-section">
+          <mat-checkbox
+            class="example-margin"
+            [formControl]="ctlIsEconomieSociale"
+            >Economie Sociale</mat-checkbox
+          >
+        </section>
+      </div>
+    </mat-tab>
+    <mat-tab label="Coordonnées">
+      <div class="form" [formGroup]="frmPhone">
+        <table>
+          <tr>
+            <td>
+              <mat-form-field appearance="fill" [style.width.px]="350">
+                <mat-label>Ajouter le nom</mat-label>
+                  <input matInput placeholder="Personne de contact" [formControl]="ctlContactName" required>
+              </mat-form-field>
+            </td>
+            <td>
+              <section style="margin-bottom:10px">
+                <mat-button-toggle-group [formControl]="ctlContactGender" aria-label="Font Style" required>
+                  <mat-button-toggle value="1">F</mat-button-toggle>
+                  <mat-button-toggle value="0">H</mat-button-toggle>
+                </mat-button-toggle-group>
+              </section>
+            </td>
+          </tr>
+        </table>
+      <mat-form-field appearance="fill">
+        <mat-label>Ajouter un n° de téléphone ou une adresse email</mat-label>
+          <input matInput placeholder="Téléphone/Email" [formControl]="ctlPhoneNumber" required>
+      </mat-form-field>
+      <div class="add-contact-info">
+        <button mat-raised-button color="primary" (click)="phoneAdd()" [disabled]="frmPhone.pristine || frmPhone.invalid || frmPhone.pending">Ajouter</button>
+      </div>
+      <table>
+        <tr *ngFor="let p of phones">
+          <td>
+            <div>
+              <span class="material-icons">
+                <i>{{ hasOnlyDigit(p.phoneNumber) ?  'phone' : 'alternate_email'}} </i>
+                </span>
+            {{p.gender == 1 ? 'Mme' : 'Mr' }} {{p.contactName}} : {{p.phoneNumber}}</div>
+          </td>
+          <td>
+            <div class="delete">
+              <button mat-icon-button (click)="phoneDelete(p)" tabindex="-1" [disabled]="this.readonly">
+                  <mat-icon color="warn">delete</mat-icon>
+              </button>
+          </div>
+          </td>
+        </tr>
+      </table>
+        <br />
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="footer">
+    <button type="reset" mat-button (click)="cancel()">Annuler</button>
+    <button
+    type="submit"
+    mat-button
+    form="frm"
+    [disabled]="frm.pristine || frm.invalid || frm.pending || this.readonly"
+    (click)="update()"
+  >
+    {{ !isNew ? 'Modifier':'Enregistrer' }}
+  </button>
+  </div>
+</form>

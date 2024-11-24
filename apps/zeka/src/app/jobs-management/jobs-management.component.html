@@ -1,0 +1,46 @@
+<div class="mat-elevation-z0">
+  <ng-container
+    *ngIf="
+      {
+        partnersData: allPartners$ | async,
+        jobsData: allJobs$ | async,
+        rewardsData: rewards$ | async
+      } as apiData;
+    ">
+    <ng-container *ngIf="apiData.partnersData">
+      <ng-container *ngIf="apiData.jobsData">
+        <ng-container *ngIf="apiData.rewardsData">
+          <frontend-jobs-filter
+          [jobs]="apiData.jobsData.jobs"
+          [rewards]="apiData.rewardsData.list"
+          [partnersList]="apiData.partnersData.partners"
+          (upsertJobtEvent)="persistJob($event)"
+          (filterChanged)="onFilterChanged($event)"
+        ></frontend-jobs-filter>
+        <h3 class="title-bloc">
+          Gestion des postes et des offres
+          <mat-icon matTooltip="gestion des emplois">business</mat-icon>
+        </h3>
+        <frontend-jobs-list
+          (filterEvent)="jobsRefresh($event)"
+          [jobs]="apiData.jobsData.jobs"
+          [currentFilter]="selectedFilter"
+          [refreshFilter]="filterRefresh"
+          [totalJobs]="apiData.jobsData.totalCount"
+          [pageSize]="pageSize"
+          [rewards]="apiData.rewardsData.list"
+          (upsertJobOfferEvent)="persistJobOffer($event)"
+          [partnersList]="apiData.partnersData.partners"
+          (upsertJobtEvent)="persistJob($event)"
+          (updateJobtDatesEvent)="updateJobDates($event)"
+          (addDocumentEvent)="saveDocument($event)"
+          (deleteJobEvent)="deleteJob($event)"
+        ></frontend-jobs-list>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+  <span *ngIf="jobsDataLoading">
+    <mat-spinner [diameter]="30" class="green-spinner"></mat-spinner>
+  </span>
+</div>

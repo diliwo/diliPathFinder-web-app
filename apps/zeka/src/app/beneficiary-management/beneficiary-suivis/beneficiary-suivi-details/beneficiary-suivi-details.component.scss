@@ -1,0 +1,97 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+  outline: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+  max-height: inherit !important;
+}
+
+.full-width{
+width: 100%;
+}
+
+.search-box{
+  border: 2px solid rgba(23, 90, 117, 0.8);
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.add {
+    height: 40px;
+}
+
+.delete {
+    display: grid;
+    justify-items: center;
+}
+
+.footer {
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+    grid-template-columns: auto auto;
+    margin-top: 30px;
+}
+
+.num-address-style {
+    width: 500px;
+}
+
+.title-bloc {
+    color: white;
+    //background: rgb(23, 90, 117);
+    background: #4CAF50;
+    /* Green */
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 1%;
+    text-align: center;
+}
+
+.docs-list-style {
+    height: 177px;
+}
+
+.editor {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-height: 300px;
+    .NgxEditor__MenuBar {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .NgxEditor {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: none;
+    }
+    .CodeMirror {
+        border: 1px solid #eee;
+        height: auto;
+        margin-bottom: 0.7rem;
+        pre {
+            white-space: pre !important;
+        }
+    }
+}
+
+::ng-deep {
+    /* to penetrate <ngx-editor> CSS styling */
+    .NgxEditor {
+        height: 260px;
+        overflow-y: scroll;
+    }
+    .NgxEditor__Content {
+        min-height: 240px;
+        /* make all of the editor area clickable */
+    }
+}

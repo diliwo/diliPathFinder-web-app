@@ -1,0 +1,69 @@
+<!-- <div *ngFor="let item of servicesIsp;">
+    <p>{{item.name}}</p>
+</div> -->
+
+<div class="row">
+  <div *ngIf="dataSource.loading$ | async">
+    <mat-spinner class="white-spinner" style="margin-top: 15px;" [diameter]="30"></mat-spinner>
+  </div>
+    <div class="col-sm-12">
+      <div class="add-button-div">
+        <h3 class="title-bloc">Gestion des partenaires<mat-icon matTooltip="Gestion des partenaires">groups</mat-icon></h3>
+        <button mat-fab color="primary" class="add-button" (click)="create()">
+          <mat-icon matTooltip="Ajouter un partenaire">add</mat-icon>
+        </button>
+      </div>
+      <mat-form-field class="w-100">
+        <input matInput placeholder="Chercher des partenaires" #input>
+      </mat-form-field>
+        <div class="mat-elevation-z2">
+          <table mat-table [dataSource]="dataSource" matSort matSortActive="partnerNumber" matSortDirection="asc" matSortDisableClear>
+              <ng-container matColumnDef="partnerNumber">
+                <th mat-header-cell *matHeaderCellDef  mat-sort-header> Numéro </th>
+                <td mat-cell *matCellDef="let row"> {{row.partnerNumber}} </td>
+            </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Nom </th>
+                    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="jobCoachName">
+                    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Joab Coach </th>
+                    <td mat-cell *matCellDef="let row"> {{row.jobCoachName | uppercase }} </td>
+                </ng-container>
+                <ng-container matColumnDef="categoryOfPartner">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Catégorie </th>
+                    <td mat-cell *matCellDef="let row"> {{row.categoryOfPartnerName }} </td>
+                </ng-container>
+                <ng-container matColumnDef="statusOfPartner">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Statut </th>
+                    <td mat-cell *matCellDef="let row"> {{row.statusOfPartnerName }} </td>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let row">
+                        <button mat-icon-button tabindex="-1" (click)="edit(row)">
+                            <mat-icon class="green-icon" matTooltip="Modifier le partenaire">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button tabindex="-1" (click)="openFileBox(row)">
+                          <ng-container *ngIf="row.hasDocuments; else fileIsNotUploaded">
+                            <mat-icon color="primary" matTooltip="Gérer les documents">file_present</mat-icon>
+                          </ng-container>
+                          <ng-template #fileIsNotUploaded>
+                            <mat-icon color="primary" matTooltip="Gérer les documents">upload_file</mat-icon>
+                          </ng-template>
+                        </button>
+                        <button mat-icon-button tabindex="-1" (click)="delete(row)">
+                            <mat-icon color="warn" matTooltip="Supprimer le partenaire">delete</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                </tr>
+            </table>
+            <mat-paginator [length]="nbOfPartners" [pageSize]="10" [pageSizeOptions]="[3, 5, 10, 25, 100]"></mat-paginator>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<form id="frm" class="form" [formGroup]="frm" novalidate>
+    <mat-tab-group mat-stretch-tabs dynamicHeight>
+        <mat-tab label="Voir les documents">
+            <h1 class="title-bloc">Voir les documents</h1>
+            <div class="docs-list-style">
+                <ng-container *ngIf="allDocumentsJob$ | async as documentsData">
+                    <frontend-job-files-list [documents]="documentsData.documents" (getSelectedDocumentEvent)="openSelectedDocument($event)" (deleteDocumentEvent)="deleteDocument($event)"></frontend-job-files-list>
+                </ng-container>
+            </div>
+        </mat-tab>
+        <mat-tab label="Importer un document">
+            <h1 class="title-bloc">Importer un document</h1>
+            <div>
+                <mat-form-field class="w-100 bg-white" appearance="outline">
+                    <mat-label>Document</mat-label>
+
+                    <input matInput [(value)]="selectedFile.name" [formControl]="ctlselectedFile" readonly name="name" (click)="fileUpload.click()" />
+                    <mat-error *ngIf="ctlselectedFile.invalid">{{getErrorMessage()}}</mat-error>
+
+                    <button mat-icon-button matSuffix color="primary" (click)="fileUpload.click()">
+        <mat-icon>file_upload</mat-icon>
+      </button>
+                    <input type="file" #fileUpload id="uploadFile" (change)="onFileChange($event)" name="uploadFile" accept="image/jpg,image/jpeg,image/png,.pdf" style="display:none" />
+                </mat-form-field>
+                <br>
+                <mat-form-field class="w-100 bg-white" appearance="outline" style="padding-right: 2px;">
+                    <mat-label>Libellé</mat-label>
+                    <input matInput [formControl]="ctldescription">
+                    <mat-error *ngIf="hasError('description', 'required')">Une description est requise</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+    <div class="footer">
+      <button type="reset" mat-button (click)="cancel()">Fermer</button>
+        <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="SaveDocument()">Ajouter</button>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  nginx:
+    container_name: zeka-webapp
+    image: zeka-webapp
+    build:
+      context: .
+      dockerfile: angular.dockerfile
+    volumes:
+      - ./dist/apps/zeka:/usr/share/nginx/html
+    ports:
+      - "4200:80"
+    environment:
+      - API_BASE_URL=http://127.0.0.1:5002
+      - API_SOCIABILI_GATEWAY_URL=http://sociabiligwint6/api/v6/
+      - GIPSY_URL=http://gipsyint/
+      - CLIENT_ID=3e8efcc4-2c25-4f8c-a235-d418117830a2
+      - LOGIN_URL=https://auth-dev.cpas-schaerbeek.brussels/adfs/oauth2/authorize
+      - ISSUER=https://auth-dev.cpas-schaerbeek.brussels/adfs

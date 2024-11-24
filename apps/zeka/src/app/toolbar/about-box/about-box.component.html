@@ -1,0 +1,31 @@
+<mat-card class="example-card">
+  <mat-card-header style="height: 80px;">
+      <mat-card-title style="margin-top:15px;color: #4CAF50;font-weight: bold;font-family: sans-serif;">APP.i</mat-card-title>
+      <mat-card-subtitle>CPAS de Schaerbeek</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <br>
+  <mat-card-content>
+      <span class="version-attribute">Version:&nbsp;</span>
+      <span class="version-value">{{version}}</span>
+      <br>
+      <span class="version-attribute">Tag:&nbsp;</span>
+      <span class="version-value">{{gitVersion.tag}}</span>
+      <br>
+      <span class="version-attribute">Build:&nbsp;</span>
+      <span class="version-value">{{gitVersion.hash}}</span>
+      <br>
+      <span class="version-attribute">Modified:&nbsp;</span>
+      <span class="version-value">{{gitVersion.dirty ? "True" : "False"}}</span>
+      <br>
+      <span class="version-attribute">Browser:&nbsp;</span>
+      <span class="version-value">{{getBrowserName()}}</span>
+      <br>
+      <span class="version-attribute">Browser version:&nbsp;</span>
+      <span class="version-value">{{getBrowserVersion()}}</span>
+      <br>
+      <span class="version-attribute">Backend Version:&nbsp;</span>
+      <span class="version-value">{{backendVersion}}</span>
+  </mat-card-content>
+
+</mat-card>

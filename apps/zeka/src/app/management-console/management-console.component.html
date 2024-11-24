@@ -1,0 +1,79 @@
+<div class="container mat-elevation-z0">
+    <ng-container *ngIf="{
+        teams : allServices$ | async,
+        referentsIsp : allReferences$ | async
+            } as apiData; else loading">
+            <ng-container *ngIf="apiData.teams">
+              <ng-container *ngIf="apiData.referentsIsp">
+                  <mat-tab-group animationDuration="0ms">
+                    <mat-tab label="&Eacute;coles">
+                      <mat-card class="card-style ">
+                          <mat-card-content>
+                            <frontend-schools
+                              (updateEvent)="updateSchool($event)"
+                              (createEvent)="createSchool($event)"
+                              (deleteEvent)="deleteSchool($event)">
+                            </frontend-schools>
+                          </mat-card-content>
+                      </mat-card>
+                  </mat-tab>
+                  <mat-tab label="Types de formations">
+                    <mat-card class="card-style">
+                        <mat-card-content>
+                            <frontend-trainingtypes></frontend-trainingtypes>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-tab>
+                  <mat-tab label="Formations">
+                    <mat-card class="card-style">
+                        <mat-card-content>
+                          <frontend-formation-list></frontend-formation-list>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-tab>
+                    <mat-tab label="Métiers">
+                      <mat-card class="card-style">
+                          <mat-card-content>
+                              <frontend-professions
+                                (createEvent)="createProfession($event)"
+                                (updateEvent)="updateProfession($event)"
+                                (deleteEvent)="deleteProfession($event)">
+                              </frontend-professions>
+                          </mat-card-content>
+                      </mat-card>
+                  </mat-tab>
+                  <mat-tab label="Partenaires">
+                    <mat-card class="card-style">
+                        <mat-card-content>
+                            <frontend-partners
+                              [referentsIsp]="apiData.referentsIsp.referents"
+                              (createPartnerEvent)="persistPartner($event)"
+                              (updatePartnerEvent)="updatePartner($event)"
+                               (deletePartnerEvent)="deletePartner($event)"
+                               (addDocumentEvent)="saveDocument($event)"
+                               ></frontend-partners>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-tab>
+                    <mat-tab label="Référents">
+                      <mat-card class="card-style">
+                          <mat-card-content>
+                              <frontend-referents [services]="apiData.teams.services" (upserReferentEvent)="persistReferent($event)" (deleteReferentEvent)="deleteReferent($event)"></frontend-referents>
+                          </mat-card-content>
+                      </mat-card>
+                  </mat-tab>
+                    <mat-tab label="Services">
+                        <mat-card class="card-style">
+                            <mat-card-content>
+                                <frontend-services [servicesIsp]="apiData.teams.services" (upsertEvent)="persistServicesIsp($event)" (deleteEvent)="deleteServicesIsp($event)"></frontend-services>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-tab>
+                </mat-tab-group>
+                </ng-container>
+            </ng-container>
+    </ng-container>
+</div>
+<ng-template #loading>
+    <mat-spinner></mat-spinner>
+</ng-template>

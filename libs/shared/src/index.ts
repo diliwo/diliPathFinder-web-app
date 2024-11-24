@@ -1,0 +1,11 @@
+export * from './lib/shared.module';
+export * as tools from './lib/dates/tools';
+export { CapitalizePipe } from './lib/pipes/capitalize.pipe';
+export { TrimPipe } from './lib/pipes/trim.pipe';
+export { ConfirmationBoxComponent } from './lib/confirmation-box/confirmation-box.component';
+export { TextEllipsisComponent } from './lib/text-ellipsis/text-ellipsis.component';
+export { UniversalTooltipComponent } from './lib/universal-tooltip/universal-tooltip.component';
+export { AfterDateDirective } from './lib/dates/after-date.directive';
+export { ValidatorBaseDirective } from './lib/dates/validator-base.directive';
+export { PartnerDetailsBoxComponent } from './lib/partner-details-box/partner-details-box.component';
+export * as permissions from './lib/permissions/userAdmin';

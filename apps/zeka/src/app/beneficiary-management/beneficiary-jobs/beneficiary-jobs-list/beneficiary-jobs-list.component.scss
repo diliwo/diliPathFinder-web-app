@@ -1,0 +1,53 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+th.mat-column-actions {
+  width: 250px
+}
+
+.button-style {
+  margin-top: 6px;
+}
+
+.boutton {
+  background-color: rgb(141, 187, 68, 0.90);
+  //rgba(3, 57, 82, 0.15);
+}
+
+.card-style {
+  margin-top: 5px;
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+.green-icon {
+  color: rgb(141, 187, 68, 0.90);
+}
+
+.title-bloc {
+  color: white;
+  //background: rgb(23, 90, 117);
+  background: #4CAF50; /* Green */
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 1%;
+  text-align: center;
+}
+
+.true-hire {color: rgb(0, 0, 255, 0.20);}
+.false-hire {color: rgb(0, 0, 255, 0.90);}
+
+.true-edit {color: rgb(141, 187, 68, 0.20);}
+.false-edit {color: rgb(141, 187, 68, 0.90);}
+
+.true-remove {color: rgb(255, 0, 0, 0.20);}
+.false-remove {color: rgb(255, 0, 0, 0.90);}
+
+.true-history {color: rgb(140, 51, 51,0.90);}
+.false-history {color: rgb(140, 51, 51, 0.20);}

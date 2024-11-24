@@ -1,0 +1,190 @@
+
+  <div class="main-container"
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()"
+  >
+    <div class="w-100">
+    <div
+    fxFlex="1 1 auto"
+    fxLayout="row wrap"
+    fxLayout.lt-sm="column"
+    style="height: auto !important"
+    >
+    <div
+    fxFlex="0 1 calc(33.325%)"
+    fxFlex.lt-md="0 1 calc(50%)"
+    fxFlex.lt-sm="100%"
+    *ngFor="let item of localJobs"
+    class="px-3 mb-5"
+    fxLayoutFill
+    fxLayoutAlign="center"
+    >
+    <frontend-univesal-tooltip
+    (mouseleave)="closePopUp()"
+    [item]="tooltipItem"
+    [showsTooltip]="showsTooltip"
+    [topPosition]="topPosition"
+    [leftPosition]="leftPosition"
+    >
+    ></frontend-univesal-tooltip>
+      <mat-card
+      fxFlex
+      fxLayoutFill
+      class="h-100 w-100"
+      [class.mat-elevation-z8]="false">
+        <mat-card-header>
+          <mat-card-title class="job-card-title">
+            <button mat-icon-button matTooltip="Modifier le poste" (click)="editJob(item)">
+              <mat-icon class="edit-job">edit</mat-icon>
+            </button>
+            <div class="job-title-style"><frontend-text-ellipsis>{{item.jobTitle}}</frontend-text-ellipsis></div>
+          </mat-card-title>
+            <mat-card-subtitle>
+              <div class="profile">
+              <strong>Poste N° {{ item.jobNumber }} ({{ item.categoryOfPartner }})</strong></div>
+            </mat-card-subtitle>
+          <mat-card-subtitle>
+            <p style="white-space: pre-line;">{{item.hasJobOffer && item.occupiedBy !== null ? 'Occupé par :\n' +  item.occupiedBy : 'Poste vacant' }}</p>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <ng-container
+            *ngIf="item.hasJobOffer && item.occupiedBy !== null; then isANotVacantJob">
+          </ng-container>
+          </mat-card-subtitle>
+          <div class="ml-auto" style="width: 40%;">
+            <table>
+              <tr>
+                <div
+                (mouseover)="onHover(item, $event)">
+                {{item.partnerName | slice: 0:20}} <span *ngIf="item.partnerName.length > 20">...</span>
+              </div>
+              </tr>
+              <tr>
+                <ng-container style="width: 10%;" *ngIf="!item.statusOfJobOffer;else closed">
+                  <table class="sTable table table-s">
+                    <ng-container *ngIf="item.hasJobOffer && !item.isLastJobOfferClosed;else createJobOffer">
+                      <div class="offer-style">
+                        <tr>
+                          <td align="left">
+                            <button mat-icon-button matTooltip="Modifier l'offre" *ngIf="!item.statusOfJobOffer" (click)="edit(item)">
+                              <mat-icon [ngClass]="isVacant(item)">edit</mat-icon>
+                            </button>
+                          </td>
+                            <td class="sTd">
+                              <button mat-icon-button (click)="openCandidaciesList(item)" matTooltip="Nombre de candidats">
+                              <mat-icon>groups</mat-icon>
+                              </button>
+                            </td>
+                        </tr>
+                        <tr class="sHr">
+                          <td>
+                            <span class="startOfferDate">{{(getJobOfferDate(item) | date:'dd/MM/yyyy')}}</span>
+                          </td>
+                          <td class="sTd">
+                            {{ item.numberOfCandidates }}
+                          </td>
+                        </tr>
+                      </div>
+                  </ng-container>
+                  </table>
+                </ng-container>
+              </tr>
+            </table>
+          </div>
+          <ng-container
+          *ngIf="isSmallScreen then adjustUiForSmallScreen; else adjustUiForLargeScreen">
+          </ng-container>
+          <ng-template #isOccupied>
+            <span>
+              <mat-icon class="icon-status">
+                hail
+              </mat-icon>
+              </span>
+          </ng-template>
+          <ng-template #isNotOccupied>
+            <span>
+              <mat-icon class="icon-status">
+                playlist_add_check
+              </mat-icon>
+              </span>
+          </ng-template>
+          <ng-template #createJobOffer>
+            <button mat-icon-button (click)="create(item)" class="add-button-style" *ngIf="!item.statusOfJobOffer" matTooltip="Ajouter une offre">
+              <mat-icon class="noOffer">data_saver_on</mat-icon>
+            </button>
+          </ng-template>
+          <ng-template #closed>
+              <mat-icon matTooltip="Poste fermé">lock</mat-icon>
+          </ng-template>
+          <ng-template #editJobOffer>
+            <button mat-icon-button  class="button-size" matTooltip="Modifier l'offre" *ngIf="!item.statusOfJobOffer">
+              <mat-icon [ngClass]="isVacant(item)" (click)="edit(item)">edit</mat-icon>
+            </button>
+          </ng-template>
+          <ng-template #isAVacantJob>
+            {{ item.hasJobOffer && !item.isLastJobOfferClosed ? 'Date début : '+ (item.lastDate | date:'dd/MM/yyyy') : 'Aucune offre'}}
+          </ng-template>
+          <ng-template #isANotVacantJob>
+            <p>Date début/fin : <br> {{(item.occupiedFrom | date:'dd/MM/yyyy')}} {{ item.occupiedTo !== null ? ' - '+(item.occupiedTo | date:'dd/MM/yyyy') : ''}}
+              <mat-icon (click)="editDates(item)"matTooltip="Modifier les dates">edit_calendar</mat-icon>
+            </p>
+          </ng-template>
+          <ng-template #fileIsUploaded>
+            <button mat-icon-button (click)="openFileBox(item)" matTooltip="Voir les documents">
+              <mat-icon>
+                file_present
+              </mat-icon>
+            </button>
+          </ng-template>
+          <ng-template #fileIsNotUploaded>
+            <button mat-icon-button (click)="openFileBox(item)" matTooltip="Importer un document">
+              <mat-icon>
+                upload_file
+              </mat-icon>
+            </button>
+          </ng-template>
+          <ng-template #adjustUiForSmallScreen>
+            <div class="right-buttons">
+              <ng-container>
+                <button mat-icon-button (click)="openOccupantsList(item)" matTooltip="Historique">
+                  <mat-icon>work_history</mat-icon>
+                </button>
+              </ng-container>
+              <ng-container
+                *ngIf="!item.hasDocumentAttached then fileIsNotUploaded; else fileIsUploaded">
+              </ng-container>
+              <ng-container *ngIf="perm.isUserAppiAdmin()">
+                <button mat-icon-button matTooltip="Supprimer le poste" (click)="delete(item)">
+                  <mat-icon class="delete-job">delete_forever</mat-icon>
+                </button>
+              </ng-container>
+            </div>
+          </ng-template>
+          <ng-template #adjustUiForLargeScreen>
+            <ng-container>
+              <button mat-icon-button (click)="openOccupantsList(item)" matTooltip="Historique">
+                <mat-icon>work_history</mat-icon>
+              </button>
+            </ng-container>
+            <ng-container
+              *ngIf="!item.hasDocumentAttached then fileIsNotUploaded; else fileIsUploaded">
+            </ng-container>
+            <ng-container *ngIf="perm.isUserAppiAdmin()">
+              <button mat-icon-button matTooltip="Supprimer le poste" (click)="delete(item)">
+                <mat-icon class="delete-job">delete_forever</mat-icon>
+              </button>
+            </ng-container>
+          </ng-template>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  <ng-template #jobsCanBeLoaded>
+      <span>
+        <mat-spinner [diameter]="30" class="green-spinner"></mat-spinner>
+      </span>
+  </ng-template>
+  </div>
+  </div>
+  </div>

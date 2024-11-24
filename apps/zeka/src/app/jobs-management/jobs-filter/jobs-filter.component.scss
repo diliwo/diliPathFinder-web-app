@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    border: 1px solid black;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    //padding: 15px 32px;
+    margin-top: 13px;
+    margin-left: 20px;
+    text-align: center;
+    //text-decoration: none;
+    //display: inline-block;
+    font-size: 35px;
+    width: 70px;
+    height: 40px;
+  }
+  .buttoListJobOffers{
+    padding: 5px;
+  }
+
+  .toggle-style {
+    margin-top: 17px;
+  }
+  .filter-style{
+    // border: 1px solid black;
+    width: 100%;
+    height: 60px;
+    //margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+
+  mat-form-field{
+      width: 16%;
+      margin: 0 10px 0 10px;
+  }
+
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #4CAF50;
+    }

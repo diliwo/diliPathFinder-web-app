@@ -1,0 +1,21 @@
+<div class="row card-style">
+  <div class="title-bloc">
+    <h4 class="title">{{ title }}
+      <mat-icon>{{ iconItem }}</mat-icon>
+    </h4>
+    <span class="example-spacer"></span>
+    <button mat-icon-button (click)="close()" class="buttoListJobOffers">
+      <mat-icon matTooltip="Fermer">close</mat-icon>
+    </button>
+  </div>
+    <div class="col-sm-12">
+      <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Consultant ISP">
+          <frontend-my-consultant-supports-list (pushNissEvent)="refreshBeneficiaries($event)"></frontend-my-consultant-supports-list>
+      </mat-tab>
+      <mat-tab label="JobCoach">
+          <frontend-my-jobcoach-supports-list (pushNissEvent)="refreshBeneficiaries($event)"></frontend-my-jobcoach-supports-list>
+      </mat-tab>
+    </mat-tab-group>
+    </div>
+</div>

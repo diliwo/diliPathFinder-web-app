@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+  outline: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: inherit !important;
+  max-height: inherit !important;
+}
+
+.full-width{
+width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.add {
+    height: 40px;
+}
+
+.delete {
+    display: grid;
+    justify-items: center;
+}
+
+.footer {
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+    grid-template-columns: auto auto;
+    margin-top: 30px;
+}
+
+.add-contact-info{
+  display: grid;
+  justify-items: stretch;
+  align-items: center;
+  //grid-template-columns: auto auto;
+  margin-top: 5px;
+}
+.num-address-style{
+    width: 500px;
+}
+
+.title-bloc {
+  color: rgb(0, 0, 0);
+  background: rgba(3, 57, 82, 0.15);
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 1%;
+  text-align: center;
+  font-family: sans-serif;
+  }
+
+  .docs-list-style{
+  height: 177px;
+  }

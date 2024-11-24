@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@frontend/api-interface": ["libs/api-interface/src/index.ts"],
+      "@frontend/core-data": ["libs/core-data/src/index.ts"],
+      "@frontend/core-state": ["libs/core-state/src/index.ts"],
+      "@frontend/material": ["libs/material/src/index.ts"],
+      "@frontend/shared": ["libs/shared/src/index.ts"],
+      "@frontend/config-loader-initializer": ["libs/config-loader-initializer/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

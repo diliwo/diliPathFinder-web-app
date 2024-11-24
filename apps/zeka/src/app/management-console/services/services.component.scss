@@ -1,0 +1,52 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+th.mat-column-actions {
+    width: 150px;
+}
+
+.button-style {
+    margin-top: 5px;
+}
+
+.boutton {
+    background-color: rgb(141, 187, 68, 0.90);
+    //rgba(3, 57, 82, 0.15);
+}
+
+.green-icon {
+    color: rgb(141, 187, 68, 0.90);
+}
+
+.title-bloc {
+  color: rgb(0, 0, 0);
+  background: rgba(3, 57, 82, 0.15);
+  font-size: 20px;
+  padding: 0.5%;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.add-button-div {
+  position: relative;
+  height: 100%;
+}
+.add-button {
+  position: absolute;
+  top: -11px;
+  left: 85%;
+  right: 0;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+
+button:hover {
+  transform: scale(0.9);
+}

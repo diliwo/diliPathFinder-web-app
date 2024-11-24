@@ -1,0 +1,106 @@
+<!-- "startdate","enddate" -->
+<form id="frm" class="form" [formGroup]="frm" novalidate style="transform: none;width: 548px;">
+  <h1 class="title-bloc">{{(!isNew ? 'Modifier la' : 'Inscrire à une') + ' formation'}}</h1>
+  <mat-tab-group mat-stretch-tabs dynamicHeight>
+    <mat-tab label="Infos générales">
+      <div class=>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Ecole</mat-label>
+            <mat-select matInput placeholder="School" [formControl]="ctlSchoolId" required>
+                <input
+                placeholder="Chercher..."
+                matInput
+                type="text"
+                (keyup)="onSearch($event.target.value,'school')"
+                class="search-box"
+                oninput="this.value"
+                #chercher
+                />
+                <mat-option *ngFor="let school of filteredlistOfSchools" [value]="school.schoolId">
+                    {{school.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Formation</mat-label>
+            <mat-select matInput placeholder="Formation" [formControl]="ctlFormationId" required>
+                <input
+                  placeholder="Chercher..."
+                  matInput
+                  type="text"
+                  (keyup)="onSearch($event.target.value,'formation')"
+                  class="search-box"
+                  oninput="this.value"
+                  #chercher
+                />
+                <mat-option *ngFor="let formation of filteredlistOfFormations" [value]="formation.formationId">
+                    {{formation.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Type de formation</mat-label>
+            <mat-select matInput placeholder="Type" [formControl]="ctlTrainingtypeId" required>
+                <mat-option *ngFor="let type of listOftrainingtypes" [value]="type.id">
+                    {{type.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Niveau</mat-label>
+            <mat-select placeholder="Niveau" [formControl]="ctlCourseLevel" required>
+                <mat-option *ngFor="let courseLevel of courseLevels" [value]="courseLevel.id">
+                    {{courseLevel.value}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
+      </mat-tab>
+      <mat-tab label="Infos spécifiques">
+      <div class="form">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Résultat</mat-label>
+          <mat-select placeholder="Type" [formControl]="ctlresultId" required>
+              <mat-option *ngFor="let result of results" [value]="result.id">
+                  {{result.value}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Date de début</mat-label>
+          <input matInput placeholder="Date début"  name="startDate" [formControl]="ctlStartDate" [matDatepicker]="startdatepicker" required>
+          <mat-datepicker-toggle matIconSuffix [for]="startdatepicker"></mat-datepicker-toggle>
+          <mat-datepicker  [dateClass]="" #startdatepicker></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Date de fin</mat-label>
+          <input matInput placeholder="Date fin" #endDateInput="ngForm" [formControl]="ctlEndDate" name="endDate" [matDatepicker]="enddatepicker" required [afterDate]="ctlStartDate.value">
+          <mat-datepicker-toggle matIconSuffix [for]="enddatepicker"></mat-datepicker-toggle>
+          <mat-datepicker [dateClass]="" #enddatepicker></mat-datepicker>
+          <mat-error class="field-error" *ngIf="endDateInput.errors?.afterDate">Doit être postérieure à la date de début !</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Remarques</mat-label>
+        <input matInput placeholder="Remarque" [formControl]="ctlNote">
+    </mat-form-field>
+    </div>
+    </mat-tab>
+    </mat-tab-group>
+        <div class="footer">
+          <button type="reset" mat-button (click)="cancel()">Annuler</button>
+          <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Enregistrer'}}</button>
+        </div>
+</form>
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->
+

@@ -1,0 +1,126 @@
+<!-- "startdate","enddate" -->
+<form id="frm" class="form" *ngIf="childForm" [formGroup]="childForm" novalidate>
+  <div class="objectifs" >
+    <table class="table-style">
+      <tr>
+        <th colspan="2"><u>TITRE DU METIER/FONCTION ({{arrayIndex + 1}})</u></th>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="search-input-style" appearance="fill">
+            <mat-label>Rechercher un métier</mat-label>
+            <mat-chip-grid #chipGrid aria-label="Profession selection">
+              <mat-chip *ngFor="let profession of selectedProfessionName" [selectable]="selectable">
+                  {{profession!}}
+                  <mat-icon matChipRemove (click)="remove(profession)">cancel</mat-icon>
+              </mat-chip>
+            <input matInput formControlName="professionTitle" [matAutocomplete]="auto" #input [matChipInputFor]="chipGrid">
+          </mat-chip-grid>
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of (allProfessions$ | async)?.professions" [value]="option" (click)="onSelectProfessionOne()">
+                    <a>{{option.name}}</a>
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">Ce que je sais (Ce qui est acquis)</th>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoir faire</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="acquiredKnowledge"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoir être</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="acquiredBehaviouralKnowledge"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoirs</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="acquiredKnowHow"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="2">Les compétences et savoirs à développer</th>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoir faire</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="knowledgeToDevelop"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoir être</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="behaviouralKnowledgeToDevelop"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <mat-form-field class="style-form" appearance="fill">
+            <mat-label>Savoirs</mat-label>
+            <textarea
+            matInput
+            rows="2"
+            cols="40"
+            placeholder="..."
+            formControlName="knowHowToDevelop"
+          ></textarea>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<!-- <pre>
+{{frm.value | json }}
+{{frm.invalid | json }}
+{{frm.pristine | json }}
+{{frm.pending | json }}
+</pre> -->
+

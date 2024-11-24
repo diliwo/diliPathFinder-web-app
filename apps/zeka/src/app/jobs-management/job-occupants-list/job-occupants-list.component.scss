@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+
+table.mat-table {
+  border-spacing: 5px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.button-style {
+  margin-top: 6px;
+}
+
+.boutton {
+  background-color: rgb(141, 187, 68, 0.90);
+  //rgba(3, 57, 82, 0.15);
+}
+
+.card-style {
+  padding: 5px 20px 20px 20px!important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+  outline: 0 !important;
+  width: 100% !important;
+  max-height: inherit !important;
+  transition: none !important;
+  box-shadow: none !important;
+  font-family: sans-serif;
+}
+
+.green-icon {
+  color: rgb(141, 187, 68, 0.90);
+}
+.title-bloc {
+color: white;
+background: #4CAF50; /* Green */
+font-size: 20px;
+padding: 1%;
+text-align: center;
+}
