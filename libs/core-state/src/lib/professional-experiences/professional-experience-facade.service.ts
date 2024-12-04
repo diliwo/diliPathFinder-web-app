@@ -23,8 +23,8 @@ export class ProfessionalExperienceFacadeService {
     this.mutations.next(true);
   }
 
-  load(pageNumber: number, pageSize: number, beneficiary: string, filter:string){
-    this.ProfessionalExperiencesService.getAll(pageNumber, pageSize, beneficiary, filter).subscribe(
+  load(pageNumber: number, pageSize: number, client: string, filter:string){
+    this.ProfessionalExperiencesService.getAll(pageNumber, pageSize, client, filter).subscribe(
       (ProfessionnalExperiences:ProfessionnalExperiences) =>{
         console.log(ProfessionnalExperiences);
         if (ProfessionnalExperiences !== undefined && ProfessionnalExperiences !== null) {

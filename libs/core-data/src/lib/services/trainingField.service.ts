@@ -1,6 +1,6 @@
 import { Injectable, Optional, Inject, InjectionToken} from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpResponseBase } from '@angular/common/http';
-import { Formation, Formations, TrainingFields } from '@frontend/api-interface';
+import { Training, Trainings, TrainingFields } from '@frontend/api-interface';
 import { Observable, throwError as _observableThrow, of as _observableOf } from 'rxjs';
 import { map, flatMap, catchError } from 'rxjs/operators';
 import { mergeMap as _observableMergeMap, catchError as _observableCatch } from 'rxjs/operators';

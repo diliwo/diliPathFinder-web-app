@@ -94,33 +94,33 @@ export class MyJobCoachSupportsList implements IMyJobCoachSupportsList {
   }
 }
 export interface IMyJobCoachSupport {
-  beneficiaryId: number;
-  beneficiaryReferenceNumber:string;
-  beneficiaryfullname:string;
-  beneficiaryLastName:string;
-  beneficiaryNiss:string;
-  beneficiaryPhoneNumber:string;
+  clientId: number;
+  clientReferenceNumber:string;
+  clientfullname:string;
+  clientLastName:string;
+  clientNiss:string;
+  clientPhoneNumber:string;
   hasChildren:boolean;
   dateLastStartContract:Date;
   dateLastEndContract:Date;
   workplace:string;
   dateLastQuartelyEvaluation:string;
-  beneficiaryContactLanguage:string;
+  clientContactLanguage:string;
   comment:string;
 }
 export class MyJobCoachSupport implements IMyJobCoachSupport{
-  beneficiaryId: number;
-  beneficiaryReferenceNumber:string;
-  beneficiaryfullname:string;
-  beneficiaryLastName:string;
-  beneficiaryNiss:string;
-  beneficiaryPhoneNumber:string;
+  clientId: number;
+  clientReferenceNumber:string;
+  clientfullname:string;
+  clientLastName:string;
+  clientNiss:string;
+  clientPhoneNumber:string;
   hasChildren:boolean;
   dateLastStartContract:Date;
   dateLastEndContract:Date;
   workplace:string;
   dateLastQuartelyEvaluation:string;
-  beneficiaryContactLanguage:string;
+  clientContactLanguage:string;
   comment:string;
 
   constructor(data?: MyJobCoachSupport) {
@@ -134,18 +134,18 @@ export class MyJobCoachSupport implements IMyJobCoachSupport{
 
   init(data: any) {
     if (data) {
-      this.beneficiaryId= data['beneficiaryId'];
-      this.beneficiaryReferenceNumber= data['beneficiaryReferenceNumber'];
-      this.beneficiaryfullname= data['beneficiaryFullName'];
-      this.beneficiaryLastName= data['beneficiaryLastName'];
-      this.beneficiaryNiss = data['beneficiaryNiss'];
-      this.beneficiaryPhoneNumber = data['beneficiaryPhoneNumber'];
+      this.clientId= data['clientId'];
+      this.clientReferenceNumber= data['clientReferenceNumber'];
+      this.clientfullname= data['clientFullName'];
+      this.clientLastName= data['clientLastName'];
+      this.clientNiss = data['clientNiss'];
+      this.clientPhoneNumber = data['clientPhoneNumber'];
       this.hasChildren = data['hasChildren'];
       this.dateLastStartContract = data['dateLastStartContract'];
       this.dateLastEndContract = data['dateLastEndContract'];
       this.workplace = data['workplace'];
       this.dateLastQuartelyEvaluation = data['dateLastQuartelyEvaluation'];
-      this.beneficiaryContactLanguage = data['beneficiaryContactLanguage'];
+      this.clientContactLanguage = data['clientContactLanguage'];
       this.comment= data['comment'];
     }
   }
@@ -159,11 +159,11 @@ export class MyJobCoachSupport implements IMyJobCoachSupport{
   }
 
   toJSON(data?: any) {
-    data['beneficiaryId'] =this.beneficiaryId;
-    data['beneficiaryReferenceNumber'] = this.beneficiaryReferenceNumber;
-    data['beneficiaryfullname'] = this.beneficiaryfullname;
-    data['beneficiaryLastName'] = this.beneficiaryLastName;
-    data['BeneficiaryNiss'] = this.beneficiaryNiss;
+    data['clientId'] =this.clientId;
+    data['clientReferenceNumber'] = this.clientReferenceNumber;
+    data['clientfullname'] = this.clientfullname;
+    data['clientLastName'] = this.clientLastName;
+    data['clientNiss'] = this.clientNiss;
     return data;
   }
 }
@@ -224,14 +224,14 @@ export class MySupportsList implements IMySupportsList {
   }
 }
 export interface IMySupport {
-  beneficiaryId: number;
-  beneficiaryReferenceNumber:string;
-  beneficiaryfullname:string;
-  beneficiaryLastName:string;
-  beneficiaryNiss:string;
-  beneficiaryPhoneNumber:string;
-  beneficiaryNativeLanguage:string;
-  beneficiaryContactLanguage:string;
+  clientId: number;
+  clientReferenceNumber:string;
+  clientfullname:string;
+  clientLastName:string;
+  clientNiss:string;
+  clientPhoneNumber:string;
+  clientNativeLanguage:string;
+  clientContactLanguage:string;
   lastAction:string;
   hasChildren:boolean;
   projects:string;
@@ -241,14 +241,14 @@ export interface IMySupport {
 }
 
 export class MySupport implements IMySupport{
-  beneficiaryId: number;
-  beneficiaryReferenceNumber:string;
-  beneficiaryfullname:string;
-  beneficiaryLastName:string;
-  beneficiaryNiss:string;
-  beneficiaryPhoneNumber:string;
-  beneficiaryNativeLanguage:string;
-  beneficiaryContactLanguage:string;
+  clientId: number;
+  clientReferenceNumber:string;
+  clientfullname:string;
+  clientLastName:string;
+  clientNiss:string;
+  clientPhoneNumber:string;
+  clientNativeLanguage:string;
+  clientContactLanguage:string;
   lastAction:string;
   hasChildren:boolean;
   projects:string;
@@ -275,14 +275,14 @@ export class MySupport implements IMySupport{
 
   init(data: any) {
     if (data) {
-      this.beneficiaryId= data['beneficiaryId'];
-      this.beneficiaryReferenceNumber= data['beneficiaryReferenceNumber'];
-      this.beneficiaryfullname= data['beneficiaryFullName'];
-      this.beneficiaryLastName= data['beneficiaryLastName'];
-      this.beneficiaryNiss = data['beneficiaryNiss'];
-      this.beneficiaryPhoneNumber = data['beneficiaryPhoneNumber'];
-      this.beneficiaryNativeLanguage = data['beneficiaryNativeLanguage'];
-      this.beneficiaryContactLanguage = data['beneficiaryContactLanguage'];
+      this.clientId= data['clientId'];
+      this.clientReferenceNumber= data['clientReferenceNumber'];
+      this.clientfullname= data['clientFullName'];
+      this.clientLastName= data['clientLastName'];
+      this.clientNiss = data['clientNiss'];
+      this.clientPhoneNumber = data['clientPhoneNumber'];
+      this.clientNativeLanguage = data['clientNativeLanguage'];
+      this.clientContactLanguage = data['clientContactLanguage'];
       this.hasChildren = data['hasChildren'];
       this.lastAction = data['lastAction'];
       this.projects= ConvertProjectsToString(data['projects']);
@@ -293,11 +293,11 @@ export class MySupport implements IMySupport{
   }
 
   toJSON(data?: any) {
-    data['beneficiaryId'] =this.beneficiaryId;
-    data['beneficiaryReferenceNumber'] = this.beneficiaryReferenceNumber;
-    data['beneficiaryfullname'] = this.beneficiaryfullname;
-    data['beneficiaryLastName'] = this.beneficiaryLastName;
-    data['BeneficiaryNiss'] = this.beneficiaryNiss;
+    data['clientId'] =this.clientId;
+    data['clientReferenceNumber'] = this.clientReferenceNumber;
+    data['clientfullname'] = this.clientfullname;
+    data['clientLastName'] = this.clientLastName;
+    data['clientNiss'] = this.clientNiss;
     return data;
   }
 }
@@ -361,18 +361,18 @@ export class IntegrationWorkers implements IIntegrationWorkers {
 }
 
 export interface IIntegrationWorker {
-  beneficiaryId: number;
-  beneficiaryName: string;
-  beneficiaryBirthDate: Date;
-  beneficiaryGender: string;
+  clientId: number;
+  clientName: string;
+  clientBirthDate: Date;
+  clientGender: string;
   benenficiaryAddress: string;
-  beneficiaryNiss: string;
-  beneficiaryReferenceNumber: string;
-  beneficiaryCivilStatus: string;
+  clientNiss: string;
+  clientReferenceNumber: string;
+  clientCivilStatus: string;
   partnerNumber: string;
   partnerName: string;
   partnerPostalCode: string;
-  referentName: string;
+  StaffMemberName: string;
   startContratDate:Date;
   endContratDate?: Date;
   jobReward: string;
@@ -381,18 +381,18 @@ export interface IIntegrationWorker {
 }
 
 export class IntegrationWorker implements IIntegrationWorker{
-  beneficiaryId: number;
-  beneficiaryName: string;
-  beneficiaryBirthDate: Date;
-  beneficiaryGender: string;
+  clientId: number;
+  clientName: string;
+  clientBirthDate: Date;
+  clientGender: string;
   benenficiaryAddress: string;
-  beneficiaryNiss: string;
-  beneficiaryReferenceNumber: string;
-  beneficiaryCivilStatus: string;
+  clientNiss: string;
+  clientReferenceNumber: string;
+  clientCivilStatus: string;
   partnerNumber: string;
   partnerName: string;
   partnerPostalCode: string;
-  referentName: string;
+  StaffMemberName: string;
   startContratDate: Date;
   endContratDate?: Date;
   jobReward: string;
@@ -410,18 +410,18 @@ export class IntegrationWorker implements IIntegrationWorker{
 
   init(data: any) {
     if (data) {
-      this.beneficiaryId= data['beneficiaryId'];
-      this.beneficiaryName= data['beneficiaryName'];
-      this.beneficiaryBirthDate= data['beneficiaryBirthDate'];
-      this.beneficiaryGender= data['beneficiaryGender'];
+      this.clientId= data['clientId'];
+      this.clientName= data['clientName'];
+      this.clientBirthDate= data['clientBirthDate'];
+      this.clientGender= data['clientGender'];
       this.benenficiaryAddress=data['benenficiaryAddress'];
-      this.beneficiaryNiss= data['beneficiaryNiss'];
-      this.beneficiaryReferenceNumber= data['beneficiaryReferenceNumber'];
-      this.beneficiaryCivilStatus= data['beneficiaryCivilStatus'];
+      this.clientNiss= data['clientNiss'];
+      this.clientReferenceNumber= data['clientReferenceNumber'];
+      this.clientCivilStatus= data['clientCivilStatus'];
       this.partnerNumber = data['partnerNumber'];
       this.partnerName = data['partnerName'];
       this.partnerPostalCode = data['partnerPostalCode'];
-      this.referentName = data['referentName'];
+      this.StaffMemberName = data['StaffMemberName'];
       this.startContratDate = data['startContratDate'];
       this.endContratDate = data['endContratDate'];
       this.jobReward = data['jobReward'];
@@ -439,18 +439,18 @@ export class IntegrationWorker implements IIntegrationWorker{
   }
 
   toJSON(data?: any) {
-    data['beneficiaryId'] = this.beneficiaryId;
-    data['beneficiaryName'] = this.beneficiaryName;
-      data['beneficiaryBirthDate'] = this.beneficiaryBirthDate;
-      data['beneficiaryGender'] = this.beneficiaryGender;
+    data['clientId'] = this.clientId;
+    data['clientName'] = this.clientName;
+      data['clientBirthDate'] = this.clientBirthDate;
+      data['clientGender'] = this.clientGender;
       data['benenficiaryAddress'] = this.benenficiaryAddress;
-      data['beneficiaryNiss'] = this.beneficiaryNiss;
-      data['beneficiaryReferenceNumber'] = this.beneficiaryReferenceNumber
-      data['beneficiaryCivilStatus'] = this.beneficiaryCivilStatus
+      data['clientNiss'] = this.clientNiss;
+      data['clientReferenceNumber'] = this.clientReferenceNumber
+      data['clientCivilStatus'] = this.clientCivilStatus
       data['partnerNumber'] = this.partnerNumber;
       data['partnerName'] = this.partnerName;
       data['partnerPostalCode'] = this.partnerPostalCode;
-      data['referentName'] = this.referentName;
+      data['StaffMemberName'] = this.StaffMemberName;
       data['startContratDate'] = this.startContratDate;
       data['endContratDate'] = this.endContratDate;
       data['jobReward'] = this.jobReward;
@@ -482,7 +482,7 @@ export class Home implements IHome {
     if (data) {
       this.quantities.set('emplois', data['numberOfJobs']);
       this.quantities.set('partenaires', data['numberOfPartners']);
-      this.quantities.set('formations', data['numberOfFormations']);
+      this.quantities.set('trainings', data['numberOftrainings']);
       this.quantities.set('insertions', data['numberOfIntegrations']);
       this.quantities.set('beneficiaires', data['numberOfMySupports']);
     }
@@ -611,8 +611,8 @@ export interface IJobOfferDetail {
   vacancyDate?: Date;
   startOccupationDate?: Date;
   endOccupationDate?: Date;
-  beneficiaryId?: number;
-  beneficiaryName?: string;
+  clientId?: number;
+  clientName?: string;
   jobId?: number;
   statusOfJobOffer?: string;
   statusOfJobOfferId?: number;
@@ -670,8 +670,8 @@ export class JobOfferDetail implements IJobOfferDetail {
     data['vacancyDate'] = this.vacancyDate;
     data['startOccupationDate'] = this.startOccupationDate;
     data['endOccupationDate'] = this.endOccupationDate;
-    // data["beneficiaryId"] = this.beneficiaryId;
-    // data["beneficiaryName"] = this.beneficiaryName;
+    // data["clientId"] = this.clientId;
+    // data["clientName"] = this.clientName;
     data['jobId'] = this.jobId;
     data['jobInfo'] = this.jobInfo;
     data['statusOfJobOffer'] = this.statusOfJobOffer;
@@ -756,7 +756,7 @@ export interface IJobDetail {
   jobOffers: JobOfferDetail[];
   nameOfhired: string;
   numOffer: string;
-  candidacies: BeneficiaryLookUp[];
+  candidacies: clientLookUp[];
   hasDocumentAttached: boolean;
   occupiedBy: string;
   occupiedFrom: Date;
@@ -797,7 +797,7 @@ export class JobDetail implements IJobDetail {
   jobOffers: JobOfferDetail[];
   nameOfhired: string;
   numOffer: string;
-  candidacies: BeneficiaryLookUp[];
+  candidacies: clientLookUp[];
   hasDocumentAttached: boolean;
   occupiedBy: string;
   occupiedFrom: Date;
@@ -1032,9 +1032,9 @@ export interface ISupport {
   supportId?: number | undefined;
   startDate: Date;
   endDate?: Date;
-  referentId: number;
-  beneficiaryId: number;
-  referentInfo: string;
+  id: number;
+  clientId: number;
+  StaffMemberInfo: string;
   isActif: boolean;
   note: string;
   reasonOfClosure:string;
@@ -1046,9 +1046,9 @@ export class Support implements ISupport {
   supportId?: number | undefined;
   startDate: Date;
   endDate?: Date;
-  referentId: number;
-  beneficiaryId: number;
-  referentInfo: string;
+  id: number;
+  clientId: number;
+  StaffMemberInfo: string;
   isActif: boolean;
   note: string;
   reasonOfClosure:string;
@@ -1069,9 +1069,9 @@ export class Support implements ISupport {
       this.supportId = data['supportId'];
       this.startDate = data['startDate'];
       this.endDate = data['endDate'];
-      this.referentId = data['referentId'];
-      this.beneficiaryId = data['beneficiaryId'];
-      this.referentInfo = data['referentInfo'];
+      this.id = data['id'];
+      this.clientId = data['clientId'];
+      this.StaffMemberInfo = data['StaffMemberInfo'];
       this.isActif = data['isActif'];
       this.note = data['note'];
       this.hasNote = hasNote(data['hasNote']);
@@ -1090,9 +1090,9 @@ export class Support implements ISupport {
   toJSON(data?: any) {
     data['supportId'] = this.supportId;
     data['startdate'] = this.startDate;
-    data['referentId'] = this.referentId;
+    data['id'] = this.id;
     data['note'] = this.note;
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     // data["hasNote"] = this.hasNote;
     return data;
   }
@@ -1163,9 +1163,9 @@ export interface ISupportDetail {
   supportId?: number | undefined;
   startDate: Date;
   endDate?: Date;
-  referentId: number;
-  beneficiaryId: number;
-  referentInfo: string;
+  id: number;
+  clientId: number;
+  StaffMemberInfo: string;
   isActif: boolean;
   note: string;
   hasNote: string;
@@ -1175,9 +1175,9 @@ export class SupportDetail implements ISupportDetail {
   supportId?: number;
   startDate: Date;
   endDate?: Date;
-  referentId: number;
-  beneficiaryId: number;
-  referentInfo: string;
+  id: number;
+  clientId: number;
+  StaffMemberInfo: string;
   isActif: boolean;
   note: string;
   hasNote: string;
@@ -1196,9 +1196,9 @@ export class SupportDetail implements ISupportDetail {
       this.supportId = data['supportId'];
       this.startDate = data['startDate'];
       this.endDate = data['endDate'];
-      this.referentId = data['referentId'];
-      this.beneficiaryId = data['beneficiaryId'];
-      this.referentInfo = data['referentInfo'];
+      this.id = data['id'];
+      this.clientId = data['clientId'];
+      this.StaffMemberInfo = data['StaffMemberInfo'];
       this.isActif = data['isActif'];
       this.note = data['note'];
       this.hasNote = hasNote(data['hasNote']);
@@ -1216,9 +1216,9 @@ export class SupportDetail implements ISupportDetail {
     data['supportId'] = this.supportId;
     data['startDate'] = this.startDate;
     data['endDate'] = this.endDate;
-    data['referentId'] = this.referentId;
-    data['beneficiaryId'] = this.beneficiaryId;
-    data['referentInfo'] = this.referentInfo;
+    data['id'] = this.id;
+    data['clientId'] = this.clientId;
+    data['StaffMemberInfo'] = this.StaffMemberInfo;
     data['isActif'] = this.isActif;
     data['note'] = this.note;
     //data["hasNote"] = this.hasNote;
@@ -1227,343 +1227,9 @@ export class SupportDetail implements ISupportDetail {
 }
 //----------End Supports
 
-export interface IUpsertReferenceCommand {
-  referentId?: number | undefined;
-  firstname: string;
-  lastname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
-  username:string;
-}
-
-export class UpsertReferenceCommand implements IUpsertReferenceCommand {
-  referentId?: number | undefined;
-  firstname: string;
-  lastname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
-  username:string;
-
-  constructor(data?: UpsertReferenceCommand) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data: any) {
-    if (data) {
-      this.referentId = data['referentId'];
-      this.firstname = data['firstName'];
-      this.lastname = data['lastName'];
-      this.serviceId = data['serviceId'];
-      this.servicename = data['serviceName'];
-      this.serviceAcronymName = data['serviceAcronymName'];
-      this.username = data['userName'];
-    }
-  }
-
-  static fromJS(data: any): UpsertReferenceCommand {
-    data = typeof data === 'object' ? data : {};
-    let result = new UpsertReferenceCommand();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    data['referentId'] = this.referentId;
-    data['firstName'] = this.firstname;
-    data['lastName'] = this.lastname;
-    data['serviceId'] = this.serviceId;
-    data['serviceName'] = this.servicename;
-    data['serviceAcronymName'] = this.serviceAcronymName;
-    data['userName'] = this.username
-    return data;
-  }
-}
-
-export interface IReferentListVm {
-  referents?: Referent[] | undefined;
-  sortOrder: string;
-  pageNumber: number;
-  pageSize: number;
-  totalCount: number;
-}
-
-export class ReferentListVm implements IReferentListVm {
-  referents?: Referent[] | undefined;
-  sortOrder: string;
-  pageNumber: number;
-  pageSize: number;
-  totalCount: number;
-
-  constructor(data?: IReferentListVm) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data?: any) {
-    if (data) {
-      if (Array.isArray(data['items'])) {
-        this.referents = [] as any;
-        for (let item of data['items'])
-          this.referents.push(Referent.fromJS(item));
-      }
-      this.sortOrder = data['sortOrder'];
-      this.pageNumber = data['pageNumber'];
-      this.pageSize = data['pageSize'];
-      this.totalCount = data['totalCount'];
-    }
-  }
-
-  static fromJS(data: any): ReferentListVm {
-    data = typeof data === 'object' ? data : {};
-    let result = new ReferentListVm();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    if (Array.isArray(this.referents)) {
-      data['referents'] = [];
-      for (let item of this.referents) data['referents'].push(item.toJSON());
-    }
-    return data;
-  }
-}
-
-export interface IReferentDetail {
-  referentId?: number | undefined;
-  firstname: string;
-  lastname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
-  username:string;
-}
-
-export class Referent implements IReferentDetail {
-  referentId?: number;
-  firstname: string;
-  lastname: string;
-  fullname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
-  username:string;
-
-  constructor(data?: IReferentDetail) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data: any) {
-    if (data) {
-      this.referentId = data['referentId'];
-      this.firstname = data['firstName'];
-      this.lastname = data['lastName'];
-      this.serviceId = data['serviceId'];
-      this.servicename = data['serviceName'];
-      this.serviceAcronymName = data['serviceAcronymName'];
-      this.username = data['userName'];
-      this.fullname = this.lastname +" "+this.firstname;
-    }
-  }
-
-  static fromJS(data: any): Referent {
-    data = typeof data === 'object' ? data : {};
-    let result = new Referent();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    data['referentId'] = this.referentId;
-    data['firstName'] = this.firstname;
-    data['lastName'] = this.lastname;
-    data['serviceId'] = this.serviceId;
-    data['serviceName'] = this.servicename;
-    data['serviceAcronymName'] = this.serviceAcronymName;
-    data['userName'] = this.username;
-    return data;
-  }
-}
-
-export interface IServiceDetail {
-  serviceId?: number | undefined;
-  name: string;
-  acronym: string;
-  referents?: any[] | undefined;
-}
-
-export interface IUpsertServiceDetailCommand {
-  serviceId?: number | undefined;
-  name: string;
-  acronym: string;
-}
-
-export class UpsertServiceDetailCommand implements IUpsertServiceDetailCommand {
-  serviceId?: number;
-  name: string;
-  acronym: string;
-
-  constructor(data?: IUpsertServiceDetailCommand) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data?: any) {
-    if (data) {
-      this.serviceId = data['serviceId'];
-      this.name = data['name'];
-      this.acronym = data['acronym'];
-    }
-  }
-
-  static fromJS(data: any): UpsertServiceDetailCommand {
-    data = typeof data === 'object' ? data : {};
-    let result = new UpsertServiceDetailCommand();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    data['serviceId'] = this.serviceId;
-    data['name'] = this.name;
-    data['acronym'] = this.acronym;
-    data['serviceId'] = this.serviceId;
-    return data;
-  }
-}
-
-export class ServiceDetail implements IServiceDetail {
-  serviceId?: number;
-  name: string;
-  acronym: string;
-  referents?: any[] | undefined;
-
-  constructor(data?: IServiceDetail) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data?: any) {
-    if (data) {
-      this.serviceId = data['serviceId'];
-      this.name = data['name'];
-      this.acronym = data['acronym'];
-      if (Array.isArray(data['referents'])) {
-        this.referents = [] as any;
-        for (let item of data['referents'])
-          this.referents!.push(Referent.fromJS(item));
-      }
-    }
-  }
-
-  static fromJS(data: any): ServiceDetail {
-    data = typeof data === 'object' ? data : {};
-    let result = new ServiceDetail();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    data['serviceId'] = this.serviceId;
-    data['name'] = this.name;
-    data['acronym'] = this.acronym;
-    data['serviceId'] = this.serviceId;
-    if (Array.isArray(this.referents)) {
-      data['referents'] = [];
-      for (let item of this.referents) data['referents'].push(item.toJSON());
-    }
-    return data;
-  }
-}
-
-export interface IServiceListVm {
-  services: ServiceDetail[] | undefined;
-  sortOrder: string;
-  pageNumber: number;
-  pageSize: number;
-  totalCount: number;
-}
-
-export class ServiceListVm implements IServiceListVm {
-  services: ServiceDetail[] | undefined;
-  sortOrder: string;
-  pageNumber: number;
-  pageSize: number;
-  totalCount: number;
-
-  constructor(data?: IServiceListVm) {
-    if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
-          (<any>this)[property] = (<any>data)[property];
-      }
-    }
-  }
-
-  init(data?: any) {
-    if (data) {
-      if (Array.isArray(data['items'])) {
-        this.services = [] as any;
-        for (let item of data['items'])
-          this.services.push(ServiceDetail.fromJS(item));
-      }
-
-      this.sortOrder = data['sortOrder'];
-      this.pageNumber = data['pageNumber'];
-      this.pageSize = data['pageSize'];
-      this.totalCount = data['totalCount'];
-    }
-  }
-
-  static fromJS(data: any): ServiceListVm {
-    data = typeof data === 'object' ? data : {};
-    let result = new ServiceListVm();
-    result.init(data);
-    return result;
-  }
-
-  toJSON(data?: any) {
-    data = typeof data === 'object' ? data : {};
-    if (Array.isArray(this.services)) {
-      data['services'] = [];
-      for (let item of this.services) data['services'].push(item.toJSON());
-    }
-    return data;
-  }
-}
-
-//----------Start Beneficiary
-export interface IBeneficiaryDetail {
-  beneficiaryId?: string | undefined;
+//----------Start client
+export interface IclientDetail {
+  clientId?: string | undefined;
   referenceNumber: string;
   civilStatus: string;
   firstname: string;
@@ -1577,20 +1243,20 @@ export interface IBeneficiaryDetail {
   niss: string;
   email?: string | undefined;
   phone?: string | undefined;
-  supportReferentName?: string | undefined;
-  supportReferentService?: string | undefined;
+  supportStaffMemberName?: string | undefined;
+  supportStaffMemberService?: string | undefined;
   supportStartDate?: Date | undefined;
   supportEndDate?: Date | undefined;
   supports?: any[] | undefined;
   nativeLanguage?: string | undefined;
   contactLanguage: string;
   address?: string | undefined;
-  lastFormationName: string;
-  lastFormationNote: string;
-  lastFormationResult: number;
-  lastFormationResultName: string;
-  lastFormationStartDate: Date;
-  lastFormationEndDate: Date;
+  lasttrainingName: string;
+  lasttrainingNote: string;
+  lasttrainingResult: number;
+  lasttrainingResultName: string;
+  lasttrainingStartDate: Date;
+  lasttrainingEndDate: Date;
   socialWorkerName?: string | undefined;
   lastJobExperienceCompanyName: string;
   lastJobExperienceContractTypeName: string;
@@ -1601,8 +1267,8 @@ export interface IBeneficiaryDetail {
   lastEvaluationDate:Date;
 }
 
-export class BeneficiaryDetail implements IBeneficiaryDetail {
-  beneficiaryId?: string;
+export class clientDetail implements IclientDetail {
+  clientId?: string;
   referenceNumber: string;
   civilStatus: string;
   firstname: string;
@@ -1617,8 +1283,8 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
   email?: string;
   phone?: string;
   mobilePhone?: string;
-  supportReferentName?: string | undefined;
-  supportReferentService?: string | undefined;
+  supportStaffMemberName?: string | undefined;
+  supportStaffMemberService?: string | undefined;
   supportStartDate?: Date | undefined;
   supportEndDate?: Date | undefined;
   supports?: any[] | undefined;
@@ -1626,12 +1292,12 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
   contactLanguage: string;
   address?: string;
   candidacies?: any[] | undefined;
-  lastFormationName: string;
-  lastFormationNote: string;
-  lastFormationResult: number;
-  lastFormationResultName: string;
-  lastFormationStartDate: Date;
-  lastFormationEndDate: Date;
+  lasttrainingName: string;
+  lasttrainingNote: string;
+  lasttrainingResult: number;
+  lasttrainingResultName: string;
+  lasttrainingStartDate: Date;
+  lasttrainingEndDate: Date;
   socialWorkerName?: string;
   lastJobExperienceCompanyName: string;
   lastJobExperienceContractTypeName: string;
@@ -1642,7 +1308,7 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
   lastEvaluationDate:Date;
   ibisNumber: string;
 
-  constructor(data?: IBeneficiaryDetail) {
+  constructor(data?: IclientDetail) {
     if (data) {
       for (var property in data) {
         if (data.hasOwnProperty(property))
@@ -1653,7 +1319,7 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
 
   init(data?: any) {
     if (data) {
-      this.beneficiaryId = data['beneficiaryId'];
+      this.clientId = data['clientId'];
       this.referenceNumber = data['referenceNumber'];
       this.civilStatus = CivilStatusConvertor(data['civilStatus']);
       this.firstname = data['firstName'];
@@ -1668,24 +1334,24 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
       this.email = data['email'];
       this.phone = data['phone'];
       this.mobilePhone = data['mobilePhone'];
-      this.supportReferentName = data['supportReferentName'];
-      this.supportReferentService = data['supportReferentService'];
+      this.supportStaffMemberName = data['supportStaffMemberName'];
+      this.supportStaffMemberService = data['supportStaffMemberService'];
       this.supportStartDate = data['supportStartDate'];
       this.supportEndDate = data['supportEndDate'];
       this.nativeLanguage = data['nativeLanguage'];
       this.contactLanguage = data['contactLanguage'];
       this.address = data['address'];
       this.candidacies = data['candidacies'];
-      this.lastFormationName = data['lastFormationName']
-        ? data['lastFormationName']
+      this.lasttrainingName = data['lasttrainingName']
+        ? data['lasttrainingName']
         : '-';
-      this.lastFormationNote = data['lastFormationNote'];
-      this.lastFormationResult = data['lastFormationResult'];
-      this.lastFormationResultName = data['lastFormationResult']
-        ? ResultConvertor(data['lastFormationResult'])
+      this.lasttrainingNote = data['lasttrainingNote'];
+      this.lasttrainingResult = data['lasttrainingResult'];
+      this.lasttrainingResultName = data['lasttrainingResult']
+        ? ResultConvertor(data['lasttrainingResult'])
         : '-';
-      this.lastFormationStartDate = data['lastFormationStartDate'];
-      this.lastFormationEndDate = data['lastFormationEndDate'];
+      this.lasttrainingStartDate = data['lasttrainingStartDate'];
+      this.lasttrainingEndDate = data['lasttrainingEndDate'];
       this.socialWorkerName = data['socialWorkerName'];
       this.lastJobExperienceCompanyName = data['lastJobExperienceCompanyName'];
       this.lastJobExperienceContractTypeName = typeOfContractConvertor(data['lastJobExperienceContractTypeName']);
@@ -1704,16 +1370,16 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
     }
   }
 
-  static fromJS(data: any): BeneficiaryDetail {
+  static fromJS(data: any): clientDetail {
     data = typeof data === 'object' ? data : {};
-    let result = new BeneficiaryDetail();
+    let result = new clientDetail();
     result.init(data);
     return result;
   }
 
   toJSON(data?: any) {
     data = typeof data === 'object' ? data : {};
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     data['referenceNumber'] = this.referenceNumber;
     data['civilStatus'] = this.civilStatus;
     data['firstname'] = this.firstname;
@@ -1727,8 +1393,8 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
     data['email'] = this.email;
     data['phone'] = this.phone;
     data['mobilePhone'] = this.mobilePhone;
-    data['supportReferentName'] = this.supportReferentName;
-    data['supportReferentService'] = this.supportReferentService;
+    data['supportStaffMemberName'] = this.supportStaffMemberName;
+    data['supportStaffMemberService'] = this.supportStaffMemberService;
     data['supportStartDate'] = this.supportStartDate;
     data['supportEndDate'] = this.supportEndDate;
     data['nativeLanguage'] = this.nativeLanguage;
@@ -1745,22 +1411,22 @@ export class BeneficiaryDetail implements IBeneficiaryDetail {
   }
 }
 
-export interface IBeneficiaryLookUp {
-  beneficiaryId: string | null;
+export interface IclientLookUp {
+  clientId: string | null;
   referenceNumber: string;
   name: string;
   niss: string;
   socialWorkerName: string;
 }
 
-export class BeneficiaryLookUp implements IBeneficiaryLookUp {
-  beneficiaryId: string;
+export class clientLookUp implements IclientLookUp {
+  clientId: string;
   referenceNumber: string;
   name: string;
   niss: string;
   socialWorkerName: string
 
-  constructor(data?: IBeneficiaryLookUp) {
+  constructor(data?: IclientLookUp) {
     if (data) {
       for (var property in data) {
         if (data.hasOwnProperty(property))
@@ -1771,7 +1437,7 @@ export class BeneficiaryLookUp implements IBeneficiaryLookUp {
 
   init(data: any) {
     if (data) {
-      this.beneficiaryId = data['beneficiaryId'];
+      this.clientId = data['clientId'];
       this.referenceNumber = data['referenceNumber'];
       this.name = data['name'];
       this.niss = data['niss'];
@@ -1779,16 +1445,16 @@ export class BeneficiaryLookUp implements IBeneficiaryLookUp {
     }
   }
 
-  static fromJS(data: any): BeneficiaryLookUp {
+  static fromJS(data: any): clientLookUp {
     data = typeof data === 'object' ? data : {};
-    let result = new BeneficiaryLookUp();
+    let result = new clientLookUp();
     result.init(data);
     return result;
   }
 
   toJSON(data?: any) {
     data = typeof data === 'object' ? data : {};
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     data['referenceNumber'] = this.referenceNumber;
     data['name'] = this.name;
     data['niss'] = this.niss;
@@ -1798,11 +1464,11 @@ export class BeneficiaryLookUp implements IBeneficiaryLookUp {
 }
 
 export interface IBeneficiariesLookUp {
-  beneficiariesLookUp?: BeneficiaryLookUp[] | undefined;
+  beneficiariesLookUp?: clientLookUp[] | undefined;
 }
 
 export class BeneficiariesLookUp implements IBeneficiariesLookUp {
-  beneficiariesLookUp?: BeneficiaryLookUp[] | undefined;
+  beneficiariesLookUp?: clientLookUp[] | undefined;
 
   constructor(data?: IBeneficiariesLookUp) {
     if (data) {
@@ -1818,7 +1484,7 @@ export class BeneficiariesLookUp implements IBeneficiariesLookUp {
       if (Array.isArray(data['beneficiaries'])) {
         this.beneficiariesLookUp = [] as any;
         for (let item of data['beneficiaries'])
-          this.beneficiariesLookUp!.push(BeneficiaryLookUp.fromJS(item));
+          this.beneficiariesLookUp!.push(clientLookUp.fromJS(item));
       }
     }
   }
@@ -1841,7 +1507,7 @@ export class BeneficiariesLookUp implements IBeneficiariesLookUp {
   }
 }
 
-// ---------End Beneficiary
+// ---------End client
 
 // ---- Start Contrat Piis
 
@@ -2129,20 +1795,20 @@ export interface SearchJobFilter {
   isOpen: boolean;
 }
 
-export class LastBenefFormation {
-  // ["formation","result","startdate","enddate"];
-  formation: string;
+export class LastBeneftraining {
+  // ["training","result","startdate","enddate"];
+  training: string;
   result: string;
   startdate: Date;
   enddate: Date;
 
   constructor(
-    formation: string,
+    training: string,
     result: string,
     startdate: Date,
     enddate: Date
   ) {
-    this.formation = formation;
+    this.training = training;
     this.result = result;
     this.startdate = startdate;
     this.enddate;
@@ -2179,7 +1845,7 @@ export interface courseLevel {
   value: string;
 }
 
-export interface FormationResult {
+export interface trainingResult {
   id: number;
   value: string;
 }
@@ -2214,7 +1880,7 @@ function TypeConvertor(Type: number): string {
       result = 'Remise à niveau';
       break;
     case 4:
-      result = 'Formations professionelles';
+      result = 'trainings professionelles';
       break;
     case 5:
       result = 'Apprentissage';
@@ -2489,16 +2155,16 @@ export interface IPaginatedListOfQuarterlyMonitoringDto {
 
 export class QuarterlyMonitoringDto implements IQuarterlyMonitoringDto {
   qMonitoringId?: number;
-  beneficiaryId?: number;
-  beneficiaryName?: string | undefined;
-  beneficiaryLastName?: string | undefined;
-  beneficiaryFirstName?: string | undefined;
-  beneficiaryNiss?: string | undefined;
-  beneficiaryDossier?: string | undefined;
-  referentId?: number;
-  referentName?: string | undefined;
-  referentLastName?: string | undefined;
-  referentFirstName?: string | undefined;
+  clientId?: number;
+  clientName?: string | undefined;
+  clientLastName?: string | undefined;
+  clientFirstName?: string | undefined;
+  clientNiss?: string | undefined;
+  clientDossier?: string | undefined;
+  id?: number;
+  StaffMemberName?: string | undefined;
+  StaffMemberLastName?: string | undefined;
+  StaffMemberFirstName?: string | undefined;
   monitoringActionId?: number;
   monitoringActionLabel?: string | undefined;
   actionDate?: Date;
@@ -2525,16 +2191,16 @@ export class QuarterlyMonitoringDto implements IQuarterlyMonitoringDto {
   init(_data?: any) {
       if (_data) {
           this.qMonitoringId = _data["qMonitoringId"];
-          this.beneficiaryId = _data["beneficiaryId"];
-          this.beneficiaryName = _data["beneficiaryName"];
-          this.beneficiaryLastName = _data["beneficiaryLastName"];
-          this.beneficiaryFirstName = _data["beneficiaryFirstName"];
-          this.beneficiaryNiss = _data["beneficiaryNiss"];
-          this.beneficiaryDossier = _data["beneficiaryDossier"];
-          this.referentId = _data["referentId"];
-          this.referentName = _data["referentName"];
-          this.referentLastName = _data["referentLastName"];
-          this.referentFirstName = _data["referentFirstName"];
+          this.clientId = _data["clientId"];
+          this.clientName = _data["clientName"];
+          this.clientLastName = _data["clientLastName"];
+          this.clientFirstName = _data["clientFirstName"];
+          this.clientNiss = _data["clientNiss"];
+          this.clientDossier = _data["clientDossier"];
+          this.id = _data["id"];
+          this.StaffMemberName = _data["StaffMemberName"];
+          this.StaffMemberLastName = _data["StaffMemberLastName"];
+          this.StaffMemberFirstName = _data["StaffMemberFirstName"];
           this.monitoringActionId = _data["monitoringActionId"];
           this.monitoringActionLabel = _data["monitoringActionLabel"];
           this.actionDate = _data["actionDate"] ? new Date(_data["actionDate"].toString()) : <any>undefined;
@@ -2548,16 +2214,16 @@ export class QuarterlyMonitoringDto implements IQuarterlyMonitoringDto {
   toJSON(data?: any) {
       data = typeof data === 'object' ? data : {};
       data["qMonitoringId"] = this.qMonitoringId;
-      data["beneficiaryId"] = this.beneficiaryId;
-      data["beneficiaryName"] = this.beneficiaryName;
-      data["beneficiaryLastName"] = this.beneficiaryLastName;
-      data["beneficiaryFirstName"] = this.beneficiaryFirstName;
-      data["beneficiaryNiss"] = this.beneficiaryNiss;
-      data["beneficiaryDossier"] = this.beneficiaryDossier;
-      data["referentId"] = this.referentId;
-      data["referentName"] = this.referentName;
-      data["referentLastName"] = this.referentLastName;
-      data["referentFirstName"] = this.referentFirstName;
+      data["clientId"] = this.clientId;
+      data["clientName"] = this.clientName;
+      data["clientLastName"] = this.clientLastName;
+      data["clientFirstName"] = this.clientFirstName;
+      data["clientNiss"] = this.clientNiss;
+      data["clientDossier"] = this.clientDossier;
+      data["id"] = this.id;
+      data["StaffMemberName"] = this.StaffMemberName;
+      data["StaffMemberLastName"] = this.StaffMemberLastName;
+      data["StaffMemberFirstName"] = this.StaffMemberFirstName;
       data["monitoringActionId"] = this.monitoringActionId;
       data["monitoringActionLabel"] = this.monitoringActionLabel;
       data["actionDate"] = this.actionDate ? this.actionDate : <any>undefined;
@@ -2570,16 +2236,16 @@ export class QuarterlyMonitoringDto implements IQuarterlyMonitoringDto {
 
 export interface IQuarterlyMonitoringDto {
   qMonitoringId?: number;
-  beneficiaryId?: number;
-  beneficiaryName?: string | undefined;
-  beneficiaryLastName?: string | undefined;
-  beneficiaryFirstName?: string | undefined;
-  beneficiaryNiss?: string | undefined;
-  beneficiaryDossier?: string | undefined;
-  referentId?: number;
-  referentName?: string | undefined;
-  referentLastName?: string | undefined;
-  referentFirstName?: string | undefined;
+  clientId?: number;
+  clientName?: string | undefined;
+  clientLastName?: string | undefined;
+  clientFirstName?: string | undefined;
+  clientNiss?: string | undefined;
+  clientDossier?: string | undefined;
+  id?: number;
+  StaffMemberName?: string | undefined;
+  StaffMemberLastName?: string | undefined;
+  StaffMemberFirstName?: string | undefined;
   monitoringActionId?: number;
   monitoringActionLabel?: string | undefined;
   actionDate?: Date;
@@ -2589,8 +2255,8 @@ export interface IQuarterlyMonitoringDto {
 }
 
 export class CreateQuarterlyMonitoringCommand implements ICreateQuarterlyMonitoringCommand {
-  beneficiaryId?: number;
-  referentId?: number;
+  clientId?: number;
+  id?: number;
   monitoringActionId?: number;
   actionDate?: Date;
   actionComment?: string | undefined;
@@ -2606,8 +2272,8 @@ export class CreateQuarterlyMonitoringCommand implements ICreateQuarterlyMonitor
 
   init(_data?: any) {
       if (_data) {
-          this.beneficiaryId = _data["beneficiaryId"];
-          this.referentId = _data["referentId"];
+          this.clientId = _data["clientId"];
+          this.id = _data["id"];
           this.monitoringActionId = _data["monitoringActionId"];
           this.actionDate = _data["actionDate"] ? new Date(_data["actionDate"].toString()) : <any>undefined;
           this.actionComment = _data["actionComment"];
@@ -2623,8 +2289,8 @@ export class CreateQuarterlyMonitoringCommand implements ICreateQuarterlyMonitor
 
   toJSON(data?: any) {
       data = typeof data === 'object' ? data : {};
-      data["beneficiaryId"] = this.beneficiaryId;
-      data["referentId"] = this.referentId;
+      data["clientId"] = this.clientId;
+      data["id"] = this.id;
       data["monitoringActionId"] = this.monitoringActionId;
       data["actionDate"] = this.actionDate ? this.actionDate : <any>undefined;
       data["actionComment"] = this.actionComment;
@@ -2633,8 +2299,8 @@ export class CreateQuarterlyMonitoringCommand implements ICreateQuarterlyMonitor
 }
 
 export interface ICreateQuarterlyMonitoringCommand {
-  beneficiaryId?: number;
-  referentId?: number;
+  clientId?: number;
+  id?: number;
   monitoringActionId?: number;
   actionDate?: Date;
   actionComment?: string | undefined;
@@ -2642,8 +2308,8 @@ export interface ICreateQuarterlyMonitoringCommand {
 
 export class UpdateQuarterlyMonitoringCommand implements IUpdateQuarterlyMonitoringCommand {
   qMonitoringId?: number;
-  beneficiaryId?: number;
-  referentId?: number;
+  clientId?: number;
+  id?: number;
   monitoringActionId?: number;
   actionDate?: Date;
   actionComment?: string | undefined;
@@ -2660,8 +2326,8 @@ export class UpdateQuarterlyMonitoringCommand implements IUpdateQuarterlyMonitor
   init(_data?: any) {
       if (_data) {
           this.qMonitoringId = _data["qMonitoringId"];
-          this.beneficiaryId = _data["beneficiaryId"];
-          this.referentId = _data["referentId"];
+          this.clientId = _data["clientId"];
+          this.id = _data["id"];
           this.monitoringActionId = _data["monitoringActionId"];
           this.actionDate = _data["actionDate"] ? new Date(_data["actionDate"].toString()) : <any>undefined;
           this.actionComment = _data["actionComment"];
@@ -2678,8 +2344,8 @@ export class UpdateQuarterlyMonitoringCommand implements IUpdateQuarterlyMonitor
   toJSON(data?: any) {
       data = typeof data === 'object' ? data : {};
       data["qMonitoringId"] = this.qMonitoringId;
-      data["beneficiaryId"] = this.beneficiaryId;
-      data["referentId"] = this.referentId;
+      data["clientId"] = this.clientId;
+      data["id"] = this.id;
       data["monitoringActionId"] = this.monitoringActionId;
       data["actionDate"] = this.actionDate ? this.actionDate : <any>undefined;
       data["actionComment"] = this.actionComment;
@@ -2689,8 +2355,8 @@ export class UpdateQuarterlyMonitoringCommand implements IUpdateQuarterlyMonitor
 
 export interface IUpdateQuarterlyMonitoringCommand {
   qMonitoringId?: number;
-  beneficiaryId?: number;
-  referentId?: number;
+  clientId?: number;
+  id?: number;
   monitoringActionId?: number;
   actionDate?: Date;
   actionComment?: string | undefined;

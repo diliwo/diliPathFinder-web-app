@@ -1,15 +1,6 @@
 {
   "production": false,
   "ApiBaseUrl": "",
-  "ApiSociabiliGatewayUrl": "",
-  "GipsyUrl" : "",
-  "OAuth": {
-    "clientId": "",
-    "loginUrl": "",
-    "issuer": "",
-    "blackListNTLM": ["adfs"],
-    "blackListAnonymous": ["sociabiligw"]
-  },
   "AppVersion":"",
   "ShowVersion": true
 }

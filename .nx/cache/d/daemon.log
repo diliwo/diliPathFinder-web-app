@@ -1,0 +1,50 @@
+[NX Daemon Server] - 2024-12-04T07:00:39.684Z - Started listening on: \\.\pipe\nx\C:\Users\hmbilo\AppData\Local\Temp\4b2ff17692bfa6952eb2\d.sock
+[NX Daemon Server] - 2024-12-04T07:00:39.689Z - [WATCHER]: Subscribed to changes within: d:\WORKSPACES\PRACTICING\github\zeka-web-app (native)
+[NX Daemon Server] - 2024-12-04T07:00:39.692Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-12-04T07:00:39.693Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-12-04T07:00:39.696Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-12-04T07:00:39.697Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-12-04T07:00:39.705Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-12-04T07:00:39.706Z - [REQUEST]: 
+[NX Daemon Server] - 2024-12-04T07:00:39.706Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2024-12-04T07:00:40.604Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-12-04T07:00:40.606Z - Time taken for 'total for creating and serializing project graph' 906.7178999999999ms
+[NX Daemon Server] - 2024-12-04T07:00:40.606Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-12-04T07:00:40.606Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 907. Response time: 2.
+[NX Daemon Server] - 2024-12-04T07:00:40.609Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-12-04T07:00:40.609Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-12-04T07:00:40.609Z - Handled REQUEST_FILE_DATA. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-12-04T07:00:40.610Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-12-04T07:05:30.344Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-12-04T07:05:30.347Z - [WATCHER]: Stopping the watcher for d:\WORKSPACES\PRACTICING\github\zeka-web-app (sources)
+[NX Daemon Server] - 2024-12-04T07:05:30.347Z - [WATCHER]: Stopping the watcher for d:\WORKSPACES\PRACTICING\github\zeka-web-app (outputs)
+[NX Daemon Server] - 2024-12-04T07:05:30.347Z - Server stopped because: "Lock file changed"
+[NX Daemon Server] - 2024-12-04T07:05:31.720Z - Started listening on: \\.\pipe\nx\C:\Users\hmbilo\AppData\Local\Temp\4b2ff17692bfa6952eb2\d.sock
+[NX Daemon Server] - 2024-12-04T07:05:31.725Z - [WATCHER]: Subscribed to changes within: d:\WORKSPACES\PRACTICING\github\zeka-web-app (native)
+[NX Daemon Server] - 2024-12-04T07:05:31.727Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-12-04T07:05:31.728Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-12-04T07:05:31.730Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-12-04T07:05:31.731Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-12-04T07:05:31.733Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-12-04T07:05:31.733Z - [REQUEST]: 
+[NX Daemon Server] - 2024-12-04T07:05:31.733Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2024-12-04T07:05:31.926Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-12-04T07:05:31.929Z - Time taken for 'total for creating and serializing project graph' 194.82170000000002ms
+[NX Daemon Server] - 2024-12-04T07:05:31.929Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-12-04T07:05:31.929Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 195. Response time: 3.
+[NX Daemon Server] - 2024-12-04T07:05:31.939Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2024-12-04T07:05:31.939Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2024-12-04T07:05:31.939Z - Handled REQUEST_FILE_DATA. Handling time: 2. Response time: 0.
+[NX Daemon Server] - 2024-12-04T07:05:31.941Z - Closed a connection. Number of open connections: 0

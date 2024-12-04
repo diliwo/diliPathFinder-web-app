@@ -2,7 +2,6 @@ import { Injectable, Inject } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CpasAuthService } from '@cpas/authentication-ng-lib';
 import { User } from '@frontend/api-interface';
 
 const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
@@ -13,7 +12,6 @@ const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 export class UserService {
   constructor(
     @Inject('API_URL') private apiUrl: string,
-    private authService: CpasAuthService,
     private http: HttpClient
   ) { }
 
@@ -81,7 +79,7 @@ export class UserService {
     const url =
       this.apiUrl +
       'user/login?userName=' +
-      encodeURIComponent(this.authService.getCurrentUserUniqueName());
+      encodeURIComponent(localStorage.getItem('currentUser')!);
 
     return this.http
       .get<User>(url, { headers })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToolbarComponent } from "./toolbar/toolbar.component";
 
 @Component({
   selector: 'frontend-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'APP.i';
+  title = 'ZeKa';
 }

@@ -22,7 +22,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatTableDataSourcePaginator, MatTableModule } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
@@ -118,7 +118,7 @@ export class MatTableState {
   }
 
   // see: https://github.com/angular/components/issues/8417#issuecomment-453253715
-  private setPage(paginator: MatTableDataSourcePaginator, pageIndex: number, pageSize: number) {
+  private setPage(paginator: MatPaginator, pageIndex: number, pageSize: number) {
       paginator.pageIndex = pageIndex;
       paginator.pageSize = pageSize;
       //todo: utile ?
@@ -129,3 +129,4 @@ export class MatTableState {
       dataSource.filter = filter;
   }
 }
+

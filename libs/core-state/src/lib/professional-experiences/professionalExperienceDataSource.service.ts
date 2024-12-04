@@ -26,9 +26,9 @@ export class ProfessionalExperienceDataSourceService implements DataSource<Profe
     this.loadingSubject.complete();
   }
 
-  load(pageNumber: number = 1, pageSize: number = 3, beneficiary:string,filter:string= ''){
+  load(pageNumber: number = 1, pageSize: number = 3, client:string,filter:string= ''){
     this.loadingSubject.next(true);
-    this.professionalExperiencesService.getAll(pageNumber, pageSize,beneficiary, filter).subscribe(
+    this.professionalExperiencesService.getAll(pageNumber, pageSize,client, filter).subscribe(
       (ProfessionnalExperiences: ProfessionnalExperiences) =>{
         if (ProfessionnalExperiences !== undefined && ProfessionnalExperiences !== null) {
           this.professionnalExperienceSubject.next(ProfessionnalExperiences.professionnalExperiences)

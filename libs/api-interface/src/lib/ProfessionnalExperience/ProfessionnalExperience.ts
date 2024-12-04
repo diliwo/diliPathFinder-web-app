@@ -11,7 +11,7 @@ interface IProfessionnalExperience {
   natureOfContractId: number;
   natureOfContractName: string;
   reasonEndOfContract: string;
-  beneficiaryId: number;
+  clientId: number;
 }
 
 export class ProfessionnalExperience implements IProfessionnalExperience {
@@ -26,7 +26,7 @@ export class ProfessionnalExperience implements IProfessionnalExperience {
   natureOfContractId: number;
   natureOfContractName: string;
   reasonEndOfContract: string;
-  beneficiaryId: number;
+  clientId: number;
 
   static fromJS(data: any): ProfessionnalExperience {
     data = typeof data === 'object' ? data : {};
@@ -58,7 +58,7 @@ export class ProfessionnalExperience implements IProfessionnalExperience {
       this.natureOfContractId = data['natureOfContractId'];
       this.natureOfContractName = data['natureOfContractName'];
       this.reasonEndOfContract = data['reasonEndOfContract'];
-      this.beneficiaryId = data['beneficiaryId'];
+      this.clientId = data['clientId'];
     }
   }
 
@@ -74,7 +74,7 @@ export class ProfessionnalExperience implements IProfessionnalExperience {
     data['natureOfContractId'] = this.natureOfContractId;
     data['natureOfContractName'] = this.natureOfContractName;
     data['reasonEndOfContract'] = this.reasonEndOfContract;
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     return data;
   }
 }

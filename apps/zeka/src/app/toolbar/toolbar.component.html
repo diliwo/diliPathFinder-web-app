@@ -1,40 +1,46 @@
 <mat-toolbar>
-    <span class="appName"><a [routerLink]="['home']">APP.i</a></span>
-    <!-- <div *ngIf="(allBeneficiariesLookUp$ | async) as beneficiaries"> -->
-    <frontend-search-beneficiary></frontend-search-beneficiary>
-    <!-- </div> -->
-    <button (click)="import()" mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon" matTooltip="Importer un bénéficiaire">
-      <mat-icon>person_add</mat-icon>
-    </button>
-    <button mat-button (click)="openAboutBox()">
-        <mat-icon style="font-size: 20px; color: rgb(76,175,80)">info</mat-icon>
-    </button>
-    <span class="example-spacer"></span>
+  <span class="appName"><a [routerLink]="['home']">ZeKa</a></span>
+  <!-- <div *ngIf="(allBeneficiariesLookUp$ | async) as beneficiaries"> -->
+  <!-- </div> -->
+  <button  mat-icon-button class="example-icon favorite-icon "
+    aria-label="Example icon-button with heart icon" matTooltip="Importer un bénéficiaire">
+    <mat-icon>person_add</mat-icon>
+  </button>
+  <button mat-button>
+    <mat-icon style="font-size: 20px; color: rgb(76,175,80)">info</mat-icon>
+  </button>
 
-    <ng-container *ngIf="{
+  <span class="example-spacer"></span>
+
+  <ng-container *ngIf="{
       pos : position$ | async,
       benefId : benefId$ |  async
     } as apiData;">
-        <button *ngIf="apiData.pos" [routerLink]="['/beneficiary',apiData.pos]" mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon" matTooltip=" Dernier bénéficiaire">
+    <button *ngIf="apiData.pos" [routerLink]="['/beneficiary',apiData.pos]" mat-icon-button
+      class="example-icon favorite-icon " aria-label="Example icon-button with heart icon"
+      matTooltip=" Dernier bénéficiaire">
       <mat-icon>sensor_occupied</mat-icon>
-      </button>
-        <button (click)="openMySupports()" mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon" matTooltip="Mes suivis">
-        <mat-icon>folder_shared</mat-icon>
-        </button>
-        <button [routerLink]="['/jobs']" mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon" matTooltip="gestion des emplois">
-        <mat-icon>business</mat-icon>
-        </button>
-    </ng-container>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon "
+      aria-label="Example icon-button with heart icon" matTooltip="Mes suivis">
+      <mat-icon>folder_shared</mat-icon>
+    </button>
+    <button [routerLink]="['/jobs']" mat-icon-button class="example-icon favorite-icon "
+      aria-label="Example icon-button with heart icon" matTooltip="gestion des emplois">
+      <mat-icon>business</mat-icon>
+    </button>
+  </ng-container>
 
-    <ng-container *ngIf="perm.isUserAppiAdmin()">
-      <span class="separator">|</span>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-    </ng-container>
-    <mat-menu #menu="matMenu">
-        <button [routerLink]="['/admin']" mat-icon-button class="example-icon favorite-icon " aria-label="Example icon-button with heart icon" matTooltip="Console admin">
-        <mat-icon>settings</mat-icon>
-        </button>
-    </mat-menu>
+  <ng-container>
+    <span class="separator">|</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </ng-container>
+  <mat-menu #menu="matMenu">
+    <button [routerLink]="['/admin']" mat-icon-button class="example-icon favorite-icon "
+      aria-label="Example icon-button with heart icon" matTooltip="Console admin">
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-menu>
 </mat-toolbar>

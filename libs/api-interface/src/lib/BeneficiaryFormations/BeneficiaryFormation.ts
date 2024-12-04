@@ -1,15 +1,15 @@
 import { LevelConvertor, ResultConvertor } from "../api-interface.module";
 
-export interface IBeneficiaryFormation {
+export interface Iclienttraining {
   schoolRegistrationId?: number;
-  formationId: number;
-  formationName: string;
+  trainingId: number;
+  trainingName: string;
   schoolId: number;
   schoolName: string;
   trainingTypeId: number;
   trainingTypeName: string;
-  beneficiaryId: number;
-  beneficiaryName: string;
+  clientId: number;
+  clientName: string;
   startDate: Date;
   enDate: Date;
   courseLevel: number;
@@ -19,16 +19,16 @@ export interface IBeneficiaryFormation {
   note?: string;
 }
 
-export class BeneficiaryFormation implements IBeneficiaryFormation {
+export class clienttraining implements Iclienttraining {
   schoolRegistrationId?: number;
-  formationId: number;
-  formationName: string;
+  trainingId: number;
+  trainingName: string;
   schoolId: number;
   schoolName: string;
   trainingTypeId: number;
   trainingTypeName: string;
-  beneficiaryId: number;
-  beneficiaryName: string;
+  clientId: number;
+  clientName: string;
   startDate: Date;
   enDate: Date;
   courseLevel: number;
@@ -37,9 +37,9 @@ export class BeneficiaryFormation implements IBeneficiaryFormation {
   schoolResultName: string;
   note?: string;
 
-  static fromJS(data: any): BeneficiaryFormation {
+  static fromJS(data: any): clienttraining {
     data = typeof data === 'object' ? data : {};
-    let result = new BeneficiaryFormation();
+    let result = new clienttraining();
     result.init(data);
 
     return result;
@@ -47,8 +47,8 @@ export class BeneficiaryFormation implements IBeneficiaryFormation {
 
   toJSON(data?: any) {
     data['schoolRegistrationId'] = this.schoolRegistrationId;
-    data['formationId'] = this.formationId;
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['trainingId'] = this.trainingId;
+    data['clientId'] = this.clientId;
     data['startDate'] = this.startDate;
     data['enDate'] = this.enDate;
     data['courseLevel'] = this.courseLevel;
@@ -57,7 +57,7 @@ export class BeneficiaryFormation implements IBeneficiaryFormation {
     return data;
   }
 
-  constructor(data?: BeneficiaryFormation) {
+  constructor(data?: clienttraining) {
     if (data) {
       for (var property in data) {
         if (data.hasOwnProperty(property))
@@ -69,14 +69,14 @@ export class BeneficiaryFormation implements IBeneficiaryFormation {
   init(data: any) {
     if (data) {
       this.schoolRegistrationId = data['schoolRegistrationId'];
-      this.formationId = data['formationId'];
-      this.formationName = data['formationName'];
+      this.trainingId = data['trainingId'];
+      this.trainingName = data['trainingName'];
       this.schoolId= data['schoolId'];
       this.schoolName= data['schoolName'];
       this.trainingTypeId= data['trainingTypeId'];
       this.trainingTypeName= data['trainingTypeName'];
-      this.beneficiaryId = data['beneficiaryId'];
-      this.beneficiaryName = data['beneficiaryName'];
+      this.clientId = data['clientId'];
+      this.clientName = data['clientName'];
       this.startDate = data['startDate'];
       this.enDate = data['enDate'];
       this.courseLevel = data['courseLevel'];

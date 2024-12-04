@@ -20,11 +20,11 @@ export class CandidaciesService {
     this.baseUrl = baseUrl ? baseUrl : "";
   }
 
-  getAll(pageNumber: number, pageSize: number, beneficiaryId:number): Observable<CandidaciesListVm> {
+  getAll(pageNumber: number, pageSize: number, clientId:number): Observable<CandidaciesListVm> {
     let httpParams = new HttpParams();
       httpParams = httpParams.append('pageNumber', pageNumber.toString())
       httpParams = httpParams.append('pageSize', pageSize.toString())
-      httpParams = httpParams.append('beneficiaryId', beneficiaryId.toString())
+      httpParams = httpParams.append('clientId', clientId.toString())
 
     let url_ = this.baseUrl + "/api/candidacies";
     url_ = url_.replace(/[?&]$/, "");

@@ -22,8 +22,8 @@ export class SupportDataSource implements DataSource<Support> {
     //this.loadingSubject.complete();
   }
 
-  load(pageNumber: number = 1, pageSize: number = 3, beneficiaryId: number){
-    this.supportsService.getAll(pageNumber, pageSize, beneficiaryId).subscribe(
+  load(pageNumber: number = 1, pageSize: number = 3, clientId: number){
+    this.supportsService.getAll(pageNumber, pageSize, clientId).subscribe(
       (supportListVm:SupportListVm) =>{
         console.log(supportListVm);
         if (supportListVm !== undefined && supportListVm !== null) {

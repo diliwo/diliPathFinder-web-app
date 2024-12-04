@@ -1,6 +1,6 @@
 import { Injectable, Optional, Inject, InjectionToken} from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpResponseBase } from '@angular/common/http';
-import { Referent, ReferentListVm, School, SchoolListVm } from '@frontend/api-interface';
+import { StaffMember, StaffMembers, School, SchoolListVm } from '@frontend/api-interface';
 import { Observable, throwError as _observableThrow, of as _observableOf } from 'rxjs';
 import { map, flatMap, catchError } from 'rxjs/operators';
 import { mergeMap as _observableMergeMap, catchError as _observableCatch } from 'rxjs/operators';

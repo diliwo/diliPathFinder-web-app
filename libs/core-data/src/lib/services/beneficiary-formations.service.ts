@@ -1,6 +1,6 @@
 import { Injectable, Optional, Inject, InjectionToken} from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpResponse, HttpResponseBase } from '@angular/common/http';
-import { BeneficiaryFormation, BeneficiaryFormationListVm } from '@frontend/api-interface';
+import { clienttraining, clienttrainingListVm } from '@frontend/api-interface';
 import { Observable, throwError as _observableThrow, of as _observableOf } from 'rxjs';
 import { map, flatMap, catchError } from 'rxjs/operators';
 import { mergeMap as _observableMergeMap, catchError as _observableCatch } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { API_BASE_URL } from '@frontend/core-data';
 @Injectable({
   providedIn: 'root'
 })
-export class BeneficiaryFormationsService {
+export class clienttrainingsService {
   private http: HttpClient;
   private baseUrl: string;
   protected jsonParseReviver:
@@ -25,11 +25,11 @@ export class BeneficiaryFormationsService {
     this.baseUrl = baseUrl ? baseUrl : '';
   }
 
-  getAll(pageNumber: number, pageSize: number, beneficiaryId:number,filter:string="", orderBy:string=""): Observable<BeneficiaryFormationListVm> {
+  getAll(pageNumber: number, pageSize: number, clientId:number,filter:string="", orderBy:string=""): Observable<clienttrainingListVm> {
     let httpParams = new HttpParams();
     httpParams = httpParams.append('pageNumber', pageNumber.toString())
     httpParams = httpParams.append('pageSize', pageSize.toString())
-    httpParams = httpParams.append('beneficiaryId', beneficiaryId.toString())
+    httpParams = httpParams.append('clientId', clientId.toString())
 
     if(filter){
       httpParams = httpParams.append('filter', filter)
@@ -64,15 +64,15 @@ export class BeneficiaryFormationsService {
             try {
               return this.processGetAll(<any>response_);
             } catch (e) {
-              return <Observable<BeneficiaryFormationListVm>>(<any>_observableCatch(e));
+              return <Observable<clienttrainingListVm>>(<any>_observableCatch(e));
             }
           } else
-            return <Observable<BeneficiaryFormationListVm>>(<any>_observableCatch(response_));
+            return <Observable<clienttrainingListVm>>(<any>_observableCatch(response_));
         })
       );
   }
 
-  protected processGetAll(response: HttpResponseBase): Observable<BeneficiaryFormationListVm> {
+  protected processGetAll(response: HttpResponseBase): Observable<clienttrainingListVm> {
     const status = response.status;
 
     const responseBlob =
@@ -96,7 +96,7 @@ export class BeneficiaryFormationsService {
             _responseText === ''
               ? null
               : JSON.parse(_responseText, this.jsonParseReviver);
-          result200 = BeneficiaryFormationListVm.fromJS(resultData200);
+          result200 = clienttrainingListVm.fromJS(resultData200);
           return _observableOf(result200);
         })
       );
@@ -112,10 +112,10 @@ export class BeneficiaryFormationsService {
         })
       );
     }
-    return _observableOf<BeneficiaryFormationListVm>(<any>null);
+    return _observableOf<clienttrainingListVm>(<any>null);
   }
 
-  insert(command: BeneficiaryFormation): Observable<void> {
+  insert(command: clienttraining): Observable<void> {
     let url_ = this.baseUrl + "/api/schoolregistrations";
     url_ = url_.replace(/[?&]$/, "");
 
@@ -165,7 +165,7 @@ protected processInsert(response: HttpResponseBase): Observable<void> {
   }
 }
 
-update(command: BeneficiaryFormation): Observable<void> {
+update(command: clienttraining): Observable<void> {
   let url_ = this.baseUrl + "/api/schoolregistrations";
   url_ = url_.replace(/[?&]$/, "");
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TrainingType, Formations, MessageType, TrainingFields, TrainingTypes } from '@frontend/api-interface';
+import { TrainingType, Trainings, MessageType, TrainingFields, TrainingTypes } from '@frontend/api-interface';
 import {TrainingFieldService, TrainingTypeService } from '@frontend/core-data';
 import { Subject } from 'rxjs';
 import { NotificationService } from '../notification/notification.service';
@@ -40,7 +40,7 @@ export class TrainingTypesFacadeService {
       {
         this.reset()
         this.notificationService.showMessage(
-          'Type de formation actualisé !',
+          'training typa updated !',
           MessageType.Information
         );
       });
@@ -49,7 +49,7 @@ export class TrainingTypesFacadeService {
       {
         this.reset()
         this.notificationService.showMessage(
-          'Type de formation ajouté !',
+          'Training type added !',
           MessageType.Information
         );
       });

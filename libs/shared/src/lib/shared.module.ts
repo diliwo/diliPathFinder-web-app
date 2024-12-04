@@ -1,13 +1,14 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { TextEllipsisComponent } from './text-ellipsis/text-ellipsis.component';
 import { UniversalTooltipComponent } from './universal-tooltip/universal-tooltip.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { AfterDateDirective } from './dates/after-date.directive';
 import { ValidatorBaseDirective } from './dates/validator-base.directive';
 import { PartnerDetailsBoxComponent } from './partner-details-box/partner-details-box.component';
 import { MaterialModule } from '@frontend/material';
+import { TextEllipsisComponent } from './text-ellipsis/text-ellipsis.component';
+import { ConfirmationBoxComponent } from './confirmation-box/confirmation-box.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule,FormsModule,ReactiveFormsModule],
@@ -20,7 +21,8 @@ import { MaterialModule } from '@frontend/material';
     CapitalizePipe,
     AfterDateDirective,
     ValidatorBaseDirective,
-    PartnerDetailsBoxComponent
+    PartnerDetailsBoxComponent,
+    ConfirmationBoxComponent
   ],
   declarations: [
     TextEllipsisComponent,
@@ -28,7 +30,8 @@ import { MaterialModule } from '@frontend/material';
     CapitalizePipe,
     AfterDateDirective,
     ValidatorBaseDirective,
-    PartnerDetailsBoxComponent
+    PartnerDetailsBoxComponent,
+    ConfirmationBoxComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

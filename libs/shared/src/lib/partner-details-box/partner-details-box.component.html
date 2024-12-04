@@ -108,7 +108,7 @@
           >
             <mat-option
               *ngFor="let refJobCoach of listRefJobCoach"
-              [value]="refJobCoach.referentId"
+              [value]="refJobCoach.id"
             >
               {{ refJobCoach.lastname | uppercase }} {{ refJobCoach.firstname }} ({{refJobCoach.serviceAcronymName}})
             </mat-option>

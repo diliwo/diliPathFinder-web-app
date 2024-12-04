@@ -59,7 +59,7 @@ export class PartnerDetailsBoxComponent {
 
   constructor(
     public dialogRef: MatDialogRef<PartnerDetailsBoxComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { partner: Partner; isNew: boolean, listReferents: any[], readonly: boolean},
+    @Inject(MAT_DIALOG_DATA) public data: { partner: Partner; isNew: boolean, listStaffMembers: any[], readonly: boolean},
     private fb: FormBuilder
     ){
       this.ctlPartnerNumber = this.fb.control('', []);
@@ -130,7 +130,7 @@ export class PartnerDetailsBoxComponent {
 
       this.phones = _.cloneDeep(data.partner.phones);
 
-      this.listRefJobCoach = data.listReferents;
+      this.listRefJobCoach = data.listStaffMembers;
 
       if(this.readonly){
         this.frm.disable();

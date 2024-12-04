@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Formation, Formations, MessageType, TrainingFields } from '@frontend/api-interface';
-import { FormationsService, TrainingFieldService } from '@frontend/core-data';
+import { Training, Trainings, MessageType, TrainingFields } from '@frontend/api-interface';
+import { TrainingsService, TrainingFieldService } from '@frontend/core-data';
 import { Subject } from 'rxjs';
 import { NotificationService } from '../notification/notification.service';
 

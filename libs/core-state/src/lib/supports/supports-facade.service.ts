@@ -10,18 +10,18 @@ import { NotificationService } from '../notification/notification.service';
   providedIn: 'root'
 })
 export class SupportsFacadeService {
-  private allSupportsByBeneficiary = new Subject<SupportListVm>();
+  private allSupportsByclient = new Subject<SupportListVm>();
   private reasons = new Subject<ReasonOfClosures>();
-  private supportsByReferents = new Subject<MySupportsList>();
+  private supportsByStaffMembers = new Subject<MySupportsList>();
   private supportsByJobCoach = new Subject<MyJobCoachSupportsList>();
   private allSupports = new Subject<SupportListVm>();
 
   private mutations = new Subject();
   public supportsState = new MatTableState('startdate', 'asc', 5);
 
-  allSupportsByBeneficiary$ = this.allSupportsByBeneficiary.asObservable();
+  allSupportsByclient$ = this.allSupportsByclient.asObservable();
   reasons$ = this.reasons.asObservable();
-  supportsByReferents$ = this.supportsByReferents.asObservable();
+  supportsByStaffMembers$ = this.supportsByStaffMembers.asObservable();
   supportsByJobCoach$ = this.supportsByJobCoach.asObservable();
   allSupports$ = this.allSupports.asObservable();
 
@@ -35,12 +35,12 @@ export class SupportsFacadeService {
     this.mutations.next(true);
   }
 
-    load(pageNumber: number, pageSize: number, beneficiaryId: number){
+    load(pageNumber: number, pageSize: number, clientId: number){
       this.supportsService
-      .getAll(pageNumber, pageSize, beneficiaryId)
+      .getAll(pageNumber, pageSize, clientId)
       .subscribe((supportListVm: SupportListVm) => {
         console.log(supportListVm);
-        this.allSupportsByBeneficiary.next(supportListVm)
+        this.allSupportsByclient.next(supportListVm)
       }
 
     );
@@ -51,7 +51,7 @@ export class SupportsFacadeService {
     .getMySupports(pageNumber, pageSize, filter)
     .subscribe((mySupportsList: MySupportsList) => {
       console.log(mySupportsList);
-      this.supportsByReferents.next(mySupportsList)
+      this.supportsByStaffMembers.next(mySupportsList)
     }
 
   );

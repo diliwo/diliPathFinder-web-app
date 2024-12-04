@@ -19,14 +19,7 @@ import { tap } from "rxjs";
 export const AppConfigs = {
   production: false,
   Env: '',
-  ApiBaseUrl: '',
-  ApiSociabiliGatewayUrl: '',
-  GipsyUrl : '',
-  OAuth: {
-    clientId: '',
-    loginUrl: '',
-    issuer: ''
-  }
+  ApiBaseUrl: ''
 };
 
 @Injectable({
@@ -49,11 +42,6 @@ export class ConfigService {
           if(this.config !== null || this.config !== undefined){
             console.log('Config loaded');
             AppConfigs.ApiBaseUrl = this.config.ApiBaseUrl;
-            AppConfigs.ApiSociabiliGatewayUrl = this.config.ApiSociabiliGatewayUrl;
-            AppConfigs.GipsyUrl = this.config.GipsyUrl;
-            AppConfigs.OAuth.clientId = this.config.OAuth.clientId;
-            AppConfigs.OAuth.loginUrl = this.config.OAuth.loginUrl;
-            AppConfigs.OAuth.issuer = this.config.OAuth.issuer;
             AppConfigs.production = this.config.production;
           }
 

@@ -12,7 +12,7 @@ export class PartnersFacadeService {
 
   private allPartnersListVm = new Subject<PartnersListVm>();
   private partnersSelection = new Subject<PartnerSelections>();
-  private selectedBeneficiary = new Subject<Partner>();
+  private selectedclient = new Subject<Partner>();
   private mutations = new Subject();
 
   public partnersListState = new MatTableState('name', 'asc', 5);
@@ -27,7 +27,7 @@ export class PartnersFacadeService {
     private notificationService: NotificationService
     ) { }
 
-  loadPartners(pageNumber: number, pageSize: number, filter:string="", orderBy:string=""){
+  load(pageNumber: number, pageSize: number, filter:string="", orderBy:string=""){
       this.partnersService
       .allPartners(pageNumber, pageSize, filter, orderBy)
       .subscribe((partnersListVm: PartnersListVm) => {
@@ -84,7 +84,7 @@ export class PartnersFacadeService {
 
   delete(id : number){
     this.partnersService.delete(id).subscribe((_) => this.reset());
-    //this.referentService.delete(id).subscribe((_) => this.reset());
+    //this.StaffMemberService.delete(id).subscribe((_) => this.reset());
   }
 
   reset() {

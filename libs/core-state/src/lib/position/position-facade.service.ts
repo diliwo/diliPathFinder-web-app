@@ -19,7 +19,7 @@ export class PositionFacadeService {
     }, 0);
   }
 
-  getBeneficiaryId(id:number){
+  getclientId(id:number){
     setTimeout(() => {
       this.benefId.next(id);
     }, 0);

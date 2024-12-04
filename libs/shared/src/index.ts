@@ -8,4 +8,3 @@ export { UniversalTooltipComponent } from './lib/universal-tooltip/universal-too
 export { AfterDateDirective } from './lib/dates/after-date.directive';
 export { ValidatorBaseDirective } from './lib/dates/validator-base.directive';
 export { PartnerDetailsBoxComponent } from './lib/partner-details-box/partner-details-box.component';
-export * as permissions from './lib/permissions/userAdmin';

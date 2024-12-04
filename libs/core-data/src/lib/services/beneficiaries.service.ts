@@ -8,8 +8,8 @@ import {
   HttpResponseBase,
 } from '@angular/common/http';
 import {
-  BeneficiaryDetail,
-  BeneficiaryLookUp,
+  clientDetail,
+  clientLookUp,
   BeneficiariesLookUp,
 } from '@frontend/api-interface';
 import {
@@ -129,7 +129,7 @@ export class BeneficiariesService implements IBeneficiariesService {
     return _observableOf<BeneficiariesLookUp>(<any>null);
   }
 
-  getBeneficiaryByNiss(niss: string): Observable<BeneficiaryDetail> {
+  getclientByNiss(niss: string): Observable<clientDetail> {
     let url_ = this.baseUrl + '/api/beneficiaries/{niss}';
     if (niss === undefined || niss === null)
       throw new Error("The parameter 'niss' must be defined.");
@@ -157,10 +157,10 @@ export class BeneficiariesService implements IBeneficiariesService {
             try {
               return this.processGet(<any>response_);
             } catch (e) {
-              return <Observable<BeneficiaryDetail>>(<any>_observableThrow(e));
+              return <Observable<clientDetail>>(<any>_observableThrow(e));
             }
           } else
-            return <Observable<BeneficiaryDetail>>(
+            return <Observable<clientDetail>>(
               (<any>_observableThrow(response_))
             );
         })
@@ -169,7 +169,7 @@ export class BeneficiariesService implements IBeneficiariesService {
 
   protected processGet(
     response: HttpResponseBase
-  ): Observable<BeneficiaryDetail> {
+  ): Observable<clientDetail> {
     const status = response.status;
     const responseBlob =
       response instanceof HttpResponse
@@ -192,7 +192,7 @@ export class BeneficiariesService implements IBeneficiariesService {
             _responseText === ''
               ? null
               : JSON.parse(_responseText, this.jsonParseReviver);
-          result200 = BeneficiaryDetail.fromJS(resultData200);
+          result200 = clientDetail.fromJS(resultData200);
           return _observableOf(result200);
         })
       );
@@ -226,7 +226,7 @@ export class BeneficiariesService implements IBeneficiariesService {
         })
       );
     }
-    return _observableOf<BeneficiaryDetail>(<any>null);
+    return _observableOf<clientDetail>(<any>null);
   }
 
   import(niss: string): Observable<number> {
@@ -390,7 +390,7 @@ export class BeneficiariesService implements IBeneficiariesService {
   }
 
 
-  getBeneficiaryBySearch(text : string): Observable<BeneficiariesLookUp> {
+  getclientBySearch(text : string): Observable<BeneficiariesLookUp> {
     let url_ = this.baseUrl + '/api/beneficiaries/searchtext/{text}';
     url_ = url_.replace('{text}', encodeURIComponent('' + text));
     url_ = url_.replace(/[?&]$/, '');
@@ -406,14 +406,14 @@ export class BeneficiariesService implements IBeneficiariesService {
       .request('get', url_, options_)
       .pipe(
         _observableMergeMap((response_: any) => {
-          return this.processGetBeneficiaryBySearch(response_);
+          return this.processGetclientBySearch(response_);
         })
       )
       .pipe(
         _observableCatch((response_: any) => {
           if (response_ instanceof HttpResponseBase) {
             try {
-              return this.processGetBeneficiaryBySearch(<any>response_);
+              return this.processGetclientBySearch(<any>response_);
             } catch (e) {
               return <Observable<BeneficiariesLookUp>>(
                 (<any>_observableThrow(e))
@@ -427,7 +427,7 @@ export class BeneficiariesService implements IBeneficiariesService {
       );
   }
 
-  protected processGetBeneficiaryBySearch(
+  protected processGetclientBySearch(
     response: HttpResponseBase
   ): Observable<BeneficiariesLookUp> {
     const status = response.status;

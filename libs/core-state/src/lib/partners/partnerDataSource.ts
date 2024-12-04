@@ -24,7 +24,7 @@ export class PartnerDataSource implements DataSource<Partner> {
     this.loadingSubject.complete();
   }
 
-  loadPartners(pageNumber: number = 1, pageSize: number = 3, filter:string= '', orderBy:string=""){
+  load(pageNumber: number = 1, pageSize: number = 3, filter:string= '', orderBy:string=""){
     this.loadingSubject.next(true);
     this.partnersService.allPartners(pageNumber, pageSize, filter, orderBy).subscribe(
       (PartnersListVm:PartnersListVm) => {

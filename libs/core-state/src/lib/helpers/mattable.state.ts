@@ -1,4 +1,4 @@
-import { MatTableDataSource, MatTableDataSourcePaginator } from "@angular/material/table";
+import { MatTableDataSource } from "@angular/material/table";
 import { PageEvent, MatPaginator } from "@angular/material/paginator";
 import { MatSort, MatSortHeader } from "@angular/material/sort";
 
@@ -44,7 +44,7 @@ export class MatTableState {
     }
 
     // see: https://github.com/angular/components/issues/8417#issuecomment-453253715
-    private setPage(paginator: MatTableDataSourcePaginator, pageIndex: number, pageSize: number) {
+    private setPage(paginator: MatPaginator, pageIndex: number, pageSize: number) {
         paginator.pageIndex = pageIndex;
         paginator.pageSize = pageSize;
     }

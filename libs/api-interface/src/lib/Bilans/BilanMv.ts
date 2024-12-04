@@ -60,7 +60,7 @@ export class BilanListVm implements IBilanListVm {
 export class Bilan implements IBilan {
   bilanId?: number;
   isFinalized: boolean;
-  beneficiaryId: number;
+  clientId: number;
   userName: string;
   creationDate: Date;
   personalSituationFamily: string;
@@ -68,13 +68,13 @@ export class Bilan implements IBilan {
   personalSituationHealth: string;
   personalSituationFinancialSituation: string;
   personalSituationAdministrativeStatus: string;
-  languageFormationNote: string;
-  formationDifficulty: string;
-  formationOpinion: string;
-  formationFacilitiesAndStrengths: string;
-  formationPersonalImprovments: string;
-  formationConsultantNote: string;
-  formationConsultantLanguageLearningNote: string;
+  languagetrainingNote: string;
+  trainingDifficulty: string;
+  trainingOpinion: string;
+  trainingFacilitiesAndStrengths: string;
+  trainingPersonalImprovments: string;
+  trainingConsultantNote: string;
+  trainingConsultantLanguageLearningNote: string;
   professionalExperienceProblemEncountered: string;
   professionalExperienceWhatsRewarding: string;
   professionalExperienceKnowledge: string;
@@ -110,7 +110,7 @@ export class Bilan implements IBilan {
     if (data) {
       this.bilanId = data['bilanId'];
       this.isFinalized = data['isFinalized'];
-      this.beneficiaryId = data['beneficiaryId'];
+      this.clientId = data['clientId'];
       this.userName = data['userName'];
       this.creationDate = data['creationDate'];
       this.personalSituationFamily = data['personalSituationFamily'];
@@ -118,13 +118,13 @@ export class Bilan implements IBilan {
       this.personalSituationHealth = data['personalSituationHealth'];
       this.personalSituationFinancialSituation = data['personalSituationFinancialSituation'];
       this.personalSituationAdministrativeStatus = data['personalSituationAdministrativeStatus'];
-      this.languageFormationNote = data['languageFormationNote'];
-      this.formationDifficulty = data['formationDifficulty'];
-      this.formationOpinion = data['formationOpinion'];
-      this.formationFacilitiesAndStrengths = data['formationFacilitiesAndStrengths'];
-      this.formationPersonalImprovments = data['formationPersonalImprovments'];
-      this.formationConsultantNote = data['formationConsultantNote'];
-      this.formationConsultantLanguageLearningNote = data['formationConsultantLanguageLearningNote'];
+      this.languagetrainingNote = data['languagetrainingNote'];
+      this.trainingDifficulty = data['trainingDifficulty'];
+      this.trainingOpinion = data['trainingOpinion'];
+      this.trainingFacilitiesAndStrengths = data['trainingFacilitiesAndStrengths'];
+      this.trainingPersonalImprovments = data['trainingPersonalImprovments'];
+      this.trainingConsultantNote = data['trainingConsultantNote'];
+      this.trainingConsultantLanguageLearningNote = data['trainingConsultantLanguageLearningNote'];
       this.professionalExperienceProblemEncountered = data['professionalExperienceProblemEncountered'];
       this.professionalExperienceWhatsRewarding = data['professionalExperienceWhatsRewarding'];
       this.professionalExperienceKnowledge = data['professionalExperienceKnowledge'];
@@ -160,7 +160,7 @@ export class Bilan implements IBilan {
   toJSON(data?: any) {
     data['bilanId'] = this.bilanId;
     data['isFinalized'] = this.isFinalized;
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     data['userName'] = this.userName;
     data['creationDate'] = this.creationDate;
     data['personalSituationFamily'] = this.personalSituationFamily;
@@ -168,13 +168,13 @@ export class Bilan implements IBilan {
     data['personalSituationHealth'] = this.personalSituationHealth;
     data['personalSituationAdministrativeStatus'] = this.personalSituationFinancialSituation;
     data['personalSituationAdministrativeStatus'] = this.personalSituationAdministrativeStatus;
-    data['languageFormationNote'] = this.languageFormationNote;
-    data['formationDifficulty'] = this.formationDifficulty;
-    data['formationOpinion'] = this.formationOpinion;
-    data['formationFacilitiesAndStrengths'] = this.formationFacilitiesAndStrengths;
-    data['formationPersonalImprovments'] = this.formationPersonalImprovments;
-    data['formationConsultantNote'] = this.formationConsultantNote;
-    data['formationConsultantLanguageLearningNote'] = this.formationConsultantLanguageLearningNote;
+    data['languagetrainingNote'] = this.languagetrainingNote;
+    data['trainingDifficulty'] = this.trainingDifficulty;
+    data['trainingOpinion'] = this.trainingOpinion;
+    data['trainingFacilitiesAndStrengths'] = this.trainingFacilitiesAndStrengths;
+    data['trainingPersonalImprovments'] = this.trainingPersonalImprovments;
+    data['trainingConsultantNote'] = this.trainingConsultantNote;
+    data['trainingConsultantLanguageLearningNote'] = this.trainingConsultantLanguageLearningNote;
     data['professionalExperienceProblemEncountered'] = this.professionalExperienceProblemEncountered;
     data['professionalExperienceWhatsRewarding'] = this.professionalExperienceWhatsRewarding;
     data['professionalExperienceKnowledge'] = this.professionalExperienceKnowledge;
@@ -202,7 +202,7 @@ export class Bilan implements IBilan {
 interface IBilan {
   bilanId?: number;
   isFinalized: boolean;
-  beneficiaryId: number;
+  clientId: number;
   userName: string;
   creationDate: Date;
   personalSituationFamily: string;
@@ -210,13 +210,13 @@ interface IBilan {
   personalSituationHealth: string;
   personalSituationFinancialSituation: string;
   personalSituationAdministrativeStatus: string;
-  languageFormationNote: string;
-  formationDifficulty: string;
-  formationOpinion: string;
-  formationFacilitiesAndStrengths: string;
-  formationPersonalImprovments: string;
-  formationConsultantNote: string;
-  formationConsultantLanguageLearningNote:string;
+  languagetrainingNote: string;
+  trainingDifficulty: string;
+  trainingOpinion: string;
+  trainingFacilitiesAndStrengths: string;
+  trainingPersonalImprovments: string;
+  trainingConsultantNote: string;
+  trainingConsultantLanguageLearningNote:string;
   professionalExperienceProblemEncountered: string;
   professionalExperienceWhatsRewarding: string;
   professionalExperienceKnowledge: string;

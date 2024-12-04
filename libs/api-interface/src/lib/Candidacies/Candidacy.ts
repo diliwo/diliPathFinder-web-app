@@ -5,7 +5,7 @@ import { EmploymentStatusHistory } from "./EmploymentStatusHistory";
 export interface ICandidacyDetail {
   candidacyId: number;
   jobOfferId: number;
-  beneficiaryId: number;
+  clientId: number;
   jobOfferInfo: string;
   isHired?: boolean;
   applicationDate: Date;
@@ -18,7 +18,7 @@ export interface ICandidacyDetail {
 export class Candidacy implements ICandidacyDetail {
   candidacyId: number;
   jobOfferId: number;
-  beneficiaryId: number;
+  clientId: number;
   jobOfferInfo: string;
   isHired?: boolean;
   applicationDate: Date;
@@ -53,7 +53,7 @@ export class Candidacy implements ICandidacyDetail {
     if (data) {
       this.candidacyId = data['candidacyId'];
       this.jobOfferId = data['jobOfferId'];
-      this.beneficiaryId = data['beneficiaryId'];
+      this.clientId = data['clientId'];
       this.jobOfferInfo = data['jobOfferInfo'];
       this.isHired = data['isHired'];
       this.applicationDate = data['applicationDate'];
@@ -71,7 +71,7 @@ export class Candidacy implements ICandidacyDetail {
   toJSON(data?: any) {
     data['candidacyId'] = this.candidacyId;
     data['jobOfferId'] = this.jobOfferId;
-    data['beneficiaryId'] = this.beneficiaryId;
+    data['clientId'] = this.clientId;
     data['jobOfferInfo'] = this.jobOfferInfo;
     data['isHired'] = this.isHired;
     data['applicationDate'] = this.applicationDate;

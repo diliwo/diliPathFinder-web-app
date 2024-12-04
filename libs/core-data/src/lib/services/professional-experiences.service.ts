@@ -25,13 +25,13 @@ export class ProfessionalExperiencesService {
     this.baseUrl = baseUrl ? baseUrl : '';
   }
 
-  getAll(pageNumber: number, pageSize: number, beneficiaryId:string, filter:string= ''): Observable<ProfessionnalExperiences> {
+  getAll(pageNumber: number, pageSize: number, clientId:string, filter:string= ''): Observable<ProfessionnalExperiences> {
     let httpParams = new HttpParams();
     httpParams = httpParams.append('pageNumber', pageNumber.toString())
     httpParams = httpParams.append('pageSize', pageSize.toString())
 
-    if(beneficiaryId){
-      httpParams = httpParams.append('beneficiaryId', beneficiaryId)
+    if(clientId){
+      httpParams = httpParams.append('clientId', clientId)
     }
 
     if(filter){

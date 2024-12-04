@@ -1,8 +1,0 @@
-<div class="filter-style" *ngIf="jobs">
-  <button (click)="createPartner()" matTooltip="Creer un nouveau poste" mat-raised-button class="button">+</button>
-  <mat-form-field class="w-100 bg-white" appearance="outline">
-    <mat-label>Chercher un poste ou un partenaire</mat-label>
-    <input type="text" matInput [formControl]="myControl">
-</mat-form-field>
-<mat-slide-toggle [formControl]="toogleFilterControl" class="toggle-style">Offres ouvertes</mat-slide-toggle>
-</div>

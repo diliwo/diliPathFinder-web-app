@@ -1,30 +1,30 @@
-import { BeneficiaryFormation } from "./BeneficiaryFormation";
+import { clienttraining } from "./clienttraining";
 
-// -- Beneficiary-Formation
-export interface IBeneficiaryFormationListVm {
-  registrations?: BeneficiaryFormation[] | undefined;
+// -- client-training
+export interface IclienttrainingListVm {
+  registrations?: clienttraining[] | undefined;
   sortOrder: string;
   pageNumber: number;
   pageSize: number;
   totalCount: number;
 }
 
-export class BeneficiaryFormationListVm implements IBeneficiaryFormationListVm {
-  registrations?: BeneficiaryFormation[] | undefined;
+export class clienttrainingListVm implements IclienttrainingListVm {
+  registrations?: clienttraining[] | undefined;
   sortOrder: string;
   pageNumber: number;
   pageSize: number;
   totalCount: number;
 
-  static fromJS(data: any): BeneficiaryFormationListVm {
+  static fromJS(data: any): clienttrainingListVm {
     data = typeof data === 'object' ? data : {};
-    let result = new BeneficiaryFormationListVm();
+    let result = new clienttrainingListVm();
     result.init(data);
     return result;
   }
 
 
-  constructor(data?: BeneficiaryFormationListVm) {
+  constructor(data?: clienttrainingListVm) {
     if (data) {
       for (var property in data) {
         if (data.hasOwnProperty(property))
@@ -38,7 +38,7 @@ export class BeneficiaryFormationListVm implements IBeneficiaryFormationListVm {
       if (Array.isArray(data['items'])) {
         this.registrations = [] as any;
         for (let item of data['items'])
-          this.registrations.push(BeneficiaryFormation.fromJS(item));
+          this.registrations.push(clienttraining.fromJS(item));
       }
 
       this.sortOrder = data['sortOrder'];

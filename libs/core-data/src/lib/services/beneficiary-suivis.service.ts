@@ -30,7 +30,7 @@ import * as servicesLib from './share';
 @Injectable({
   providedIn: 'root',
 })
-export class BeneficiarySuivisService  {
+export class clientSuivisService  {
   private http: HttpClient;
   private baseUrl: string;
   protected jsonParseReviver:
@@ -357,18 +357,18 @@ export class BeneficiarySuivisService  {
     return _observableOf<number>(<any>null);
   }
 
-  getAllByBeneficiaryId(
-    beneficiaryId: number | undefined,
+  getAllByclientId(
+    clientId: number | undefined,
     filter: string | null | undefined,
     withDeleted: boolean | undefined,
     pageNumber: number | undefined,
     pageSize: number | undefined
   ): Observable<PaginatedListOfQuarterlyMonitoringDto> {
-    let url_ = this.baseUrl + '/api/QuarterlyMonitoring/beneficiary?';
-    if (beneficiaryId === null)
-      throw new Error("The parameter 'beneficiaryId' cannot be null.");
-    else if (beneficiaryId !== undefined)
-      url_ += 'BeneficiaryId=' + encodeURIComponent('' + beneficiaryId) + '&';
+    let url_ = this.baseUrl + '/api/QuarterlyMonitoring/client?';
+    if (clientId === null)
+      throw new Error("The parameter 'clientId' cannot be null.");
+    else if (clientId !== undefined)
+      url_ += 'clientId=' + encodeURIComponent('' + clientId) + '&';
     if (filter !== undefined && filter !== null)
       url_ += 'Filter=' + encodeURIComponent('' + filter) + '&';
     if (withDeleted === null)
@@ -397,14 +397,14 @@ export class BeneficiarySuivisService  {
       .request('get', url_, options_)
       .pipe(
         _observableMergeMap((response_: any) => {
-          return this.processGetAllByBeneficiaryId(response_);
+          return this.processGetAllByclientId(response_);
         })
       )
       .pipe(
         _observableCatch((response_: any) => {
           if (response_ instanceof HttpResponseBase) {
             try {
-              return this.processGetAllByBeneficiaryId(<any>response_);
+              return this.processGetAllByclientId(<any>response_);
             } catch (e) {
               return <Observable<PaginatedListOfQuarterlyMonitoringDto>>(
                 (<any>_observableThrow(e))
@@ -418,7 +418,7 @@ export class BeneficiarySuivisService  {
       );
   }
 
-  protected processGetAllByBeneficiaryId(
+  protected processGetAllByclientId(
     response: HttpResponseBase
   ): Observable<PaginatedListOfQuarterlyMonitoringDto> {
     const status = response.status;
@@ -482,18 +482,18 @@ export class BeneficiarySuivisService  {
     return _observableOf<PaginatedListOfQuarterlyMonitoringDto>(<any>null);
   }
 
-  getAllByReferentId(
-    referentId: number | undefined,
+  getAllByStaffMemberId(
+    id: number | undefined,
     filter: string | null | undefined,
     withDeleted: boolean | undefined,
     pageNumber: number | undefined,
     pageSize: number | undefined
   ): Observable<PaginatedListOfQuarterlyMonitoringDto> {
-    let url_ = this.baseUrl + '/api/QuarterlyMonitoring/referent?';
-    if (referentId === null)
-      throw new Error("The parameter 'referentId' cannot be null.");
-    else if (referentId !== undefined)
-      url_ += 'ReferentId=' + encodeURIComponent('' + referentId) + '&';
+    let url_ = this.baseUrl + '/api/QuarterlyMonitoring/StaffMember?';
+    if (id === null)
+      throw new Error("The parameter 'id' cannot be null.");
+    else if (id !== undefined)
+      url_ += 'id=' + encodeURIComponent('' + id) + '&';
     if (filter !== undefined && filter !== null)
       url_ += 'Filter=' + encodeURIComponent('' + filter) + '&';
     if (withDeleted === null)
@@ -522,14 +522,14 @@ export class BeneficiarySuivisService  {
       .request('get', url_, options_)
       .pipe(
         _observableMergeMap((response_: any) => {
-          return this.processGetAllByReferentId(response_);
+          return this.processGetAllByStaffMemberId(response_);
         })
       )
       .pipe(
         _observableCatch((response_: any) => {
           if (response_ instanceof HttpResponseBase) {
             try {
-              return this.processGetAllByReferentId(<any>response_);
+              return this.processGetAllByStaffMemberId(<any>response_);
             } catch (e) {
               return <Observable<PaginatedListOfQuarterlyMonitoringDto>>(
                 (<any>_observableThrow(e))
@@ -543,7 +543,7 @@ export class BeneficiarySuivisService  {
       );
   }
 
-  protected processGetAllByReferentId(
+  protected processGetAllByStaffMemberId(
     response: HttpResponseBase
   ): Observable<PaginatedListOfQuarterlyMonitoringDto> {
     const status = response.status;

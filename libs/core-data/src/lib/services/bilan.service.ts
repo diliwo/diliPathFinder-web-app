@@ -42,13 +42,13 @@ export class BilanService {
   getAll(
     pageNumber: number,
     pageSize: number,
-    beneficiaryId: number,
+    clientId: number,
     filter: string = '',
   ): Observable<BilanMv.BilanListVm> {
     let httpParams = new HttpParams();
     httpParams = httpParams.append('pageNumber', pageNumber.toString());
     httpParams = httpParams.append('pageSize', pageSize.toString());
-    httpParams = httpParams.append('beneficiaryId', beneficiaryId.toString());
+    httpParams = httpParams.append('clientId', clientId.toString());
 
     if (filter) {
       httpParams = httpParams.append('filter', filter);

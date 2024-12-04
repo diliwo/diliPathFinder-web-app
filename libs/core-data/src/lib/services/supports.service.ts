@@ -21,11 +21,11 @@ export class SupportsService {
       this.baseUrl = baseUrl ? baseUrl : "";
     }
 
-    getAll(pageNumber: number, pageSize: number, beneficiaryId:number): Observable<SupportListVm> {
+    getAll(pageNumber: number, pageSize: number, clientId:number): Observable<SupportListVm> {
       let httpParams = new HttpParams();
       httpParams = httpParams.append('pageNumber', pageNumber.toString())
       httpParams = httpParams.append('pageSize', pageSize.toString())
-      httpParams = httpParams.append('beneficiaryId', beneficiaryId.toString())
+      httpParams = httpParams.append('clientId', clientId.toString())
 
       let url_ = this.baseUrl + "/api/supports";
       url_ = url_.replace(/[?&]$/, '');
@@ -40,11 +40,11 @@ export class SupportsService {
       };
 
       return this.http.request("get", url_, options_).pipe(_observableMergeMap((response_ : any) => {
-          return this.processGetAllByBeneficiary(response_);
+          return this.processGetAllByclient(response_);
       })).pipe(_observableCatch((response_: any) => {
           if (response_ instanceof HttpResponseBase) {
               try {
-                  return this.processGetAllByBeneficiary(<any>response_);
+                  return this.processGetAllByclient(<any>response_);
               } catch (e) {
                   return <Observable<SupportListVm>><any>_observableThrow(e);
               }
@@ -53,7 +53,7 @@ export class SupportsService {
       }));
   }
 
-    protected processGetAllByBeneficiary(response: HttpResponseBase): Observable<SupportListVm> {
+    protected processGetAllByclient(response: HttpResponseBase): Observable<SupportListVm> {
       const status = response.status;
 
       const responseBlob =
