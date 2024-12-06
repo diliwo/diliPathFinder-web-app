@@ -40,7 +40,7 @@ export class ProfessionsService {
             httpParams = httpParams.append('orderBy', orderBy);
         }
 
-        let url_ = this.baseUrl + "/api/professions";
+        let url_ = this.baseUrl + "/professions";
         url_ = url_.replace(/[?&]$/, "");
         console.log(url_);
         let options_: any = {
@@ -90,7 +90,7 @@ export class ProfessionsService {
     }
 
     upsert(command: ProfessionMv.Profession): Observable<void> {
-        let url_ = this.baseUrl + "/api/professions";
+        let url_ = this.baseUrl + "/professions";
         url_ = url_.replace(/[?&]$/, "");
 
         const content_ = JSON.stringify(command);
@@ -143,7 +143,7 @@ export class ProfessionsService {
 
     delete(id: number): Observable<void> {
         console.log(id);
-        let url_ = this.baseUrl + "/api/professions/{id}";
+        let url_ = this.baseUrl + "/professions/{id}";
         if (id === undefined || id === null)
             throw new Error("The parameter 'id' must be defined.");
         url_ = url_.replace("{id}", encodeURIComponent("" + id));
