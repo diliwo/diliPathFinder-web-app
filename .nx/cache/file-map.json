@@ -82,127 +82,127 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tools/generators/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1914616369387315427"
-      },
-      {
         "file": ".editorconfig",
         "hash": "11532813898455409296"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7922954044214489651"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "233833317249464641"
-      },
-      {
-        "file": "angular.json",
-        "hash": "246286368784002039"
       },
       {
         "file": "docker-compose.prod.yml",
         "hash": "2950820792799485121"
       },
       {
-        "file": ".prettierignore",
-        "hash": "1324685984948235314"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "10517892632782819869"
-      },
-      {
-        "file": "jest.config.js",
-        "hash": "12466618850903731978"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "18280692227545641734"
-      },
-      {
-        "file": ".dockerignore",
-        "hash": "15412806613453801337"
-      },
-      {
-        "file": "docker-compose.pht.yml",
-        "hash": "9830917868919529140"
-      },
-      {
-        "file": "config/nginx.conf",
-        "hash": "9810783947974661015"
-      },
-      {
-        "file": "angular.dockerfile",
-        "hash": "15036553006114624416"
-      },
-      {
-        "file": "config/entryPoint.sh",
-        "hash": "713644450940578242"
+        "file": ".vscode/settings.json",
+        "hash": "6093451115457943712"
       },
       {
         "file": ".eslintrc.json",
         "hash": "6076523549091800167"
       },
       {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "11810713488198132402"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6040700554504661696"
-      },
-      {
-        "file": "libs/.gitkeep",
+        "file": "apps/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
-        "file": "decorate-angular-cli.js",
-        "hash": "5797619241828206054"
-      },
-      {
-        "file": "azure-pipelines.yml",
-        "hash": "2350315700589714317"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "14231632535905330688"
-      },
-      {
-        "file": "package.json",
-        "hash": "3040773649775353900"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "7330501279360470719"
-      },
-      {
-        "file": "README.md",
-        "hash": "15265449088905795621"
+        "file": "jest.preset.js",
+        "hash": "7922954044214489651"
       },
       {
         "file": ".vscode/launch.json",
         "hash": "14231182958454569115"
       },
       {
-        "file": "docker-compose.yml",
-        "hash": "14313302419479125001"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "6093451115457943712"
-      },
-      {
         "file": "angular.prod.dockerfile",
         "hash": "5633761594037843846"
       },
       {
-        "file": "apps/.gitkeep",
+        "file": ".prettierignore",
+        "hash": "1324685984948235314"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7330501279360470719"
+      },
+      {
+        "file": "angular.json",
+        "hash": "246286368784002039"
+      },
+      {
+        "file": "angular.dockerfile",
+        "hash": "15036553006114624416"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "5797619241828206054"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "233833317249464641"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "12466618850903731978"
+      },
+      {
+        "file": "package.json",
+        "hash": "3040773649775353900"
+      },
+      {
+        "file": "azure-pipelines.yml",
+        "hash": "2350315700589714317"
+      },
+      {
+        "file": "config/nginx.conf",
+        "hash": "9810783947974661015"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "15412806613453801337"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "14231632535905330688"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "10517892632782819869"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1914616369387315427"
+      },
+      {
+        "file": "docker-compose.pht.yml",
+        "hash": "9830917868919529140"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6040700554504661696"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "11810713488198132402"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "14313302419479125001"
+      },
+      {
+        "file": "config/entryPoint.sh",
+        "hash": "713644450940578242"
+      },
+      {
+        "file": "README.md",
+        "hash": "15265449088905795621"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "18280692227545641734"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
         "hash": "3244421341483603138"
       }
     ],
@@ -420,13 +420,12 @@
         },
         {
           "file": "libs/core-data/src/lib/services/schools.service.ts",
-          "hash": "16252322156150209719",
+          "hash": "14732897123891665005",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
+            "npm:rxjs"
           ]
         },
         {
@@ -637,7 +636,7 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.html",
-          "hash": "6057022212741109402"
+          "hash": "4728463056738675718"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.scss",
@@ -780,11 +779,11 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.html",
-          "hash": "7174349527740701597"
+          "hash": "4080730980729211953"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.scss",
-          "hash": "18295347526941106750"
+          "hash": "13160505597614462001"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.spec.ts",
