@@ -41,25 +41,24 @@ export class AdminAreaManagementComponent implements OnInit {
 
   ngOnInit(): void {
     this.reset();
-    this.partnersFacadeService.mutations$.subscribe((_) => {
-      this.reset();
-    });
+    // this.partnersFacadeService.mutations$.subscribe((_) => {
+    //   this.reset();
+    // });
       this.teamsFacadeService.mutations$.subscribe((_) => {
         this.reset();
       });
-    this.staffMembersFacadeService.mutations$.subscribe((_) => {
-      this.reset();
-    });
+    // this.staffMembersFacadeService.mutations$.subscribe((_) => {
+    //   this.reset();
+    // });
   }
 
   reset() {
-    this.loadServices();
-    this.load();
-    this.load();
+    this.loadTeams();
+    // this.load();
   }
 
-  loadServices() {
-    this.teamsFacadeService.loadServices();
+  loadTeams() {
+    this.teamsFacadeService.loadTeams();
   }
 
   load() {

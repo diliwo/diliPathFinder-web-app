@@ -2,12 +2,9 @@
   <span class="appName"><a [routerLink]="['home']">ZeKa</a></span>
   <!-- <div *ngIf="(allBeneficiariesLookUp$ | async) as beneficiaries"> -->
   <!-- </div> -->
-  <button  mat-icon-button class="example-icon favorite-icon "
-    aria-label="Example icon-button with heart icon" matTooltip="Importer un bénéficiaire">
-    <mat-icon>person_add</mat-icon>
-  </button>
+
   <button mat-button>
-    <mat-icon style="font-size: 20px; color: rgb(76,175,80)">info</mat-icon>
+    <mat-icon style="color: rgb(179, 214, 243)">info</mat-icon>
   </button>
 
   <span class="example-spacer"></span>
@@ -21,26 +18,30 @@
       matTooltip=" Dernier bénéficiaire">
       <mat-icon>sensor_occupied</mat-icon>
     </button>
+    <button  mat-icon-button class="example-icon favorite-icon "
+    aria-label="Example icon-button with heart icon" matTooltip="Add new client">
+    <mat-icon>person_add</mat-icon>
+  </button>
     <button mat-icon-button class="example-icon favorite-icon "
-      aria-label="Example icon-button with heart icon" matTooltip="Mes suivis">
+      aria-label="Example icon-button with heart icon" matTooltip="My tracks">
       <mat-icon>folder_shared</mat-icon>
     </button>
     <button [routerLink]="['/jobs']" mat-icon-button class="example-icon favorite-icon "
-      aria-label="Example icon-button with heart icon" matTooltip="gestion des emplois">
+      aria-label="Example icon-button with heart icon" matTooltip="Jobs management">
       <mat-icon>business</mat-icon>
     </button>
   </ng-container>
 
   <ng-container>
     <span class="separator">|</span>
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" matTooltip="Admin area">
       <mat-icon>more_vert</mat-icon>
     </button>
   </ng-container>
   <mat-menu #menu="matMenu">
     <button [routerLink]="['/admin']" mat-icon-button class="example-icon favorite-icon "
-      aria-label="Example icon-button with heart icon" matTooltip="Console admin">
-      <mat-icon>settings</mat-icon>
+      aria-label="Example icon-button with heart icon">
+      <mat-icon style="color: rgb(109, 170, 39)">settings</mat-icon>
     </button>
   </mat-menu>
 </mat-toolbar>

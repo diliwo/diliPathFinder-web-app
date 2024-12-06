@@ -10,7 +10,7 @@ import { TeamsService } from '@frontend/core-data';
 import * as _ from 'lodash-es';
 
 @Component({
-  selector: 'frontend-services-details',
+  selector: 'frontend-teams-details',
   templateUrl: './team-details.component.html',
   styleUrls: ['./team-details.component.scss']
 })
@@ -35,7 +35,7 @@ export class TeamDetailsComponent {
       Validators.maxLength(7)]);
 
     this.frm = this.fb.group({
-      serviceId: this.data.team.id,
+      id: this.data.team.id,
       name: this.ctlName,
       acronym: this.ctlAcronym,
     });

@@ -13859,6 +13859,11 @@
       },
       {
         "source": "material",
+        "target": "npm:@angular/material",
+        "type": "static"
+      },
+      {
+        "source": "material",
         "target": "npm:@angular/flex-layout",
         "type": "static"
       }
@@ -13985,7 +13990,22 @@
       },
       {
         "source": "zeka",
+        "target": "npm:@angular/material",
+        "type": "static"
+      },
+      {
+        "source": "zeka",
+        "target": "npm:@angular/cdk",
+        "type": "static"
+      },
+      {
+        "source": "zeka",
         "target": "npm:@angular/platform-browser",
+        "type": "static"
+      },
+      {
+        "source": "zeka",
+        "target": "npm:moment",
         "type": "static"
       },
       {

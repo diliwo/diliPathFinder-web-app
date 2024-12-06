@@ -46,7 +46,7 @@ export class TeamsService {
         httpParams = httpParams.append('orderBy',orderBy);
       }
 
-      let url_ = this.baseUrl + "/api/services";
+      let url_ = this.baseUrl + "/teams";
       url_ = url_.replace(/[?&]$/, "");
         console.log(url_);
       let options_ : any = {
@@ -96,7 +96,7 @@ export class TeamsService {
     }
 
     upsert(command: Team): Observable<void> {
-      let url_ = this.baseUrl + "/api/services";
+      let url_ = this.baseUrl + "/teams";
       url_ = url_.replace(/[?&]$/, "");
 
       const content_ = JSON.stringify(command);
@@ -149,7 +149,7 @@ export class TeamsService {
 
   delete(id: number): Observable<void> {
       console.log(id);
-    let url_ = this.baseUrl + "/api/services/{id}";
+    let url_ = this.baseUrl + "/teams/{id}";
     if (id === undefined || id === null)
         throw new Error("The parameter 'id' must be defined.");
     url_ = url_.replace("{id}", encodeURIComponent("" + id));

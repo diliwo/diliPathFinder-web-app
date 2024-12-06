@@ -27,7 +27,7 @@ export class TeamsFacadeService {
     this.mutations.next(true);
   }
 
-  loadServices(){
+  loadTeams(){
     this.teamsService
     .allTeams(1,10,'')
     .subscribe((teams: Teams) =>

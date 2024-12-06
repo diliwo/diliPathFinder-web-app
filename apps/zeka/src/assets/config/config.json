@@ -1,6 +1,6 @@
 {
   "production": false,
-  "ApiBaseUrl": "",
+  "ApiBaseUrl": "http://localhost:9010",
   "AppVersion":"",
   "ShowVersion": true
 }

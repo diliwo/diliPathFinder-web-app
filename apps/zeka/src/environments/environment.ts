@@ -3,17 +3,7 @@ import { gitVersion } from './git-version';
 
 export const environment = {
   production: false,
-  //ApiBaseUrl: 'http://localhost:5001',
-  ApiBaseUrl: 'http://ispapiint',
-  ApiSociabiliGatewayUrl: 'http://sociabiligwint6/api/v6/',
-  GipsyUrl : 'http://gipsyint/',
-  OAuth: {
-    clientId: '3e8efcc4-2c25-4f8c-a235-d418117830a2',
-    loginUrl: 'https://auth-dev.cpas-schaerbeek.brussels/adfs/oauth2/authorize',
-    issuer: 'https://auth-dev.cpas-schaerbeek.brussels/adfs',
-    blackListNTLM: ['adfs'],
-    blackListAnonymous: ['sociabiligw'],
-  },
+  ApiBaseUrl: 'http://localhost:9010',
   AppVersion:
     'develop (build ' + gitVersion.hash + (gitVersion.dirty ? '*' : '') + ')',
   ShowVersion: true

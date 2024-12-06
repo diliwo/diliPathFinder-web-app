@@ -4,11 +4,11 @@
 
 a {
   text-decoration: none;
-  color: #476f24;
+  color: #ffffff;
 }
 
 .separator {
-  color: rgb(141, 187, 68, 0.9);
+  color: rgb(179, 214, 243, 0.9);
   font-size: 25px;
   font-weight: bold;
 }
@@ -19,6 +19,7 @@ a {
 
 .appName {
   font-weight: 900;
+  font-family: sans-serif;
 }
 
 button:hover {
@@ -34,4 +35,13 @@ button:hover {
 .icon-about-box {
   color: #c6c6c6;
   transform: scale(1.1);
+}
+
+.mat-toolbar{
+  background-color: #0178d4;
+  height: 50px;
+}
+
+.mat-icon {
+  color: #ffffff;
 }

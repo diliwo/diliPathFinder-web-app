@@ -14,9 +14,9 @@ import { debounceTime, distinctUntilChanged, fromEvent, merge, tap } from 'rxjs'
 import { ConfirmationBoxComponent } from '@frontend/shared';
 
 @Component({
-  selector: 'frontend-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  selector: 'frontend-teams',
+  templateUrl: './teams.component.html',
+  styleUrls: ['./teams.component.scss']
 })
 export class TeamsComponent implements OnDestroy {
   displayedColumns: string[] = [
@@ -102,21 +102,21 @@ export class TeamsComponent implements OnDestroy {
     });
   }
 
-  edit(serviceDetail: Team) {
-    const dlg = this.dialog.open(TeamDetailsComponent, { data: { serviceDetail, isNew: false } });
+  edit(team: Team) {
+    const dlg = this.dialog.open(TeamDetailsComponent, { data: { team, isNew: false } });
     dlg.beforeClosed().subscribe(res => {
         if (res) {
-            _.assign(serviceDetail, res);
+            _.assign(team, res);
             this.upsertEvent.emit(res);
         }
     });
   }
 
   create(){
-    const serviceDetail = new Team();
+    const team = new Team();
     const err = this.error;
     console.log(err);
-    const dlg = this.dialog.open(TeamDetailsComponent, { data: { serviceDetail, err, isNew: true } });
+    const dlg = this.dialog.open(TeamDetailsComponent, { data: { team, err, isNew: true } });
     dlg.beforeClosed().subscribe(res => {
         if (res) {
             this.upsertEvent.emit(res);

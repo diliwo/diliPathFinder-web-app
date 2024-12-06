@@ -80,6 +80,132 @@
   },
   "nxJsonPlugins": [],
   "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "14231182958454569115"
+      },
+      {
+        "file": "docker-compose.prod.yml",
+        "hash": "2950820792799485121"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "233833317249464641"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "15412806613453801337"
+      },
+      {
+        "file": "config/entryPoint.sh",
+        "hash": "713644450940578242"
+      },
+      {
+        "file": "azure-pipelines.yml",
+        "hash": "2350315700589714317"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1914616369387315427"
+      },
+      {
+        "file": "package.json",
+        "hash": "3040773649775353900"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6040700554504661696"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "11810713488198132402"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "5797619241828206054"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7922954044214489651"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "6076523549091800167"
+      },
+      {
+        "file": "jest.config.js",
+        "hash": "12466618850903731978"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7330501279360470719"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1324685984948235314"
+      },
+      {
+        "file": "README.md",
+        "hash": "15265449088905795621"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "14231632535905330688"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "18280692227545641734"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "docker-compose.pht.yml",
+        "hash": "9830917868919529140"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "10517892632782819869"
+      },
+      {
+        "file": "angular.prod.dockerfile",
+        "hash": "5633761594037843846"
+      },
+      {
+        "file": "config/nginx.conf",
+        "hash": "9810783947974661015"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "6093451115457943712"
+      },
+      {
+        "file": "angular.dockerfile",
+        "hash": "15036553006114624416"
+      },
+      {
+        "file": "angular.json",
+        "hash": "246286368784002039"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "14313302419479125001"
+      }
+    ],
     "projectFileMap": {
       "core-data": [
         {
@@ -177,9 +303,9 @@
         },
         {
           "file": "libs/core-data/src/lib/services/config.service.ts",
-          "hash": "11536999790085185323",
+          "hash": "10320771359055313961",
           "deps": [
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "npm:@angular/core",
             "npm:rxjs"
           ]
@@ -350,13 +476,12 @@
         },
         {
           "file": "libs/core-data/src/lib/services/teams.service.ts",
-          "hash": "6638234942053820159",
+          "hash": "4378827715632542199",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
+            "npm:rxjs"
           ]
         },
         {
@@ -434,34 +559,126 @@
           "hash": "17859551126707004133"
         }
       ],
-      "shared": [
+      "material": [
         {
-          "file": "libs/shared/.eslintrc.json",
-          "hash": "9151719026736844654"
+          "file": "libs/material/.eslintrc.json",
+          "hash": "13770091168398568363"
         },
         {
-          "file": "libs/shared/README.md",
-          "hash": "10101154919385284392"
+          "file": "libs/material/README.md",
+          "hash": "15813805337173482533"
         },
         {
-          "file": "libs/shared/jest.config.js",
-          "hash": "582152406985003175"
+          "file": "libs/material/jest.config.ts",
+          "hash": "1564304547280541103"
         },
         {
-          "file": "libs/shared/src/index.ts",
-          "hash": "6077773516009998270"
+          "file": "libs/material/src/index.ts",
+          "hash": "9048117972835505143"
         },
         {
-          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.html",
-          "hash": "12368103584386784855"
+          "file": "libs/material/src/lib/material.module.ts",
+          "hash": "4126851127311945056",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/flex-layout"
+          ]
         },
         {
-          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.scss",
-          "hash": "2925095660463138539"
+          "file": "libs/material/src/test-setup.ts",
+          "hash": "13957278976106148009",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest",
+            "npm:@angular/core/testing",
+            "npm:@angular/platform-browser-dynamic/testing"
+          ]
         },
         {
-          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.spec.ts",
-          "hash": "8088944819884816383",
+          "file": "libs/material/tsconfig.json",
+          "hash": "10948883899869269534"
+        },
+        {
+          "file": "libs/material/tsconfig.lib.json",
+          "hash": "15377471018703630738"
+        },
+        {
+          "file": "libs/material/tsconfig.spec.json",
+          "hash": "17859551126707004133"
+        }
+      ],
+      "zeka": [
+        {
+          "file": "apps/zeka/.browserslistrc",
+          "hash": "5551378607286028761"
+        },
+        {
+          "file": "apps/zeka/.eslintrc.json",
+          "hash": "13770091168398568363"
+        },
+        {
+          "file": "apps/zeka/git-version.js",
+          "hash": "3811492930131434778",
+          "deps": [
+            "npm:git-describe",
+            "npm:fs"
+          ]
+        },
+        {
+          "file": "apps/zeka/jest.config.ts",
+          "hash": "3391454768870838619"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/admin-area-management-routing.module.ts",
+          "hash": "13250497100376896847",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.html",
+          "hash": "17376341717241710133"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.scss",
+          "hash": "10049244809051140354"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.ts",
+          "hash": "6372358575164806108",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:@angular/router",
+            "core-state",
+            "api-interface"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.module.ts",
+          "hash": "7153713076529926037",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "core-data",
+            "core-state",
+            "material",
+            "shared",
+            "npm:ngx-editor"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.html",
+          "hash": "16181505107235796968"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.scss",
+          "hash": "7582283687738653475"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.spec.ts",
+          "hash": "10101750635464612107",
           "deps": [
             "npm:@angular/core/testing",
             "npm:@angular/common/http/testing",
@@ -478,46 +695,36 @@
           ]
         },
         {
-          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.ts",
-          "hash": "6022344579428461775",
+          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.ts",
+          "hash": "5349511840949088477",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/material/dialog"
+            "core-state",
+            "api-interface",
+            "material",
+            "npm:@angular/material/table",
+            "npm:@angular/material/paginator",
+            "npm:@angular/material/sort",
+            "npm:@angular/material/dialog",
+            "npm:@angular/material/snack-bar",
+            "npm:lodash-es",
+            "shared",
+            "core-data",
+            "npm:rxjs/operators",
+            "npm:rxjs"
           ]
         },
         {
-          "file": "libs/shared/src/lib/dates/after-date.directive.ts",
-          "hash": "10491388700697342416",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms"
-          ]
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.html",
+          "hash": "2925454253621594457"
         },
         {
-          "file": "libs/shared/src/lib/dates/tools.ts",
-          "hash": "10156754906253196159",
-          "deps": [
-            "npm:@angular/forms"
-          ]
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.scss",
+          "hash": "9533035824888524842"
         },
         {
-          "file": "libs/shared/src/lib/dates/validator-base.directive.ts",
-          "hash": "3532956770019409347",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.html",
-          "hash": "1700590807162153306"
-        },
-        {
-          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.scss",
-          "hash": "17026366872990990841"
-        },
-        {
-          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.ts",
-          "hash": "6062251841208292414",
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.ts",
+          "hash": "430931495718740426",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material/dialog",
@@ -527,79 +734,728 @@
           ]
         },
         {
-          "file": "libs/shared/src/lib/pipes/capitalize.pipe.ts",
-          "hash": "3473275604882630325",
-          "deps": [
-            "npm:@angular/core"
-          ]
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.html",
+          "hash": "6308710811016284568"
         },
         {
-          "file": "libs/shared/src/lib/pipes/trim.pipe.ts",
-          "hash": "13010028242848678148",
-          "deps": [
-            "npm:@angular/core"
-          ]
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.scss",
+          "hash": "3793409712082847344"
         },
         {
-          "file": "libs/shared/src/lib/shared.module.ts",
-          "hash": "14258219767523177464",
+          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.ts",
+          "hash": "7210426324281536571",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common",
+            "core-state",
+            "api-interface",
+            "material",
+            "npm:@angular/material/table",
+            "npm:@angular/material/paginator",
+            "npm:@angular/material/sort",
+            "npm:@angular/material/dialog",
+            "npm:@angular/material/snack-bar",
+            "npm:lodash-es",
+            "core-data",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.html",
+          "hash": "7658091564948868195"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.scss",
+          "hash": "3096781440967715043"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.ts",
+          "hash": "5540206263874659555",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material/dialog",
             "npm:@angular/forms",
+            "api-interface",
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.html",
+          "hash": "7174349527740701597"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.scss",
+          "hash": "18295347526941106750"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.spec.ts",
+          "hash": "2663295564123445191",
+          "deps": [
+            "npm:@angular/core/testing",
+            "npm:@angular/common/http/testing",
+            "npm:@angular/common/http",
+            "npm:@angular/router",
+            "core-data",
+            "core-state",
+            "npm:@angular/forms",
+            "npm:@angular/material/snack-bar",
+            "npm:@angular/router/testing",
+            "npm:@angular/common",
+            "npm:@angular/material/dialog",
             "material"
           ]
         },
         {
-          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.html",
-          "hash": "14098066016978487203"
-        },
-        {
-          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.scss",
-          "hash": "3329261431180221734"
-        },
-        {
-          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.ts",
-          "hash": "9141398721985598755",
+          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.ts",
+          "hash": "81156470102344611",
           "deps": [
+            "npm:@angular/cdk/collections",
+            "npm:@angular/core",
             "npm:@angular/material/dialog",
+            "npm:@angular/material/paginator",
+            "npm:@angular/material/sort",
+            "api-interface",
+            "core-data",
+            "core-state",
+            "npm:console",
+            "npm:rxjs",
+            "npm:rxjs/operators",
+            "shared",
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.html",
+          "hash": "18366897986637202342"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.scss",
+          "hash": "14836724827120839026"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.ts",
+          "hash": "14160118971535610486",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material/dialog",
+            "npm:@angular/forms",
+            "api-interface",
+            "core-state",
+            "npm:lodash-es",
+            "npm:rxjs",
+            "npm:console"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.html",
+          "hash": "9240832505965333425"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.ts",
+          "hash": "808346245712173818",
+          "deps": [
+            "npm:@angular/core",
+            "core-state",
+            "api-interface",
+            "material",
+            "npm:@angular/material/table",
+            "npm:@angular/material/paginator",
+            "npm:@angular/material/sort",
+            "npm:@angular/material/dialog",
+            "npm:@angular/material/snack-bar",
+            "npm:lodash-es",
+            "npm:console",
+            "core-data",
+            "npm:rxjs",
+            "npm:rxjs/operators",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmemberscomponent.scss",
+          "hash": "12453608499435330607"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.html",
+          "hash": "6244668018153566276"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.scss",
+          "hash": "7473974149843333504"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.ts",
+          "hash": "8585698678862647333",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/forms",
+            "api-interface",
+            "core-data",
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/teams.component.ts",
+          "hash": "6691830675831004999",
+          "deps": [
+            "npm:@angular/core",
+            "core-state",
+            "api-interface",
+            "material",
+            "npm:@angular/material",
+            "npm:lodash-es",
+            "core-data",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.html",
+          "hash": "10388993737083480496"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.scss",
+          "hash": "6096460586557509787"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.ts",
+          "hash": "12536598720164961198",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material/dialog",
+            "npm:@angular/forms",
+            "api-interface",
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.html",
+          "hash": "2542629016171489747"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.scss",
+          "hash": "3793409712082847344"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.ts",
+          "hash": "5250749517913194650",
+          "deps": [
+            "npm:@angular/core",
+            "core-state",
+            "api-interface",
+            "material",
+            "npm:@angular/material/table",
+            "npm:@angular/material/paginator",
+            "npm:@angular/material/sort",
+            "npm:@angular/material/dialog",
+            "npm:@angular/material/snack-bar",
+            "npm:lodash-es",
+            "core-data",
+            "npm:rxjs",
+            "shared"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.html",
+          "hash": "10510444392345651764"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.scss",
+          "hash": "14903283373516073689"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.ts",
+          "hash": "8821329421698143920",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material/dialog",
+            "npm:@angular/forms",
+            "api-interface",
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.html",
+          "hash": "15115915510399148160"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.scss",
+          "hash": "7650189625812803181"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.spec.ts",
+          "hash": "14219368035262200731",
+          "deps": [
+            "npm:@angular/core/testing",
+            "npm:@angular/common/http/testing",
+            "npm:@angular/common/http",
+            "npm:@angular/router",
+            "core-data",
+            "core-state",
+            "npm:@angular/forms",
+            "npm:@angular/material/snack-bar",
+            "npm:@angular/router/testing",
+            "npm:@angular/common",
+            "npm:@angular/material/dialog",
+            "material"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.ts",
+          "hash": "16047038178457205227",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "api-interface",
+            "npm:console",
+            "npm:rxjs",
+            "shared",
+            "npm:lodash-es",
+            "core-state",
+            "core-data"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/app.component.html",
+          "hash": "798080118864115404"
+        },
+        {
+          "file": "apps/zeka/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/zeka/src/app/app.component.ts",
+          "hash": "4428247969764756675",
+          "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.html",
-          "hash": "9113301620351235589"
-        },
-        {
-          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.scss",
-          "hash": "16622320406059264655"
-        },
-        {
-          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.ts",
-          "hash": "10076832783513247720",
+          "file": "apps/zeka/src/app/app.module.ts",
+          "hash": "10091175885274069511",
           "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/common",
+            "core-data",
+            "core-state",
+            "material",
+            "npm:@angular/forms",
+            "shared",
+            "npm:@angular/material",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/routing.module.ts",
+          "hash": "3338507281010838808",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "core-state"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/toolbar/toolbar.component.html",
+          "hash": "800482083155912739"
+        },
+        {
+          "file": "apps/zeka/src/app/toolbar/toolbar.component.scss",
+          "hash": "4145499625442563457"
+        },
+        {
+          "file": "apps/zeka/src/app/toolbar/toolbar.component.ts",
+          "hash": "6591625841365274651",
+          "deps": [
+            "npm:@angular/core",
+            "core-state",
+            "npm:rxjs",
             "npm:@angular/material/dialog",
-            "npm:@angular/core"
+            "npm:@angular/material/snack-bar",
+            "npm:@angular/router"
           ]
         },
         {
-          "file": "libs/shared/src/test-setup.ts",
-          "hash": "9531801021999427605",
+          "file": "apps/zeka/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/zeka/src/assets/config/config.json",
+          "hash": "10899471355259452336"
+        },
+        {
+          "file": "apps/zeka/src/assets/config/config.template.json",
+          "hash": "10554122143440289902"
+        },
+        {
+          "file": "apps/zeka/src/assets/config/config.test.json",
+          "hash": "10962676262718178562"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/ArbreISP.jpg",
+          "hash": "6059201118784735617"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/DeviseISP.jpg",
+          "hash": "9624036835276130684"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/icon-gipsy-150px.jpg",
+          "hash": "3790109639444904977"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/icon-gipsy.jpg",
+          "hash": "17157585700192116161"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/search.svg",
+          "hash": "16005171242507745867"
+        },
+        {
+          "file": "apps/zeka/src/environments/environment.prod.ts",
+          "hash": "2370180593024095483"
+        },
+        {
+          "file": "apps/zeka/src/environments/environment.ts",
+          "hash": "2365864708472481902"
+        },
+        {
+          "file": "apps/zeka/src/environments/git-version.ts",
+          "hash": "10058474627890864635"
+        },
+        {
+          "file": "apps/zeka/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/zeka/src/index.html",
+          "hash": "5242123555113174646"
+        },
+        {
+          "file": "apps/zeka/src/main.ts",
+          "hash": "12530990079120336302",
           "deps": [
-            "npm:jest-preset-angular/setup-jest"
+            "npm:@angular/core",
+            "npm:@angular/platform-browser-dynamic"
           ]
         },
         {
-          "file": "libs/shared/tsconfig.json",
-          "hash": "12734125728340456857"
+          "file": "apps/zeka/src/polyfills.ts",
+          "hash": "7830949019142423225",
+          "deps": [
+            "npm:zone.js"
+          ]
         },
         {
-          "file": "libs/shared/tsconfig.lib.json",
-          "hash": "9957768570326938340"
+          "file": "apps/zeka/src/silent-refresh.html",
+          "hash": "5800203274317999124"
         },
         {
-          "file": "libs/shared/tsconfig.spec.json",
-          "hash": "5336739058178520381"
+          "file": "apps/zeka/src/styles.scss",
+          "hash": "1511244123520941307"
+        },
+        {
+          "file": "apps/zeka/src/test-setup.ts",
+          "hash": "7603315141941604112",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest",
+            "npm:@angular/core/testing",
+            "npm:@angular/platform-browser-dynamic/testing"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/web.config",
+          "hash": "13339365491517354275"
+        },
+        {
+          "file": "apps/zeka/tsconfig.app.json",
+          "hash": "7960281287006713728"
+        },
+        {
+          "file": "apps/zeka/tsconfig.editor.json",
+          "hash": "16418290743226680092"
+        },
+        {
+          "file": "apps/zeka/tsconfig.json",
+          "hash": "15967895180794470652"
+        },
+        {
+          "file": "apps/zeka/tsconfig.spec.json",
+          "hash": "17859551126707004133"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/teams.component.html",
+          "hash": "16935294517871738860"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/teams.component.spec.ts",
+          "hash": "15709413495685245138",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:@angular/forms",
+            "npm:@angular/material",
+            "material"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/teams/teams.component.scss",
+          "hash": "15143371253246003217"
+        }
+      ],
+      "zeka-e2e": [
+        {
+          "file": "apps/zeka-e2e/.eslintrc.json",
+          "hash": "15435685467925347887"
+        },
+        {
+          "file": "apps/zeka-e2e/cypress.json",
+          "hash": "4534483344189197351"
+        },
+        {
+          "file": "apps/zeka-e2e/src/fixtures/example.json",
+          "hash": "17341819486505642070"
+        },
+        {
+          "file": "apps/zeka-e2e/src/integration/app.spec.ts",
+          "hash": "17930578620994572607"
+        },
+        {
+          "file": "apps/zeka-e2e/src/plugins/index.js",
+          "hash": "958103339670479771",
+          "deps": [
+            "npm:@nrwl/cypress/plugins/preprocessor"
+          ]
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/app.po.ts",
+          "hash": "5364106453863571025"
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/commands.ts",
+          "hash": "11031723810997510506"
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/index.ts",
+          "hash": "15928825062325902088"
+        },
+        {
+          "file": "apps/zeka-e2e/tsconfig.e2e.json",
+          "hash": "16207512718177857315"
+        },
+        {
+          "file": "apps/zeka-e2e/tsconfig.json",
+          "hash": "13003415357433107754"
+        }
+      ],
+      "api-interface": [
+        {
+          "file": "libs/api-interface/.eslintrc.json",
+          "hash": "13770091168398568363"
+        },
+        {
+          "file": "libs/api-interface/README.md",
+          "hash": "2325167109018656675"
+        },
+        {
+          "file": "libs/api-interface/jest.config.ts",
+          "hash": "15178256645889921402"
+        },
+        {
+          "file": "libs/api-interface/src/index.ts",
+          "hash": "10005909049782420236"
+        },
+        {
+          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormation.ts",
+          "hash": "6959572428730546233"
+        },
+        {
+          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormations.ts",
+          "hash": "5831302120576842978"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Bilans/BilanMv.ts",
+          "hash": "9672504143456610708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Bilans/BilanProfession.ts",
+          "hash": "5768758980400283727"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/Candidacies.ts",
+          "hash": "9284657941312152488"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/Candidacy.ts",
+          "hash": "17236925159842822368"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusHistory.ts",
+          "hash": "6973441222018255588"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusItem.ts",
+          "hash": "11263657751408638673"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReason.ts",
+          "hash": "15853056004892210354"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReasons.ts",
+          "hash": "411843186739070477"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationType.ts",
+          "hash": "2852056562331547330"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationTypes.ts",
+          "hash": "15260636063716476535"
+        },
+        {
+          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupant.ts",
+          "hash": "7784197937353522489"
+        },
+        {
+          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupants.ts",
+          "hash": "9283923922236977240"
+        },
+        {
+          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContract.ts",
+          "hash": "4194071896021807708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContracts.ts",
+          "hash": "18371826606037796488"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/Partner.ts",
+          "hash": "1061311770855883071"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/PartnerSelection.ts",
+          "hash": "5423799223262053051"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/Partners.ts",
+          "hash": "8619893479324086254"
+        },
+        {
+          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperience.ts",
+          "hash": "13076745195836029747"
+        },
+        {
+          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperiences.ts",
+          "hash": "13993838192832581423"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Professions/ProfessionMv.ts",
+          "hash": "8180758411927971467"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Schools/School.ts",
+          "hash": "9842469153355709261"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Schools/Schools.ts",
+          "hash": "16770974135109365656"
+        },
+        {
+          "file": "libs/api-interface/src/lib/StaffMember/StaffMember.ts",
+          "hash": "12690314540676087531"
+        },
+        {
+          "file": "libs/api-interface/src/lib/StaffMember/StaffMembers.ts",
+          "hash": "15882954538903704472"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Supports/reasonOfClosure.ts",
+          "hash": "12767870694326123450"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Supports/reasonOfClosures.ts",
+          "hash": "1531642842519249270"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Teams/Team.ts",
+          "hash": "13136624179775708504"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Teams/Teams.ts",
+          "hash": "6196553013376307419"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonForEmployment.ts",
+          "hash": "11532919114270895241"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonsForEmployment.ts",
+          "hash": "16926895031191554159"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingFields/TrainingField.ts",
+          "hash": "6220860592561018200"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingFields/TrainingFields.ts",
+          "hash": "4182296412559501708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingType.ts",
+          "hash": "2574030103466453003"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingTypes.ts",
+          "hash": "10947952385063225632"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Trainings/Training.ts",
+          "hash": "4222365527902941953"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Trainings/Trainings.ts",
+          "hash": "5915074909067218104"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Users/User.ts",
+          "hash": "11746099402668164108"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Users/Users.ts",
+          "hash": "14727999582012579588"
+        },
+        {
+          "file": "libs/api-interface/src/lib/api-interface.module.ts",
+          "hash": "2974886283444987681",
+          "deps": [
+            "npm:lodash-es"
+          ]
+        },
+        {
+          "file": "libs/api-interface/src/test-setup.ts",
+          "hash": "13957278976106148009",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest",
+            "npm:@angular/core/testing",
+            "npm:@angular/platform-browser-dynamic/testing"
+          ]
+        },
+        {
+          "file": "libs/api-interface/tsconfig.json",
+          "hash": "10948883899869269534"
+        },
+        {
+          "file": "libs/api-interface/tsconfig.lib.json",
+          "hash": "15377471018703630738"
+        },
+        {
+          "file": "libs/api-interface/tsconfig.spec.json",
+          "hash": "17859551126707004133"
         }
       ],
       "core-state": [
@@ -901,7 +1757,7 @@
         },
         {
           "file": "libs/core-state/src/lib/teams/teams-facade.service.ts",
-          "hash": "8618013169323298110",
+          "hash": "9593525743207002623",
           "deps": [
             "npm:@angular/core",
             "api-interface",
@@ -1013,123 +1869,34 @@
           "hash": "17859551126707004133"
         }
       ],
-      "zeka-e2e": [
+      "shared": [
         {
-          "file": "apps/zeka-e2e/.eslintrc.json",
-          "hash": "15435685467925347887"
+          "file": "libs/shared/.eslintrc.json",
+          "hash": "9151719026736844654"
         },
         {
-          "file": "apps/zeka-e2e/cypress.json",
-          "hash": "4534483344189197351"
+          "file": "libs/shared/README.md",
+          "hash": "10101154919385284392"
         },
         {
-          "file": "apps/zeka-e2e/src/fixtures/example.json",
-          "hash": "17341819486505642070"
+          "file": "libs/shared/jest.config.js",
+          "hash": "582152406985003175"
         },
         {
-          "file": "apps/zeka-e2e/src/integration/app.spec.ts",
-          "hash": "17930578620994572607"
+          "file": "libs/shared/src/index.ts",
+          "hash": "6077773516009998270"
         },
         {
-          "file": "apps/zeka-e2e/src/plugins/index.js",
-          "hash": "958103339670479771",
-          "deps": [
-            "npm:@nrwl/cypress/plugins/preprocessor"
-          ]
+          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.html",
+          "hash": "12368103584386784855"
         },
         {
-          "file": "apps/zeka-e2e/src/support/app.po.ts",
-          "hash": "5364106453863571025"
+          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.scss",
+          "hash": "2925095660463138539"
         },
         {
-          "file": "apps/zeka-e2e/src/support/commands.ts",
-          "hash": "11031723810997510506"
-        },
-        {
-          "file": "apps/zeka-e2e/src/support/index.ts",
-          "hash": "15928825062325902088"
-        },
-        {
-          "file": "apps/zeka-e2e/tsconfig.e2e.json",
-          "hash": "16207512718177857315"
-        },
-        {
-          "file": "apps/zeka-e2e/tsconfig.json",
-          "hash": "13003415357433107754"
-        }
-      ],
-      "zeka": [
-        {
-          "file": "apps/zeka/.browserslistrc",
-          "hash": "5551378607286028761"
-        },
-        {
-          "file": "apps/zeka/.eslintrc.json",
-          "hash": "13770091168398568363"
-        },
-        {
-          "file": "apps/zeka/git-version.js",
-          "hash": "3811492930131434778",
-          "deps": [
-            "npm:git-describe",
-            "npm:fs"
-          ]
-        },
-        {
-          "file": "apps/zeka/jest.config.ts",
-          "hash": "3391454768870838619"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/admin-area-management-routing.module.ts",
-          "hash": "13250497100376896847",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.html",
-          "hash": "4235201001332579172"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.scss",
-          "hash": "10049244809051140354"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.ts",
-          "hash": "11820202585148361033",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:@angular/router",
-            "core-state",
-            "api-interface"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/admin-area-management.module.ts",
-          "hash": "7153713076529926037",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "core-data",
-            "core-state",
-            "material",
-            "shared",
-            "npm:ngx-editor"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.html",
-          "hash": "16181505107235796968"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.scss",
-          "hash": "7582283687738653475"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.spec.ts",
-          "hash": "10101750635464612107",
+          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.spec.ts",
+          "hash": "8088944819884816383",
           "deps": [
             "npm:@angular/core/testing",
             "npm:@angular/common/http/testing",
@@ -1146,941 +1913,130 @@
           ]
         },
         {
-          "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.ts",
-          "hash": "5349511840949088477",
+          "file": "libs/shared/src/lib/confirmation-box/confirmation-box.component.ts",
+          "hash": "6022344579428461775",
           "deps": [
             "npm:@angular/core",
-            "core-state",
-            "api-interface",
-            "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:lodash-es",
-            "shared",
-            "core-data",
-            "npm:rxjs/operators",
-            "npm:rxjs"
+            "npm:@angular/material/dialog"
           ]
         },
         {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.html",
-          "hash": "2925454253621594457"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.scss",
-          "hash": "9533035824888524842"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.ts",
-          "hash": "430931495718740426",
+          "file": "libs/shared/src/lib/dates/after-date.directive.ts",
+          "hash": "10491388700697342416",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "npm:lodash-es"
+            "npm:@angular/forms"
           ]
         },
         {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.html",
-          "hash": "6308710811016284568"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.scss",
-          "hash": "3793409712082847344"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/professions/professions.component.ts",
-          "hash": "7210426324281536571",
+          "file": "libs/shared/src/lib/dates/tools.ts",
+          "hash": "10156754906253196159",
           "deps": [
-            "npm:@angular/core",
-            "core-state",
-            "api-interface",
-            "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:lodash-es",
-            "core-data",
-            "npm:rxjs",
-            "shared"
+            "npm:@angular/forms"
           ]
         },
         {
-          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.html",
-          "hash": "7658091564948868195"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.scss",
-          "hash": "3096781440967715043"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/school-details/school-details.component.ts",
-          "hash": "5540206263874659555",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.html",
-          "hash": "7174349527740701597"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.scss",
-          "hash": "18295347526941106750"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.spec.ts",
-          "hash": "2663295564123445191",
-          "deps": [
-            "npm:@angular/core/testing",
-            "npm:@angular/common/http/testing",
-            "npm:@angular/common/http",
-            "npm:@angular/router",
-            "core-data",
-            "core-state",
-            "npm:@angular/forms",
-            "npm:@angular/material/snack-bar",
-            "npm:@angular/router/testing",
-            "npm:@angular/common",
-            "npm:@angular/material/dialog",
-            "material"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/schools/schools.component.ts",
-          "hash": "81156470102344611",
-          "deps": [
-            "npm:@angular/cdk/collections",
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "api-interface",
-            "core-data",
-            "core-state",
-            "npm:console",
-            "npm:rxjs",
-            "npm:rxjs/operators",
-            "shared",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.html",
-          "hash": "18366897986637202342"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.scss",
-          "hash": "14836724827120839026"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.ts",
-          "hash": "14160118971535610486",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "core-state",
-            "npm:lodash-es",
-            "npm:rxjs",
-            "npm:console"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.html",
-          "hash": "9240832505965333425"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.ts",
-          "hash": "808346245712173818",
-          "deps": [
-            "npm:@angular/core",
-            "core-state",
-            "api-interface",
-            "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:lodash-es",
-            "npm:console",
-            "core-data",
-            "npm:rxjs",
-            "npm:rxjs/operators",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmemberscomponent.scss",
-          "hash": "12453608499435330607"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/services.component.html",
-          "hash": "7294398208248720877"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/services.component.scss",
-          "hash": "3793409712082847344"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/services.component.spec.ts",
-          "hash": "14195579496482787551",
-          "deps": [
-            "npm:@angular/core/testing",
-            "npm:@angular/common/http/testing",
-            "npm:@angular/common/http",
-            "npm:@angular/router",
-            "core-data",
-            "core-state",
-            "npm:@angular/forms",
-            "npm:@angular/material/snack-bar",
-            "npm:@angular/router/testing",
-            "npm:@angular/common",
-            "npm:@angular/material/dialog",
-            "material"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.html",
-          "hash": "5468054715128627243"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.scss",
-          "hash": "2156246077493534457"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.ts",
-          "hash": "12709791245164229774",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "core-data",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/teams/teams.component.ts",
-          "hash": "5004496997520820477",
-          "deps": [
-            "npm:@angular/core",
-            "core-state",
-            "api-interface",
-            "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:lodash-es",
-            "core-data",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.html",
-          "hash": "10388993737083480496"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.scss",
-          "hash": "6096460586557509787"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingType-details/trainingType-details.component.ts",
-          "hash": "12536598720164961198",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.html",
-          "hash": "2542629016171489747"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.scss",
-          "hash": "3793409712082847344"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.ts",
-          "hash": "5250749517913194650",
-          "deps": [
-            "npm:@angular/core",
-            "core-state",
-            "api-interface",
-            "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:lodash-es",
-            "core-data",
-            "npm:rxjs",
-            "shared"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.html",
-          "hash": "10510444392345651764"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.scss",
-          "hash": "14903283373516073689"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/training-details/training-details.component.ts",
-          "hash": "8821329421698143920",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/forms",
-            "api-interface",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.html",
-          "hash": "15115915510399148160"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.scss",
-          "hash": "7650189625812803181"
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.spec.ts",
-          "hash": "14219368035262200731",
-          "deps": [
-            "npm:@angular/core/testing",
-            "npm:@angular/common/http/testing",
-            "npm:@angular/common/http",
-            "npm:@angular/router",
-            "core-data",
-            "core-state",
-            "npm:@angular/forms",
-            "npm:@angular/material/snack-bar",
-            "npm:@angular/router/testing",
-            "npm:@angular/common",
-            "npm:@angular/material/dialog",
-            "material"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/trainings/trainings.component.ts",
-          "hash": "18084515693856310743",
-          "deps": [
-            "npm:@angular/cdk/collections",
-            "npm:@angular/core",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "api-interface",
-            "npm:console",
-            "npm:rxjs",
-            "npm:rxjs/operators",
-            "shared",
-            "npm:lodash-es"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/app.component.html",
-          "hash": "798080118864115404"
-        },
-        {
-          "file": "apps/zeka/src/app/app.component.scss",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/zeka/src/app/app.component.ts",
-          "hash": "4428247969764756675",
+          "file": "libs/shared/src/lib/dates/validator-base.directive.ts",
+          "hash": "3532956770019409347",
           "deps": [
             "npm:@angular/core"
           ]
         },
         {
-          "file": "apps/zeka/src/app/app.module.ts",
-          "hash": "14466949971592652460",
+          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.html",
+          "hash": "1700590807162153306"
+        },
+        {
+          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.scss",
+          "hash": "17026366872990990841"
+        },
+        {
+          "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.ts",
+          "hash": "6062251841208292414",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/platform-browser",
-            "npm:@angular/common/http",
-            "core-data",
-            "core-state",
-            "material",
+            "npm:@angular/material/dialog",
             "npm:@angular/forms",
-            "npm:@angular/platform-browser/animations",
-            "npm:@angular/common",
-            "shared",
-            "npm:@angular/material/core",
-            "npm:moment/locale/fr"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/routing.module.ts",
-          "hash": "3338507281010838808",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/router",
-            "core-state"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/app/toolbar/toolbar.component.html",
-          "hash": "6989859235235511261"
-        },
-        {
-          "file": "apps/zeka/src/app/toolbar/toolbar.component.scss",
-          "hash": "4352358666025208095"
-        },
-        {
-          "file": "apps/zeka/src/app/toolbar/toolbar.component.ts",
-          "hash": "6591625841365274651",
-          "deps": [
-            "npm:@angular/core",
-            "core-state",
-            "npm:rxjs",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
-            "npm:@angular/router"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/zeka/src/assets/config/config.json",
-          "hash": "6923178724575232354"
-        },
-        {
-          "file": "apps/zeka/src/assets/config/config.template.json",
-          "hash": "2689309547667564632"
-        },
-        {
-          "file": "apps/zeka/src/assets/config/config.test.json",
-          "hash": "10962676262718178562"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/ArbreISP.jpg",
-          "hash": "6059201118784735617"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/DeviseISP.jpg",
-          "hash": "9624036835276130684"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/icon-gipsy-150px.jpg",
-          "hash": "3790109639444904977"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/icon-gipsy.jpg",
-          "hash": "17157585700192116161"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/search.svg",
-          "hash": "16005171242507745867"
-        },
-        {
-          "file": "apps/zeka/src/environments/environment.prod.ts",
-          "hash": "2370180593024095483"
-        },
-        {
-          "file": "apps/zeka/src/environments/environment.ts",
-          "hash": "3380074481185510478"
-        },
-        {
-          "file": "apps/zeka/src/environments/git-version.ts",
-          "hash": "10058474627890864635"
-        },
-        {
-          "file": "apps/zeka/src/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/zeka/src/index.html",
-          "hash": "5242123555113174646"
-        },
-        {
-          "file": "apps/zeka/src/main.ts",
-          "hash": "12530990079120336302",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/platform-browser-dynamic"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/polyfills.ts",
-          "hash": "7830949019142423225",
-          "deps": [
-            "npm:zone.js"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/silent-refresh.html",
-          "hash": "5800203274317999124"
-        },
-        {
-          "file": "apps/zeka/src/styles.scss",
-          "hash": "1511244123520941307"
-        },
-        {
-          "file": "apps/zeka/src/test-setup.ts",
-          "hash": "7603315141941604112",
-          "deps": [
-            "npm:jest-preset-angular/setup-jest",
-            "npm:@angular/core/testing",
-            "npm:@angular/platform-browser-dynamic/testing"
-          ]
-        },
-        {
-          "file": "apps/zeka/src/web.config",
-          "hash": "13339365491517354275"
-        },
-        {
-          "file": "apps/zeka/tsconfig.app.json",
-          "hash": "7960281287006713728"
-        },
-        {
-          "file": "apps/zeka/tsconfig.editor.json",
-          "hash": "16418290743226680092"
-        },
-        {
-          "file": "apps/zeka/tsconfig.json",
-          "hash": "15967895180794470652"
-        },
-        {
-          "file": "apps/zeka/tsconfig.spec.json",
-          "hash": "17859551126707004133"
-        }
-      ],
-      "material": [
-        {
-          "file": "libs/material/.eslintrc.json",
-          "hash": "13770091168398568363"
-        },
-        {
-          "file": "libs/material/README.md",
-          "hash": "15813805337173482533"
-        },
-        {
-          "file": "libs/material/jest.config.ts",
-          "hash": "1564304547280541103"
-        },
-        {
-          "file": "libs/material/src/index.ts",
-          "hash": "9048117972835505143"
-        },
-        {
-          "file": "libs/material/src/lib/material.module.ts",
-          "hash": "17791218892778138896",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material/autocomplete",
-            "npm:@angular/material/button",
-            "npm:@angular/material/button-toggle",
-            "npm:@angular/material/card",
-            "npm:@angular/material/checkbox",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/expansion",
-            "npm:@angular/material/form-field",
-            "npm:@angular/material/grid-list",
-            "npm:@angular/material/icon",
-            "npm:@angular/material/input",
-            "npm:@angular/material/list",
-            "npm:@angular/material/menu",
-            "npm:@angular/material/progress-bar",
-            "npm:@angular/material/radio",
-            "npm:@angular/material/select",
-            "npm:@angular/material/sidenav",
-            "npm:@angular/material/slider",
-            "npm:@angular/material/snack-bar",
-            "npm:@angular/material/stepper",
-            "npm:@angular/material/tabs",
-            "npm:@angular/material/toolbar",
-            "npm:@angular/material/tooltip",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/progress-spinner",
-            "npm:@angular/flex-layout",
-            "npm:@angular/material/chips",
-            "npm:@angular/material/slide-toggle",
-            "npm:@angular/material/datepicker",
-            "npm:@angular/material/core"
-          ]
-        },
-        {
-          "file": "libs/material/src/test-setup.ts",
-          "hash": "13957278976106148009",
-          "deps": [
-            "npm:jest-preset-angular/setup-jest",
-            "npm:@angular/core/testing",
-            "npm:@angular/platform-browser-dynamic/testing"
-          ]
-        },
-        {
-          "file": "libs/material/tsconfig.json",
-          "hash": "10948883899869269534"
-        },
-        {
-          "file": "libs/material/tsconfig.lib.json",
-          "hash": "15377471018703630738"
-        },
-        {
-          "file": "libs/material/tsconfig.spec.json",
-          "hash": "17859551126707004133"
-        }
-      ],
-      "api-interface": [
-        {
-          "file": "libs/api-interface/.eslintrc.json",
-          "hash": "13770091168398568363"
-        },
-        {
-          "file": "libs/api-interface/README.md",
-          "hash": "2325167109018656675"
-        },
-        {
-          "file": "libs/api-interface/jest.config.ts",
-          "hash": "15178256645889921402"
-        },
-        {
-          "file": "libs/api-interface/src/index.ts",
-          "hash": "10005909049782420236"
-        },
-        {
-          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormation.ts",
-          "hash": "6959572428730546233"
-        },
-        {
-          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormations.ts",
-          "hash": "5831302120576842978"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Bilans/BilanMv.ts",
-          "hash": "9672504143456610708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Bilans/BilanProfession.ts",
-          "hash": "5768758980400283727"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/Candidacies.ts",
-          "hash": "9284657941312152488"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/Candidacy.ts",
-          "hash": "17236925159842822368"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusHistory.ts",
-          "hash": "6973441222018255588"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusItem.ts",
-          "hash": "11263657751408638673"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReason.ts",
-          "hash": "15853056004892210354"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReasons.ts",
-          "hash": "411843186739070477"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationType.ts",
-          "hash": "2852056562331547330"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationTypes.ts",
-          "hash": "15260636063716476535"
-        },
-        {
-          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupant.ts",
-          "hash": "7784197937353522489"
-        },
-        {
-          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupants.ts",
-          "hash": "9283923922236977240"
-        },
-        {
-          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContract.ts",
-          "hash": "4194071896021807708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContracts.ts",
-          "hash": "18371826606037796488"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/Partner.ts",
-          "hash": "1061311770855883071"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/PartnerSelection.ts",
-          "hash": "5423799223262053051"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/Partners.ts",
-          "hash": "8619893479324086254"
-        },
-        {
-          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperience.ts",
-          "hash": "13076745195836029747"
-        },
-        {
-          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperiences.ts",
-          "hash": "13993838192832581423"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Professions/ProfessionMv.ts",
-          "hash": "8180758411927971467"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Schools/School.ts",
-          "hash": "9842469153355709261"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Schools/Schools.ts",
-          "hash": "16770974135109365656"
-        },
-        {
-          "file": "libs/api-interface/src/lib/StaffMember/StaffMember.ts",
-          "hash": "12690314540676087531"
-        },
-        {
-          "file": "libs/api-interface/src/lib/StaffMember/StaffMembers.ts",
-          "hash": "15882954538903704472"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Supports/reasonOfClosure.ts",
-          "hash": "12767870694326123450"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Supports/reasonOfClosures.ts",
-          "hash": "1531642842519249270"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Teams/Team.ts",
-          "hash": "13136624179775708504"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Teams/Teams.ts",
-          "hash": "6196553013376307419"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonForEmployment.ts",
-          "hash": "11532919114270895241"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonsForEmployment.ts",
-          "hash": "16926895031191554159"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingFields/TrainingField.ts",
-          "hash": "6220860592561018200"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingFields/TrainingFields.ts",
-          "hash": "4182296412559501708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingType.ts",
-          "hash": "2574030103466453003"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingTypes.ts",
-          "hash": "10947952385063225632"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Trainings/Training.ts",
-          "hash": "4222365527902941953"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Trainings/Trainings.ts",
-          "hash": "5915074909067218104"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Users/User.ts",
-          "hash": "11746099402668164108"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Users/Users.ts",
-          "hash": "14727999582012579588"
-        },
-        {
-          "file": "libs/api-interface/src/lib/api-interface.module.ts",
-          "hash": "2974886283444987681",
-          "deps": [
+            "api-interface",
             "npm:lodash-es"
           ]
         },
         {
-          "file": "libs/api-interface/src/test-setup.ts",
-          "hash": "13957278976106148009",
+          "file": "libs/shared/src/lib/pipes/capitalize.pipe.ts",
+          "hash": "3473275604882630325",
           "deps": [
-            "npm:jest-preset-angular/setup-jest",
-            "npm:@angular/core/testing",
-            "npm:@angular/platform-browser-dynamic/testing"
+            "npm:@angular/core"
           ]
         },
         {
-          "file": "libs/api-interface/tsconfig.json",
-          "hash": "10948883899869269534"
+          "file": "libs/shared/src/lib/pipes/trim.pipe.ts",
+          "hash": "13010028242848678148",
+          "deps": [
+            "npm:@angular/core"
+          ]
         },
         {
-          "file": "libs/api-interface/tsconfig.lib.json",
-          "hash": "15377471018703630738"
+          "file": "libs/shared/src/lib/shared.module.ts",
+          "hash": "3166793691540754901",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "material"
+          ]
         },
         {
-          "file": "libs/api-interface/tsconfig.spec.json",
-          "hash": "17859551126707004133"
+          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.html",
+          "hash": "14098066016978487203"
+        },
+        {
+          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.scss",
+          "hash": "3329261431180221734"
+        },
+        {
+          "file": "libs/shared/src/lib/text-ellipsis/text-ellipsis.component.ts",
+          "hash": "9141398721985598755",
+          "deps": [
+            "npm:@angular/material/dialog",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.html",
+          "hash": "9113301620351235589"
+        },
+        {
+          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.scss",
+          "hash": "16622320406059264655"
+        },
+        {
+          "file": "libs/shared/src/lib/universal-tooltip/universal-tooltip.component.ts",
+          "hash": "10076832783513247720",
+          "deps": [
+            "npm:@angular/material/dialog",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/src/test-setup.ts",
+          "hash": "9531801021999427605",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest"
+          ]
+        },
+        {
+          "file": "libs/shared/tsconfig.json",
+          "hash": "12734125728340456857"
+        },
+        {
+          "file": "libs/shared/tsconfig.lib.json",
+          "hash": "9957768570326938340"
+        },
+        {
+          "file": "libs/shared/tsconfig.spec.json",
+          "hash": "5336739058178520381"
         }
       ]
-    },
-    "nonProjectFiles": [
-      {
-        "file": ".dockerignore",
-        "hash": "15412806613453801337"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "6076523549091800167"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6665220110971111663"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1324685984948235314"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "14231632535905330688"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "18280692227545641734"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "14231182958454569115"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "6093451115457943712"
-      },
-      {
-        "file": "README.md",
-        "hash": "15265449088905795621"
-      },
-      {
-        "file": "angular.dockerfile",
-        "hash": "15036553006114624416"
-      },
-      {
-        "file": "angular.json",
-        "hash": "246286368784002039"
-      },
-      {
-        "file": "angular.prod.dockerfile",
-        "hash": "5633761594037843846"
-      },
-      {
-        "file": "apps/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "azure-pipelines.yml",
-        "hash": "2350315700589714317"
-      },
-      {
-        "file": "config/entryPoint.sh",
-        "hash": "713644450940578242"
-      },
-      {
-        "file": "config/nginx.conf",
-        "hash": "9810783947974661015"
-      },
-      {
-        "file": "decorate-angular-cli.js",
-        "hash": "5797619241828206054"
-      },
-      {
-        "file": "docker-compose.pht.yml",
-        "hash": "9830917868919529140"
-      },
-      {
-        "file": "docker-compose.prod.yml",
-        "hash": "2950820792799485121"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "14313302419479125001"
-      },
-      {
-        "file": "jest.config.js",
-        "hash": "12466618850903731978"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "10517892632782819869"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7922954044214489651"
-      },
-      {
-        "file": "libs/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1914616369387315427"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "2845032311651600802"
-      },
-      {
-        "file": "package.json",
-        "hash": "3040773649775353900"
-      },
-      {
-        "file": "tools/generators/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "11810713488198132402"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "233833317249464641"
-      }
-    ]
+    }
   }
 }

@@ -1,12 +1,6 @@
 <div class="container mat-elevation-z0">
-    <ng-container *ngIf="{
-        teams : allTeams$ | async,
-        StaffMembersIsp : allStaffMembers$ | async
-            } as apiData; else loading">
-            <ng-container *ngIf="apiData.teams">
-              <ng-container *ngIf="apiData.StaffMembersIsp">
                   <mat-tab-group animationDuration="0ms">
-                    <mat-tab label="&Eacute;coles">
+                    <!-- <mat-tab label="&Eacute;coles">
                       <mat-card class="card-style ">
                           <mat-card-content>
                             <frontend-schools
@@ -16,22 +10,22 @@
                             </frontend-schools>
                           </mat-card-content>
                       </mat-card>
-                  </mat-tab>
-                  <mat-tab label="Types de trainings">
+                  </mat-tab> -->
+                  <!-- <mat-tab label="Types de trainings">
                     <mat-card class="card-style">
                         <mat-card-content>
                             <frontend-trainingtypes></frontend-trainingtypes>
                         </mat-card-content>
                     </mat-card>
-                </mat-tab>
-                  <mat-tab label="trainings">
+                </mat-tab> -->
+                  <!-- <mat-tab label="trainings">
                     <mat-card class="card-style">
                         <mat-card-content>
                           <frontend-training-list></frontend-training-list>
                         </mat-card-content>
                     </mat-card>
-                </mat-tab>
-                    <mat-tab label="Métiers">
+                </mat-tab> -->
+                    <!-- <mat-tab label="Métiers">
                       <mat-card class="card-style">
                           <mat-card-content>
                               <frontend-professions
@@ -41,8 +35,8 @@
                               </frontend-professions>
                           </mat-card-content>
                       </mat-card>
-                  </mat-tab>
-                  <mat-tab label="Partenaires">
+                  </mat-tab> -->
+                  <!-- <mat-tab label="Partenaires">
                     <mat-card class="card-style">
                         <mat-card-content>
                             <frontend-partners
@@ -54,25 +48,22 @@
                                ></frontend-partners>
                         </mat-card-content>
                     </mat-card>
-                </mat-tab>
-                    <mat-tab label="Référents">
+                </mat-tab> -->
+                    <!-- <mat-tab label="Référents">
                       <mat-card class="card-style">
                           <mat-card-content>
                               <frontend-StaffMembers [services]="apiData.teams.services" (upserStaffMemberEvent)="persistStaffMember($event)" (deleteStaffMemberEvent)="deleteStaffMember($event)"></frontend-StaffMembers>
                           </mat-card-content>
                       </mat-card>
-                  </mat-tab>
-                    <mat-tab label="Services">
+                  </mat-tab> -->
+                    <mat-tab label="Teams">
                         <mat-card class="card-style">
                             <mat-card-content>
-                                <frontend-services [teams]="apiData.teams.services" (upsertEvent)="persistteams($event)" (deleteEvent)="deleteteams($event)"></frontend-services>
+                                <frontend-teams (upsertEvent)="persistteams($event)" (deleteEvent)="deleteteams($event)"></frontend-teams>
                             </mat-card-content>
                         </mat-card>
                     </mat-tab>
                 </mat-tab-group>
-                </ng-container>
-            </ng-container>
-    </ng-container>
 </div>
 <ng-template #loading>
     <mat-spinner></mat-spinner>
