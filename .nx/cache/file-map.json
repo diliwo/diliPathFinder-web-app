@@ -82,116 +82,68 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".vscode/launch.json",
-        "hash": "14231182958454569115"
-      },
-      {
-        "file": "angular.json",
-        "hash": "246286368784002039"
-      },
-      {
-        "file": "decorate-angular-cli.js",
-        "hash": "5797619241828206054"
-      },
-      {
-        "file": "package.json",
-        "hash": "3040773649775353900"
-      },
-      {
-        "file": "azure-pipelines.yml",
-        "hash": "2350315700589714317"
-      },
-      {
-        "file": ".dockerignore",
-        "hash": "15412806613453801337"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "6076523549091800167"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1324685984948235314"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "10517892632782819869"
-      },
-      {
-        "file": "angular.prod.dockerfile",
-        "hash": "5633761594037843846"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7922954044214489651"
-      },
-      {
-        "file": "config/entryPoint.sh",
-        "hash": "713644450940578242"
-      },
-      {
-        "file": "docker-compose.prod.yml",
-        "hash": "2950820792799485121"
-      },
-      {
-        "file": "jest.config.js",
-        "hash": "12466618850903731978"
-      },
-      {
-        "file": "angular.dockerfile",
-        "hash": "15036553006114624416"
-      },
-      {
-        "file": "apps/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "docker-compose.yml",
-        "hash": "14313302419479125001"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6040700554504661696"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "18280692227545641734"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "14231632535905330688"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "6093451115457943712"
+        "file": "config/nginx.conf",
+        "hash": "9810783947974661015"
       },
       {
         "file": ".editorconfig",
         "hash": "11532813898455409296"
       },
       {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "11810713488198132402"
+        "file": "decorate-angular-cli.js",
+        "hash": "5797619241828206054"
       },
       {
-        "file": "config/nginx.conf",
-        "hash": "9810783947974661015"
+        "file": "jest.config.js",
+        "hash": "12466618850903731978"
+      },
+      {
+        "file": "angular.prod.dockerfile",
+        "hash": "5633761594037843846"
       },
       {
         "file": "nx.json",
         "hash": "1914616369387315427"
       },
       {
-        "file": "libs/.gitkeep",
-        "hash": "3244421341483603138"
+        "file": ".gitignore",
+        "hash": "6040700554504661696"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7330501279360470719"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1324685984948235314"
+      },
+      {
+        "file": "angular.dockerfile",
+        "hash": "15036553006114624416"
+      },
+      {
+        "file": "README.md",
+        "hash": "15265449088905795621"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "15412806613453801337"
       },
       {
         "file": "docker-compose.pht.yml",
         "hash": "9830917868919529140"
       },
       {
-        "file": "README.md",
-        "hash": "15265449088905795621"
+        "file": ".vscode/settings.json",
+        "hash": "6093451115457943712"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7922954044214489651"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "14313302419479125001"
       },
       {
         "file": "tsconfig.base.json",
@@ -202,8 +154,56 @@
         "hash": "3244421341483603138"
       },
       {
-        "file": "package-lock.json",
-        "hash": "7330501279360470719"
+        "file": "docker-compose.prod.yml",
+        "hash": "2950820792799485121"
+      },
+      {
+        "file": "angular.json",
+        "hash": "246286368784002039"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "14231182958454569115"
+      },
+      {
+        "file": "config/entryPoint.sh",
+        "hash": "713644450940578242"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "14231632535905330688"
+      },
+      {
+        "file": "package.json",
+        "hash": "3040773649775353900"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "18280692227545641734"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "11810713488198132402"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "6076523549091800167"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "10517892632782819869"
+      },
+      {
+        "file": "azure-pipelines.yml",
+        "hash": "2350315700589714317"
       }
     ],
     "projectFileMap": {
@@ -445,13 +445,12 @@
         },
         {
           "file": "libs/core-data/src/lib/services/staffmember.service.ts",
-          "hash": "6145873661939798057",
+          "hash": "2782283015679520081",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
+            "npm:rxjs"
           ]
         },
         {
@@ -484,13 +483,12 @@
         },
         {
           "file": "libs/core-data/src/lib/services/trainingField.service.ts",
-          "hash": "16752140449061435481",
+          "hash": "13158150882225831062",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
+            "npm:rxjs"
           ]
         },
         {
@@ -1090,7 +1088,7 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.html",
-          "hash": "5710227716662925617"
+          "hash": "16069371186433011909"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.scss",
@@ -1109,10 +1107,10 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.module.ts",
-          "hash": "7153713076529926037",
+          "hash": "17712954387196136495",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common/http",
+            "npm:@angular/common",
             "core-data",
             "core-state",
             "material",
@@ -1172,7 +1170,7 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.scss",
-          "hash": "9533035824888524842"
+          "hash": "16785871292221608626"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.ts",
@@ -1278,18 +1276,18 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.html",
-          "hash": "18366897986637202342"
+          "hash": "18377707256275218961"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.scss",
-          "hash": "14836724827120839026"
+          "hash": "13618758026751532272"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmember-details/staffmember-details.component.ts",
-          "hash": "14160118971535610486",
+          "hash": "8383812018922855245",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/material/dialog",
+            "npm:@angular/material",
             "npm:@angular/forms",
             "api-interface",
             "core-state",
@@ -1300,32 +1298,23 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.html",
-          "hash": "9240832505965333425"
+          "hash": "157197070675006423"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.ts",
-          "hash": "808346245712173818",
+          "hash": "2389827449500536830",
           "deps": [
             "npm:@angular/core",
             "core-state",
             "api-interface",
             "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
+            "npm:@angular/material",
             "npm:lodash-es",
             "npm:console",
             "core-data",
             "npm:rxjs",
-            "npm:rxjs/operators",
             "shared"
           ]
-        },
-        {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmemberscomponent.scss",
-          "hash": "12453608499435330607"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/teams/team-details/team-details.component.html",
@@ -1403,7 +1392,7 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.html",
-          "hash": "1518888130642864816"
+          "hash": "2133512744829191745"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/trainingTypes/trainingTypes.component.scss",
@@ -1657,6 +1646,10 @@
         {
           "file": "apps/zeka/tsconfig.spec.json",
           "hash": "17859551126707004133"
+        },
+        {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.scss",
+          "hash": "12600836386238250628"
         }
       ],
       "api-interface": [
@@ -1774,7 +1767,7 @@
         },
         {
           "file": "libs/api-interface/src/lib/StaffMember/StaffMember.ts",
-          "hash": "12690314540676087531"
+          "hash": "18437645669446667204"
         },
         {
           "file": "libs/api-interface/src/lib/StaffMember/StaffMembers.ts",

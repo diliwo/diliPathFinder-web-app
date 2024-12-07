@@ -21,6 +21,7 @@ import { ProfessionsDetailsComponent } from './professions/professions-details/p
 import { ProfessionsComponent } from './professions/professions.component';
 import { TrainingTypesDetailsComponent } from './trainingTypes/trainingType-details/trainingType-details.component';
 import { TrainingTypesComponent } from './trainingTypes/trainingTypes.component';
+import { StaffMembersComponent } from './staffmembers/staffmembers.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TrainingTypesComponent } from './trainingTypes/trainingTypes.component'
     trainingDetailsComponent,
     trainingsComponent,
     TrainingTypesDetailsComponent,
-    TrainingTypesComponent
+    TrainingTypesComponent,
+    StaffMembersComponent
   ],
   imports: [
     SharedModule,

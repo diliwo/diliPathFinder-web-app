@@ -39,7 +39,7 @@ export class StaffMemberService {
       httpParams = httpParams.append('orderBy',orderBy);
     }
 
-    let url_ = this.baseUrl + "/api/StaffMembers";
+    let url_ = this.baseUrl + "/staffmember";
     url_ = url_.replace(/[?&]$/, "");
 
     let options_ : any = {
@@ -90,7 +90,7 @@ export class StaffMemberService {
   }
 
   upsert(command: StaffMember): Observable<void> {
-    let url_ = this.baseUrl + "/api/StaffMembers";
+    let url_ = this.baseUrl + "/staffmember";
     url_ = url_.replace(/[?&]$/, "");
 
     const content_ = JSON.stringify(command);
@@ -140,7 +140,7 @@ protected processUpsert(response: HttpResponseBase): Observable<void> {
 }
 
 delete(id: number): Observable<void> {
-  let url_ = this.baseUrl + "/api/StaffMembers/{id}";
+  let url_ = this.baseUrl + "/staffmember/{id}";
   if (id === undefined || id === null)
       throw new Error("The parameter 'id' must be defined.");
   url_ = url_.replace("{id}", encodeURIComponent("" + id));
@@ -190,7 +190,7 @@ protected processDelete(response: HttpResponseBase): Observable<void> {
 }
 
 getStaffMemberBySearch(text : string): Observable<Users> {
-  let url_ = this.baseUrl + '/api/StaffMembers/searchtext/{text}';
+  let url_ = this.baseUrl + '/staffmember/searchtext/{text}';
   url_ = url_.replace('{text}', encodeURIComponent('' + text));
   url_ = url_.replace(/[?&]$/, '');
   let options_: any = {

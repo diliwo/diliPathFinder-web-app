@@ -26,7 +26,7 @@ export class StaffMemberDetailsComponent implements OnInit {
   public ctlServiceId: FormControl;
   public ctlUser: FormControl;
   public isNew: boolean;
-  public listServices: any[];
+  public listOfTeams: any[];
   public usersLoading = false;
   filteredOptions: Observable<User[]>;
   options : User[];
@@ -55,7 +55,7 @@ export class StaffMemberDetailsComponent implements OnInit {
       id: this.data.staffMember.id,
       firstname: this.ctlFirstname,
       lastname: this.ctlLastname,
-      serviceId: this.ctlServiceId,
+      teamId: this.ctlServiceId,
       userName: this.data.staffMember.username,
       user: this.ctlUser
     });
@@ -64,9 +64,9 @@ export class StaffMemberDetailsComponent implements OnInit {
     //this.frm.patchValue(data.staffMember);
     this.frm.get("firstname").patchValue(data.staffMember.firstname);
     this.frm.get("lastname").patchValue(data.staffMember.lastname);
-    this.frm.get("serviceId").patchValue(data.staffMember.serviceId);
+    this.frm.get("teamId").patchValue(data.staffMember.teamId);
     //this.frm.get("userName").patchValue(data.staffMember.username);
-    this.listServices = data.listStaffMembers;
+    this.listOfTeams = data.listStaffMembers;
     this.isDisabled = true;
 
     if(!this.isNew){

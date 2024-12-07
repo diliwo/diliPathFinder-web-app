@@ -38,7 +38,7 @@ getAll(pageNumber: number, pageSize: number, filter:string= '', orderBy:string="
     httpParams = httpParams.append('orderBy',orderBy);
   }
 
-  let url_ = this.baseUrl + '/api/trainingfield';
+  let url_ = this.baseUrl + '/trainingfield';
   url_ = url_.replace(/[?&]$/, '');
 
   let options_: any = {

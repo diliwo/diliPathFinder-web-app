@@ -17,12 +17,12 @@ import { ConfirmationBoxComponent } from '@frontend/shared';
 import { StaffMemberDetailsComponent } from './staffmember-details/staffmember-details.component';
 
 @Component({
-  selector: 'frontend-StaffMembers',
-  templateUrl: './StaffMembers.component.html',
-  styleUrls: ['./StaffMembers.component.scss']
+  selector: 'frontend-staffmembers',
+  templateUrl: './staffmembers.component.html',
+  styleUrls: ['./staffmembers.component.scss']
 })
 export class StaffMembersComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['firstname', 'lastname','servicename','actions'];
+  displayedColumns: string[] = ['firstname', 'lastname','teamName','actions'];
   dataSource : StaffMemberDataSource;
   nbOfStaffMembers:number;
 
@@ -42,14 +42,14 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
   error: any;
 
   constructor(
-    private StaffMembersService : StaffMemberService,
-    private StaffMembersFacadeService : StaffMembersFacadeService,
+    private staffMembersService : StaffMemberService,
+    private staffMembersFacadeService : StaffMembersFacadeService,
     private teamsFacadeService : TeamsFacadeService,
     public dialog: MatDialog,
     ) { }
 
   ngOnInit() {
-    this.dataSource = new StaffMemberDataSource(this.StaffMembersService);
+    this.dataSource = new StaffMemberDataSource(this.staffMembersService);
     this.dataSource.load(1, 10, '','firstname asc');
     this.getNumberOfStaffMembers();
   }
@@ -78,7 +78,7 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
       .subscribe();
 
         // one create or update, load new page
-        this.StaffMembersFacadeService.mutations$.subscribe((_) => {
+        this.staffMembersFacadeService.mutations$.subscribe((_) => {
           this.loadPage();
           this.getNumberOfStaffMembers();
         });
@@ -124,8 +124,8 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
     delete(StaffMember: StaffMember){
       const confirmDialog = this.dialog.open(ConfirmationBoxComponent, {
         data: {
-          title: 'Confirmez la suppression !',
-          message: 'Etes-vous certain de vouloir supprimer ce référent'
+          title: 'Confirm the action!',
+          message: 'Are you certain about suppressing this item?'
         }
       });
 

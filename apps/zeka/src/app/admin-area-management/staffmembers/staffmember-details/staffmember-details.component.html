@@ -1,11 +1,11 @@
 <form id="frm" class="form" [formGroup]="frm" novalidate>
-    <h1 class="title-bloc">{{(!isNew ? 'Modifier le' : 'Ajouter un') + ' référent'}}</h1>
+    <h1 class="title-bloc">{{(!isNew ? 'Edit the' : 'Add a') + ' staff member'}}</h1>
     <span>
       <mat-spinner class="green-spinner" style="margin-top: 15px;" [diameter]="30" *ngIf="usersLoading"></mat-spinner>
     </span>
     <div>
       <mat-form-field appearance="outline" class="w-100">
-        <input matInput placeholder="Chercher le référent..." [formControl]="ctlUser" [matAutocomplete]="auto">
+        <input matInput placeholder="Search staff members" [formControl]="ctlUser" [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayUserFn"
           (optionSelected)='onUserSelect($event.option.value)' panelWidth="auto">
           <mat-option *ngFor="let user of (users$ | async)?.users" [value]="user">
@@ -23,8 +23,8 @@
         <br>
         <mat-form-field appearance="fill" class="w-100">
             <mat-select placeholder="Service" [formControl]="ctlServiceId" required>
-                <mat-option *ngFor="let service of listServices" [value]="service.serviceId">
-                    {{service.name}} ({{service.acronym}})
+                <mat-option *ngFor="let team of listOfTeams" [value]="team.serviceId">
+                    {{team.name}} ({{team.acronym}})
                 </mat-option>
             </mat-select>
         </mat-form-field>

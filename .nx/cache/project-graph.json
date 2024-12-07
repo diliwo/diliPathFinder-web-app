@@ -13955,6 +13955,11 @@
       },
       {
         "source": "zeka",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "zeka",
         "target": "core-data",
         "type": "static"
       },
@@ -13976,11 +13981,6 @@
       {
         "source": "zeka",
         "target": "npm:@angular/forms",
-        "type": "static"
-      },
-      {
-        "source": "zeka",
-        "target": "npm:@angular/common",
         "type": "static"
       },
       {

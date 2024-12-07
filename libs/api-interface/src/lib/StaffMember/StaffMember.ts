@@ -2,9 +2,9 @@ export interface IStaffMember {
   id?: number | undefined;
   firstname: string;
   lastname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
+  teamId?: number;
+  teamName: string;
+  teamAcronymName: string;
   username:string;
 }
 
@@ -13,9 +13,9 @@ export class StaffMember implements IStaffMember {
   firstname: string;
   lastname: string;
   fullname: string;
-  serviceId?: number;
-  servicename: string;
-  serviceAcronymName: string;
+  teamId?: number;
+  teamName: string;
+  teamAcronymName: string;
   username:string;
 
   constructor(data?: IStaffMember) {
@@ -32,9 +32,9 @@ export class StaffMember implements IStaffMember {
       this.id = data['id'];
       this.firstname = data['firstName'];
       this.lastname = data['lastName'];
-      this.serviceId = data['serviceId'];
-      this.servicename = data['serviceName'];
-      this.serviceAcronymName = data['serviceAcronymName'];
+      this.teamId = data['teamId'];
+      this.teamName = data['teamName'];
+      this.teamAcronymName = data['teamAcronymName'];
       this.username = data['userName'];
       this.fullname = this.lastname +" "+this.firstname;
     }
@@ -52,9 +52,9 @@ export class StaffMember implements IStaffMember {
     data['id'] = this.id;
     data['firstName'] = this.firstname;
     data['lastName'] = this.lastname;
-    data['serviceId'] = this.serviceId;
-    data['serviceName'] = this.servicename;
-    data['serviceAcronymName'] = this.serviceAcronymName;
+    data['teamId'] = this.teamId;
+    data['teamName'] = this.teamName;
+    data['teamAcronymName'] = this.teamAcronymName;
     data['userName'] = this.username;
     return data;
   }
