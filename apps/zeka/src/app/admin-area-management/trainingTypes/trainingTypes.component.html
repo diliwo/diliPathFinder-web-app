@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col-sm-12">
       <div class="add-button-div">
-        <h3 class="title-bloc">gestion des types de trainings<mat-icon matTooltip="gestion des types de trainings">category</mat-icon></h3>
+        <h3 class="title-bloc">Training types management<mat-icon matTooltip="Training types management">category</mat-icon></h3>
         <button mat-fab color="primary" class="add-button" (click)="create()">
-          <mat-icon matTooltip="Ajouter un type">add</mat-icon>
+          <mat-icon matTooltip="Add a type">add</mat-icon>
         </button>
       </div>
       <mat-form-field class="w-100">
-        <input matInput placeholder="Chercher des métiers" #input>
+        <input matInput placeholder="Search types" #input>
       </mat-form-field>
         <div class="mat-elevation-z2">
             <table mat-table [dataSource]="dataSource"  matSort matSortActive="name" matSortDirection="asc" matSortDisableClear>

@@ -38,7 +38,7 @@ getAll(pageNumber: number, pageSize: number, filter:string= '', orderBy:string="
     httpParams = httpParams.append('orderBy',orderBy);
   }
 
-  let url_ = this.baseUrl + '/api/trainingtype';
+  let url_ = this.baseUrl + '/trainingtype';
   url_ = url_.replace(/[?&]$/, '');
 
   let options_: any = {
@@ -115,7 +115,7 @@ protected processgetAll(response: HttpResponseBase): Observable<TrainingTypes> {
 }
 
 insert(command: TrainingType): Observable<void> {
-  let url_ = this.baseUrl + "/api/trainingtype";
+  let url_ = this.baseUrl + "/trainingtype";
   url_ = url_.replace(/[?&]$/, "");
 
   const content_ = JSON.stringify(command);
@@ -165,7 +165,7 @@ if (status === 200) {
 }
 
 update(command: TrainingType): Observable<void> {
-let url_ = this.baseUrl + "/api/trainingtype";
+let url_ = this.baseUrl + "/trainingtype";
 url_ = url_.replace(/[?&]$/, "");
 
 const content_ = JSON.stringify(command);
@@ -216,7 +216,7 @@ if (status === 200) {
 
 delete(id: number): Observable<void> {
   console.log(id);
-let url_ = this.baseUrl + "/api/trainingtype/{id}";
+let url_ = this.baseUrl + "/trainingtype/{id}";
 if (id === undefined || id === null)
     throw new Error("The parameter 'id' must be defined.");
 url_ = url_.replace("{id}", encodeURIComponent("" + id));
