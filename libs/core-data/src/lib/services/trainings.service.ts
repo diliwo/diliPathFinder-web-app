@@ -38,7 +38,7 @@ export class TrainingsService {
       httpParams = httpParams.append('orderBy',orderBy);
     }
 
-    let url_ = this.baseUrl + '/api/trainings';
+    let url_ = this.baseUrl + '/trainings';
     url_ = url_.replace(/[?&]$/, '');
 
     let options_: any = {
@@ -115,7 +115,7 @@ export class TrainingsService {
   }
 
   insert(command: Training): Observable<void> {
-    let url_ = this.baseUrl + "/api/trainings";
+    let url_ = this.baseUrl + "/trainings";
     url_ = url_.replace(/[?&]$/, "");
 
     const content_ = JSON.stringify(command);
@@ -165,7 +165,7 @@ protected processInsert(response: HttpResponseBase): Observable<void> {
 }
 
 update(command: Training): Observable<void> {
-  let url_ = this.baseUrl + "/api/trainings";
+  let url_ = this.baseUrl + "/trainings";
   url_ = url_.replace(/[?&]$/, "");
 
   const content_ = JSON.stringify(command);
@@ -216,7 +216,7 @@ if (status === 200) {
 
 delete(id: number): Observable<void> {
     console.log(id);
-  let url_ = this.baseUrl + "/api/trainings/{id}";
+  let url_ = this.baseUrl + "/trainings/{id}";
   if (id === undefined || id === null)
       throw new Error("The parameter 'id' must be defined.");
   url_ = url_.replace("{id}", encodeURIComponent("" + id));

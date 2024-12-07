@@ -1,18 +1,18 @@
 <form id="frm" class="form" [formGroup]="frm" novalidate>
-  <h1 class="title-bloc">{{(!isNew ? 'Modifier une' : 'Ajouter une') + ' école'}}</h1>
+  <h1 class="title-bloc">{{(!isNew ? 'Edit the' : 'Add a') + ' school'}}</h1>
   <div class="form">
       <mat-form-field appearance="fill">
-        <mat-label>Nom</mat-label>
-          <input matInput placeholder="Nom" [formControl]="ctlName" required>
+        <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" [formControl]="ctlName" required>
       </mat-form-field>
       <br>
       <mat-form-field appearance="fill">
-        <mat-label>Localité</mat-label>
-          <input matInput placeholder="Localité" [formControl]="ctlLocality" required>
+        <mat-label>Locality</mat-label>
+          <input matInput placeholder="Locality" [formControl]="ctlLocality" required>
       </mat-form-field>
   </div>
   <div class="footer">
-      <button type="reset" mat-button (click)="cancel()">Annuler</button>
-      <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">{{!isNew ? 'Modifier' : 'Enregistrer'}}</button>
+      <button type="reset" mat-button (click)="cancel()">Cancel</button>
+      <button type="submit" mat-button form="frm" [disabled]="frm.pristine || frm.invalid || frm.pending" (click)="update()">Cancel</button>
   </div>
 </form>
