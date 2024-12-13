@@ -63,7 +63,7 @@ export class PartnersService implements IPartnersService {
       httpParams = httpParams.append('orderBy',orderBy);
     }
 
-    let url_ = this.baseUrl + '/api/partners';
+    let url_ = this.baseUrl + '/partners';
     url_ = url_.replace(/[?&]$/, '');
 
     let options_: any = {
@@ -144,7 +144,7 @@ export class PartnersService implements IPartnersService {
   }
 
   delete(id: number): Observable<void> {
-    let url_ = this.baseUrl + '/api/partners/{id}';
+    let url_ = this.baseUrl + '/partners/{id}';
     if (id === undefined || id === null)
       throw new Error("The parameter 'id' must be defined.");
     url_ = url_.replace('{id}', encodeURIComponent('' + id));
@@ -222,7 +222,7 @@ export class PartnersService implements IPartnersService {
   }
 
   create(command: Partner): Observable<void> {
-    let url_ = this.baseUrl + '/api/partners';
+    let url_ = this.baseUrl + '/partners';
     url_ = url_.replace(/[?&]$/, '');
 
     const content_ = JSON.stringify(command);
@@ -299,7 +299,7 @@ export class PartnersService implements IPartnersService {
   }
 
   update(command: Partner): Observable<void> {
-    let url_ = this.baseUrl + '/api/partners';
+    let url_ = this.baseUrl + '/partners';
     url_ = url_.replace(/[?&]$/, '');
 
     const content_ = JSON.stringify(command);
@@ -393,7 +393,7 @@ export class PartnersService implements IPartnersService {
       httpParams = httpParams.append('orderBy',orderBy);
     }
 
-    let url_ = this.baseUrl + '/api/partners/selectionlist';
+    let url_ = this.baseUrl + '/partners/selectionlist';
     url_ = url_.replace(/[?&]$/, '');
 
     let options_: any = {

@@ -60,8 +60,7 @@ export class PartnersComponent {
 
   @ViewChild('input') input: ElementRef;
 
-  @Input() partners: any[] = [];
-  @Input() staffMembers: StaffMember[] = [];
+  staffMembers: StaffMember[] = [];
   @Input() documentsList: DocumentDetail[] = [];
   @Output() updatePartnerEvent: EventEmitter<any> = new EventEmitter();
   @Output() createPartnerEvent: EventEmitter<any> = new EventEmitter();
@@ -70,6 +69,7 @@ export class PartnersComponent {
 
   constructor(
     private partnersFacadeService: PartnersFacadeService,
+    private staffMembersFacadeService: StaffMembersFacadeService,
     private partnerService: PartnersService,
     public dialog: MatDialog,
     public snackBar: MatSnackBar,
@@ -79,6 +79,7 @@ export class PartnersComponent {
     this.dataSource = new PartnerDataSource(this.partnerService);
     this.dataSource.load(1, 10, '','partnerNumber asc');
     this.getNumberOfPartners();
+    this.loadStaffMembers();
   }
 
   // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
@@ -110,6 +111,10 @@ export class PartnersComponent {
       this.loadPartnersPage();
       this.getNumberOfPartners();
     });
+
+    this.staffMembersFacadeService.mutations$.subscribe((_) => {
+      this.loadStaffMembers();
+    });
   }
 
   loadPartnersPage() {
@@ -120,6 +125,15 @@ export class PartnersComponent {
       this.sort.active+ " " + this.sort.direction
     );
   }
+
+  loadStaffMembers() {
+    this.staffMembers = null;
+    this.staffMembersFacadeService.load(1,1000,'','lastname asc');
+    this.staffMembersFacadeService.allStaffMembers$.subscribe((data) => {
+      this.staffMembers = data.StaffMembers;
+    });
+  }
+
 
   delete(partner: Partner){
     const confirmDialog = this.dialog.open(ConfirmationBoxComponent, {

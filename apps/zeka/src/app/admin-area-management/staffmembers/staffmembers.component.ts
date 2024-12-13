@@ -36,7 +36,7 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
   }
 
   @ViewChild('input') input: ElementRef;
-  @Input() services: any[] = [];
+  @Input() teams: any[] = [];
   @Output() upserStaffMemberEvent: EventEmitter<any> = new EventEmitter();
   @Output() deleteStaffMemberEvent: EventEmitter<any> = new EventEmitter();
   error: any;
@@ -99,7 +99,7 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
 
     edit(staffMember: StaffMember) {
       console.log(staffMember);
-      const listStaffMembers = this.services;
+      const listStaffMembers = this.teams;
       const dlg = this.dialog.open(StaffMemberDetailsComponent, { data: { staffMember, isNew: false,listStaffMembers } });
       dlg.beforeClosed().subscribe(res => {
           if (res) {
@@ -112,7 +112,7 @@ export class StaffMembersComponent implements OnInit, AfterViewInit {
 
     create(){
       const staffMember = new StaffMember();
-      const listStaffMembers = this.services;
+      const listStaffMembers = this.teams;
       const dlg = this.dialog.open(StaffMemberDetailsComponent, { data: { staffMember, isNew: true,listStaffMembers } });
       dlg.beforeClosed().subscribe(res => {
           if (res) {
