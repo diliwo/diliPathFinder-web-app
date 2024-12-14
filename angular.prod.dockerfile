@@ -1,12 +1,14 @@
-FROM node:16-alpine as node
+FROM node:17-alpine as node
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY decorate-angular-cli.js ./
 # Configure .npmrc for Azure DevOps
-COPY .npmrc ./
-RUN npm ci
+# COPY .npmrc ./
+# RUN npm ci
 COPY . .
 
+RUN npm install -g @nrwl/cli@15.9.7
+RUN npm i nx@17.0.0
 RUN npm run nx -- build zeka
 
 FROM nginx:alpine

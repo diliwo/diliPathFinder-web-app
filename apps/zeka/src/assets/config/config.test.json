@@ -1,6 +1,6 @@
 {
   "production": false,
-  "ApiBaseUrl": "http://ispapiint",
+  "ApiBaseUrl": "",
   "AppVersion":"",
   "ShowVersion": true
 }

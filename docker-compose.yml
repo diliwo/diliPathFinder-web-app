@@ -3,8 +3,8 @@ version: '3.7'
 services:
 
   nginx:
-    container_name: zeka-webapp
-    image: zeka-webapp
+    container_name: zekawebapp
+    image: zekawebapp
     build:
       context: .
       dockerfile: angular.dockerfile
@@ -13,4 +13,4 @@ services:
     ports:
       - "4200:80"
     environment:
-      - API_BASE_URL=http://127.0.0.1:5002
+      - API_BASE_URL=http://localhost:9010
