@@ -1,1 +1,1 @@
-A toolkit for social workers that enable them to easily track and manage cases (Web app).
+A toolkit for social workers that enables to easily track and manage clients and cases (Web app).
