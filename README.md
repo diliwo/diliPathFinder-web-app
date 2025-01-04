@@ -1,2 +1,9 @@
-Web App : 
-A toolkit for social workers that enables them to track and manage clients and cases easily.
+# Zeka Web App
+
+The web interface for Zeka, a free and open-source tool for social workers, enabling efficient tracking and management of clients and cases.
+
+## Features
+
+- Intuitive dashboard for managing clients and cases.
+- Real-time updates and notifications.
+- Fully responsive design.
