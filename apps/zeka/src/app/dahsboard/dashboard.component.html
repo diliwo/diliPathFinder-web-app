@@ -1,0 +1,15 @@
+<div class="container">
+        <div class="buttons" fxLayout="column">
+          <div *ngFor="let item of itemsLeft" fxFlex="0 1 calc(25%)" fxFlex.lt-md="0 1 calc(50%)" fxFlex.lt-sm="100%" class="px-3 mb-4">
+              <frontend-left-item-list [item]="item" [nbrItems]="42"></frontend-left-item-list>
+          </div>
+      </div>
+      <div class="logos">
+          <img width="512" height="371" ngSrc="assets/images/zekalogo.png" priority/>
+      </div>
+      <div class="buttons" fxLayout="column">
+        <div *ngFor="let item of itemsRight" fxFlex="0 1 calc(25%)" fxFlex.lt-md="0 1 calc(50%)" fxFlex.lt-sm="100%" class="px-3 mb-4">
+            <frontend-right-item-list [item]="item" [nbrItems]="78"></frontend-right-item-list>
+        </div>
+    </div>
+</div>
