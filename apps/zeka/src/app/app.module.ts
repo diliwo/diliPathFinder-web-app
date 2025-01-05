@@ -14,12 +14,18 @@ import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import 'moment/locale/fr';
 import { ConfigService } from '@frontend/core-data'
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { DashboardComponent } from './dahsboard/dashboard.component';
+import { RightItemListComponent } from './dahsboard/right-item-list/right-item-list.component';
+import { LeftItemListComponent } from './dahsboard/left-item-list/left-item-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DashboardComponent,
+    RightItemListComponent,
+    LeftItemListComponent
   ],
   imports: [
     CoreDataModule,

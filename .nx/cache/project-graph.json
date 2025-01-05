@@ -13985,12 +13985,12 @@
       },
       {
         "source": "zeka",
-        "target": "npm:lodash-es",
+        "target": "npm:@angular/material",
         "type": "static"
       },
       {
         "source": "zeka",
-        "target": "npm:@angular/material",
+        "target": "npm:lodash-es",
         "type": "static"
       },
       {

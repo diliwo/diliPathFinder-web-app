@@ -82,107 +82,23 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "config/nginx.conf",
-        "hash": "9810783947974661015"
+        "file": "docker-compose.prod.yml",
+        "hash": "13726257933574715079"
       },
       {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "decorate-angular-cli.js",
-        "hash": "5797619241828206054"
+        "file": "tools/tsconfig.tools.json",
+        "hash": "11810713488198132402"
       },
       {
         "file": "jest.config.js",
         "hash": "12466618850903731978"
       },
       {
-        "file": "angular.prod.dockerfile",
-        "hash": "5633761594037843846"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1914616369387315427"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "6040700554504661696"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "7330501279360470719"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1324685984948235314"
-      },
-      {
-        "file": "angular.dockerfile",
-        "hash": "15036553006114624416"
-      },
-      {
-        "file": "README.md",
-        "hash": "15265449088905795621"
-      },
-      {
-        "file": ".dockerignore",
-        "hash": "15412806613453801337"
-      },
-      {
-        "file": "docker-compose.pht.yml",
-        "hash": "9830917868919529140"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "6093451115457943712"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7922954044214489651"
-      },
-      {
         "file": "docker-compose.yml",
-        "hash": "14313302419479125001"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "233833317249464641"
+        "hash": "10973348775062067659"
       },
       {
         "file": "tools/generators/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "docker-compose.prod.yml",
-        "hash": "2950820792799485121"
-      },
-      {
-        "file": "angular.json",
-        "hash": "246286368784002039"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "14231182958454569115"
-      },
-      {
-        "file": "config/entryPoint.sh",
-        "hash": "713644450940578242"
-      },
-      {
-        "file": "apps/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "14231632535905330688"
-      },
-      {
-        "file": "package.json",
-        "hash": "3040773649775353900"
-      },
-      {
-        "file": "libs/.gitkeep",
         "hash": "3244421341483603138"
       },
       {
@@ -190,349 +106,289 @@
         "hash": "18280692227545641734"
       },
       {
-        "file": "tools/tsconfig.tools.json",
-        "hash": "11810713488198132402"
+        "file": "package.json",
+        "hash": "3040773649775353900"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "6076523549091800167"
+        "file": "angular.dockerfile",
+        "hash": "15036553006114624416"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "14231632535905330688"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "14231182958454569115"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "233833317249464641"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "15412806613453801337"
+      },
+      {
+        "file": "config/entryPoint.sh",
+        "hash": "713644450940578242"
+      },
+      {
+        "file": "README.md",
+        "hash": "15265449088905795621"
       },
       {
         "file": "jest.config.ts",
         "hash": "10517892632782819869"
       },
       {
+        "file": ".prettierignore",
+        "hash": "1324685984948235314"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "6076523549091800167"
+      },
+      {
+        "file": "decorate-angular-cli.js",
+        "hash": "5797619241828206054"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7330501279360470719"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "6040700554504661696"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "6093451115457943712"
+      },
+      {
+        "file": "angular.json",
+        "hash": "246286368784002039"
+      },
+      {
+        "file": "angular.prod.dockerfile",
+        "hash": "12430960830546791325"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1914616369387315427"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7922954044214489651"
+      },
+      {
         "file": "azure-pipelines.yml",
         "hash": "2350315700589714317"
+      },
+      {
+        "file": "config/nginx.conf",
+        "hash": "9810783947974661015"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
       }
     ],
     "projectFileMap": {
-      "core-data": [
+      "api-interface": [
         {
-          "file": "libs/core-data/.eslintrc.json",
+          "file": "libs/api-interface/.eslintrc.json",
           "hash": "13770091168398568363"
         },
         {
-          "file": "libs/core-data/README.md",
-          "hash": "13190609722090154082"
+          "file": "libs/api-interface/README.md",
+          "hash": "2325167109018656675"
         },
         {
-          "file": "libs/core-data/jest.config.ts",
-          "hash": "11280888239478251818"
+          "file": "libs/api-interface/jest.config.ts",
+          "hash": "15178256645889921402"
         },
         {
-          "file": "libs/core-data/src/index.ts",
-          "hash": "4063962569921398798"
+          "file": "libs/api-interface/src/index.ts",
+          "hash": "16008191594859664248"
         },
         {
-          "file": "libs/core-data/src/lib/core-data.module.ts",
-          "hash": "6467004346848152131",
+          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormation.ts",
+          "hash": "6959572428730546233"
+        },
+        {
+          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormations.ts",
+          "hash": "5831302120576842978"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Bilans/BilanMv.ts",
+          "hash": "9672504143456610708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Bilans/BilanProfession.ts",
+          "hash": "5768758980400283727"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/Candidacies.ts",
+          "hash": "9284657941312152488"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/Candidacy.ts",
+          "hash": "17236925159842822368"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusHistory.ts",
+          "hash": "6973441222018255588"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusItem.ts",
+          "hash": "11263657751408638673"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReason.ts",
+          "hash": "15853056004892210354"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReasons.ts",
+          "hash": "411843186739070477"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationType.ts",
+          "hash": "2852056562331547330"
+        },
+        {
+          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationTypes.ts",
+          "hash": "15260636063716476535"
+        },
+        {
+          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupant.ts",
+          "hash": "7784197937353522489"
+        },
+        {
+          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupants.ts",
+          "hash": "9283923922236977240"
+        },
+        {
+          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContract.ts",
+          "hash": "4194071896021807708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContracts.ts",
+          "hash": "18371826606037796488"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/Partner.ts",
+          "hash": "1061311770855883071"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/PartnerSelection.ts",
+          "hash": "5423799223262053051"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Partner/Partners.ts",
+          "hash": "8619893479324086254"
+        },
+        {
+          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperience.ts",
+          "hash": "13076745195836029747"
+        },
+        {
+          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperiences.ts",
+          "hash": "13993838192832581423"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Professions/ProfessionMv.ts",
+          "hash": "8180758411927971467"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Schools/School.ts",
+          "hash": "9842469153355709261"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Schools/Schools.ts",
+          "hash": "16770974135109365656"
+        },
+        {
+          "file": "libs/api-interface/src/lib/StaffMember/StaffMember.ts",
+          "hash": "18437645669446667204"
+        },
+        {
+          "file": "libs/api-interface/src/lib/StaffMember/StaffMembers.ts",
+          "hash": "15882954538903704472"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Supports/reasonOfClosure.ts",
+          "hash": "12767870694326123450"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Supports/reasonOfClosures.ts",
+          "hash": "1531642842519249270"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Teams/Team.ts",
+          "hash": "13136624179775708504"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Teams/Teams.ts",
+          "hash": "6196553013376307419"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonForEmployment.ts",
+          "hash": "11532919114270895241"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonsForEmployment.ts",
+          "hash": "16926895031191554159"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingFields/TrainingField.ts",
+          "hash": "6220860592561018200"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingFields/TrainingFields.ts",
+          "hash": "4182296412559501708"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingType.ts",
+          "hash": "2574030103466453003"
+        },
+        {
+          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingTypes.ts",
+          "hash": "10947952385063225632"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Trainings/Training.ts",
+          "hash": "4222365527902941953"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Trainings/Trainings.ts",
+          "hash": "5915074909067218104"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Users/User.ts",
+          "hash": "11746099402668164108"
+        },
+        {
+          "file": "libs/api-interface/src/lib/Users/Users.ts",
+          "hash": "14727999582012579588"
+        },
+        {
+          "file": "libs/api-interface/src/lib/api-interface.module.ts",
+          "hash": "2974886283444987681",
           "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:lodash-es"
           ]
         },
         {
-          "file": "libs/core-data/src/lib/services/beneficiaries.service.spec.ts",
-          "hash": "5854710943743501225",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/beneficiaries.service.ts",
-          "hash": "12352669446725543111",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/beneficiary-formations.service.ts",
-          "hash": "4779724718716123259",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/beneficiary-suivis.service.ts",
-          "hash": "12463403769916501906",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "npm:rxjs",
-            "npm:rxjs/operators",
-            "api-interface"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/bilan.service.ts",
-          "hash": "16985208050746176264",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/candidacies.service.spec.ts",
-          "hash": "8016001353057055341",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/candidacies.service.ts",
-          "hash": "8478270366383867101",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/config.service.ts",
-          "hash": "10320771359055313961",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/documents.service.ts",
-          "hash": "7168664194735522838",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/home.service.ts",
-          "hash": "16869259977667152502",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/job-offers.service.spec.ts",
-          "hash": "17332491696772362458",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/job-offers.service.ts",
-          "hash": "3514947042577963538",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/jobs.service.spec.ts",
-          "hash": "9485041613150115952",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/jobs.service.ts",
-          "hash": "9963130257015030154",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/natureOfContract.service.ts",
-          "hash": "16051894169691772739",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/partners.service.spec.ts",
-          "hash": "16238792120284253001",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/partners.service.ts",
-          "hash": "12661057653651274631",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/professional-experiences.service.ts",
-          "hash": "13965487390554603353",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/professions.service.ts",
-          "hash": "11976234105553347307",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/schools.service.ts",
-          "hash": "14732897123891665005",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/services-isp.service.spec.ts",
-          "hash": "14191475817705959521",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/share.ts",
-          "hash": "8555695038134541331",
-          "deps": [
-            "npm:rxjs",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/staffmember.service.ts",
-          "hash": "2782283015679520081",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/supports.service.spec.ts",
-          "hash": "16200497659135378202",
-          "deps": [
-            "npm:@angular/core/testing"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/supports.service.ts",
-          "hash": "2347661668586992955",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "api-interface",
-            "npm:rxjs",
-            "npm:rxjs/operators"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/teams.service.ts",
-          "hash": "4378827715632542199",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/trainingField.service.ts",
-          "hash": "13158150882225831062",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/trainingType.service.ts",
-          "hash": "13014317048915380308",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/trainings.service.ts",
-          "hash": "13354162703632009284",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "api-interface",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/user.service.ts",
-          "hash": "2020537462679385698",
-          "deps": [
-            "npm:@angular/core",
-            "npm:rxjs",
-            "npm:rxjs/operators",
-            "npm:@angular/common/http",
-            "api-interface"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/lib/services/version.be.service.ts",
-          "hash": "5047275849018850312",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common/http",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "libs/core-data/src/test-setup.ts",
+          "file": "libs/api-interface/src/test-setup.ts",
           "hash": "13957278976106148009",
           "deps": [
             "npm:jest-preset-angular/setup-jest",
@@ -541,61 +397,20 @@
           ]
         },
         {
-          "file": "libs/core-data/tsconfig.json",
+          "file": "libs/api-interface/tsconfig.json",
           "hash": "10948883899869269534"
         },
         {
-          "file": "libs/core-data/tsconfig.lib.json",
+          "file": "libs/api-interface/tsconfig.lib.json",
           "hash": "15377471018703630738"
         },
         {
-          "file": "libs/core-data/tsconfig.spec.json",
+          "file": "libs/api-interface/tsconfig.spec.json",
           "hash": "17859551126707004133"
-        }
-      ],
-      "zeka-e2e": [
-        {
-          "file": "apps/zeka-e2e/.eslintrc.json",
-          "hash": "15435685467925347887"
         },
         {
-          "file": "apps/zeka-e2e/cypress.json",
-          "hash": "4534483344189197351"
-        },
-        {
-          "file": "apps/zeka-e2e/src/fixtures/example.json",
-          "hash": "17341819486505642070"
-        },
-        {
-          "file": "apps/zeka-e2e/src/integration/app.spec.ts",
-          "hash": "17930578620994572607"
-        },
-        {
-          "file": "apps/zeka-e2e/src/plugins/index.js",
-          "hash": "958103339670479771",
-          "deps": [
-            "npm:@nrwl/cypress/plugins/preprocessor"
-          ]
-        },
-        {
-          "file": "apps/zeka-e2e/src/support/app.po.ts",
-          "hash": "5364106453863571025"
-        },
-        {
-          "file": "apps/zeka-e2e/src/support/commands.ts",
-          "hash": "11031723810997510506"
-        },
-        {
-          "file": "apps/zeka-e2e/src/support/index.ts",
-          "hash": "15928825062325902088"
-        },
-        {
-          "file": "apps/zeka-e2e/tsconfig.e2e.json",
-          "hash": "16207512718177857315"
-        },
-        {
-          "file": "apps/zeka-e2e/tsconfig.json",
-          "hash": "13003415357433107754"
+          "file": "libs/api-interface/src/lib/Dashboard/Dashboard.ts",
+          "hash": "15526944181189179333"
         }
       ],
       "core-state": [
@@ -1009,54 +824,6 @@
           "hash": "17859551126707004133"
         }
       ],
-      "material": [
-        {
-          "file": "libs/material/.eslintrc.json",
-          "hash": "13770091168398568363"
-        },
-        {
-          "file": "libs/material/README.md",
-          "hash": "15813805337173482533"
-        },
-        {
-          "file": "libs/material/jest.config.ts",
-          "hash": "1564304547280541103"
-        },
-        {
-          "file": "libs/material/src/index.ts",
-          "hash": "9048117972835505143"
-        },
-        {
-          "file": "libs/material/src/lib/material.module.ts",
-          "hash": "4126851127311945056",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material",
-            "npm:@angular/flex-layout"
-          ]
-        },
-        {
-          "file": "libs/material/src/test-setup.ts",
-          "hash": "13957278976106148009",
-          "deps": [
-            "npm:jest-preset-angular/setup-jest",
-            "npm:@angular/core/testing",
-            "npm:@angular/platform-browser-dynamic/testing"
-          ]
-        },
-        {
-          "file": "libs/material/tsconfig.json",
-          "hash": "10948883899869269534"
-        },
-        {
-          "file": "libs/material/tsconfig.lib.json",
-          "hash": "15377471018703630738"
-        },
-        {
-          "file": "libs/material/tsconfig.spec.json",
-          "hash": "17859551126707004133"
-        }
-      ],
       "zeka": [
         {
           "file": "apps/zeka/.browserslistrc",
@@ -1088,7 +855,7 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.html",
-          "hash": "16069371186433011909"
+          "hash": "12394829868730257714"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/admin-area-management.component.scss",
@@ -1120,11 +887,11 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.html",
-          "hash": "16181505107235796968"
+          "hash": "9750802076469848065"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.scss",
-          "hash": "7582283687738653475"
+          "hash": "13701314058975678501"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.spec.ts",
@@ -1146,27 +913,22 @@
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/partners/partners.component.ts",
-          "hash": "5349511840949088477",
+          "hash": "9591002725086686457",
           "deps": [
             "npm:@angular/core",
             "core-state",
             "api-interface",
             "material",
-            "npm:@angular/material/table",
-            "npm:@angular/material/paginator",
-            "npm:@angular/material/sort",
-            "npm:@angular/material/dialog",
-            "npm:@angular/material/snack-bar",
+            "npm:@angular/material",
             "npm:lodash-es",
             "shared",
             "core-data",
-            "npm:rxjs/operators",
             "npm:rxjs"
           ]
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.html",
-          "hash": "17812251990246724636"
+          "hash": "12097551206909531689"
         },
         {
           "file": "apps/zeka/src/app/admin-area-management/professions/professions-details/professions-details.component.scss",
@@ -1301,8 +1063,12 @@
           "hash": "157197070675006423"
         },
         {
+          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.scss",
+          "hash": "12600836386238250628"
+        },
+        {
           "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.ts",
-          "hash": "2389827449500536830",
+          "hash": "7587133763974390200",
           "deps": [
             "npm:@angular/core",
             "core-state",
@@ -1495,7 +1261,7 @@
         },
         {
           "file": "apps/zeka/src/app/app.module.ts",
-          "hash": "10091175885274069511",
+          "hash": "17516185833297315773",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
@@ -1511,7 +1277,7 @@
         },
         {
           "file": "apps/zeka/src/app/routing.module.ts",
-          "hash": "3338507281010838808",
+          "hash": "4213508803868028709",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -1521,11 +1287,11 @@
         },
         {
           "file": "apps/zeka/src/app/toolbar/toolbar.component.html",
-          "hash": "800482083155912739"
+          "hash": "9851298366852263805"
         },
         {
           "file": "apps/zeka/src/app/toolbar/toolbar.component.scss",
-          "hash": "4145499625442563457"
+          "hash": "6376188185982964419"
         },
         {
           "file": "apps/zeka/src/app/toolbar/toolbar.component.ts",
@@ -1553,23 +1319,7 @@
         },
         {
           "file": "apps/zeka/src/assets/config/config.test.json",
-          "hash": "10962676262718178562"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/ArbreISP.jpg",
-          "hash": "6059201118784735617"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/DeviseISP.jpg",
-          "hash": "9624036835276130684"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/icon-gipsy-150px.jpg",
-          "hash": "3790109639444904977"
-        },
-        {
-          "file": "apps/zeka/src/assets/images/icon-gipsy.jpg",
-          "hash": "17157585700192116161"
+          "hash": "6923178724575232354"
         },
         {
           "file": "apps/zeka/src/assets/images/search.svg",
@@ -1616,7 +1366,7 @@
         },
         {
           "file": "apps/zeka/src/styles.scss",
-          "hash": "1511244123520941307"
+          "hash": "6434816566985453603"
         },
         {
           "file": "apps/zeka/src/test-setup.ts",
@@ -1648,214 +1398,64 @@
           "hash": "17859551126707004133"
         },
         {
-          "file": "apps/zeka/src/app/admin-area-management/staffmembers/staffmembers.component.scss",
-          "hash": "12600836386238250628"
-        }
-      ],
-      "api-interface": [
-        {
-          "file": "libs/api-interface/.eslintrc.json",
-          "hash": "13770091168398568363"
+          "file": "apps/zeka/src/app/dahsboard/dashboard.component.html",
+          "hash": "13378434065279732937"
         },
         {
-          "file": "libs/api-interface/README.md",
-          "hash": "2325167109018656675"
+          "file": "apps/zeka/src/app/dahsboard/dashboard.component.scss",
+          "hash": "9234601444913706620"
         },
         {
-          "file": "libs/api-interface/jest.config.ts",
-          "hash": "15178256645889921402"
-        },
-        {
-          "file": "libs/api-interface/src/index.ts",
-          "hash": "10005909049782420236"
-        },
-        {
-          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormation.ts",
-          "hash": "6959572428730546233"
-        },
-        {
-          "file": "libs/api-interface/src/lib/BeneficiaryFormations/BeneficiaryFormations.ts",
-          "hash": "5831302120576842978"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Bilans/BilanMv.ts",
-          "hash": "9672504143456610708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Bilans/BilanProfession.ts",
-          "hash": "5768758980400283727"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/Candidacies.ts",
-          "hash": "9284657941312152488"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/Candidacy.ts",
-          "hash": "17236925159842822368"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusHistory.ts",
-          "hash": "6973441222018255588"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Candidacies/EmploymentStatusItem.ts",
-          "hash": "11263657751408638673"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReason.ts",
-          "hash": "15853056004892210354"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationReason/EmploymentTerminationReasons.ts",
-          "hash": "411843186739070477"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationType.ts",
-          "hash": "2852056562331547330"
-        },
-        {
-          "file": "libs/api-interface/src/lib/EmploymentTerminationType/EmploymentTerminationTypes.ts",
-          "hash": "15260636063716476535"
-        },
-        {
-          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupant.ts",
-          "hash": "7784197937353522489"
-        },
-        {
-          "file": "libs/api-interface/src/lib/JobOccupants/JobOccupants.ts",
-          "hash": "9283923922236977240"
-        },
-        {
-          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContract.ts",
-          "hash": "4194071896021807708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/NatureOfContract/NatureOfContracts.ts",
-          "hash": "18371826606037796488"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/Partner.ts",
-          "hash": "1061311770855883071"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/PartnerSelection.ts",
-          "hash": "5423799223262053051"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Partner/Partners.ts",
-          "hash": "8619893479324086254"
-        },
-        {
-          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperience.ts",
-          "hash": "13076745195836029747"
-        },
-        {
-          "file": "libs/api-interface/src/lib/ProfessionnalExperience/ProfessionnalExperiences.ts",
-          "hash": "13993838192832581423"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Professions/ProfessionMv.ts",
-          "hash": "8180758411927971467"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Schools/School.ts",
-          "hash": "9842469153355709261"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Schools/Schools.ts",
-          "hash": "16770974135109365656"
-        },
-        {
-          "file": "libs/api-interface/src/lib/StaffMember/StaffMember.ts",
-          "hash": "18437645669446667204"
-        },
-        {
-          "file": "libs/api-interface/src/lib/StaffMember/StaffMembers.ts",
-          "hash": "15882954538903704472"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Supports/reasonOfClosure.ts",
-          "hash": "12767870694326123450"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Supports/reasonOfClosures.ts",
-          "hash": "1531642842519249270"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Teams/Team.ts",
-          "hash": "13136624179775708504"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Teams/Teams.ts",
-          "hash": "6196553013376307419"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonForEmployment.ts",
-          "hash": "11532919114270895241"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TerminationReasonsForEmployment/TerminationReasonsForEmployment.ts",
-          "hash": "16926895031191554159"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingFields/TrainingField.ts",
-          "hash": "6220860592561018200"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingFields/TrainingFields.ts",
-          "hash": "4182296412559501708"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingType.ts",
-          "hash": "2574030103466453003"
-        },
-        {
-          "file": "libs/api-interface/src/lib/TrainingTypes/TrainingTypes.ts",
-          "hash": "10947952385063225632"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Trainings/Training.ts",
-          "hash": "4222365527902941953"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Trainings/Trainings.ts",
-          "hash": "5915074909067218104"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Users/User.ts",
-          "hash": "11746099402668164108"
-        },
-        {
-          "file": "libs/api-interface/src/lib/Users/Users.ts",
-          "hash": "14727999582012579588"
-        },
-        {
-          "file": "libs/api-interface/src/lib/api-interface.module.ts",
-          "hash": "2974886283444987681",
+          "file": "apps/zeka/src/app/dahsboard/dashboard.component.ts",
+          "hash": "3630543751026843550",
           "deps": [
-            "npm:lodash-es"
+            "npm:@angular/core",
+            "api-interface"
           ]
         },
         {
-          "file": "libs/api-interface/src/test-setup.ts",
-          "hash": "13957278976106148009",
+          "file": "apps/zeka/src/assets/images/zekalogo.png",
+          "hash": "275712588821971470"
+        },
+        {
+          "file": "apps/zeka/src/assets/images/zekaicon.png",
+          "hash": "13714819266771064328"
+        },
+        {
+          "file": "apps/zeka/src/app/dahsboard/right-item-list/right-item-list.component.scss",
+          "hash": "11651957998473505093"
+        },
+        {
+          "file": "apps/zeka/src/app/dahsboard/right-item-list/right-item-list.component.html",
+          "hash": "17932038276665938527"
+        },
+        {
+          "file": "apps/zeka/src/app/dahsboard/right-item-list/right-item-list.component.ts",
+          "hash": "9010908884281331248",
           "deps": [
-            "npm:jest-preset-angular/setup-jest",
-            "npm:@angular/core/testing",
-            "npm:@angular/platform-browser-dynamic/testing"
+            "npm:@angular/core",
+            "npm:@angular/material"
           ]
         },
         {
-          "file": "libs/api-interface/tsconfig.json",
-          "hash": "10948883899869269534"
+          "file": "apps/zeka/src/app/dahsboard/left-item-list/left-item-list.component.html",
+          "hash": "17932038276665938527"
         },
         {
-          "file": "libs/api-interface/tsconfig.lib.json",
-          "hash": "15377471018703630738"
+          "file": "apps/zeka/src/app/dahsboard/left-item-list/left-item-list.component.scss",
+          "hash": "11651957998473505093"
         },
         {
-          "file": "libs/api-interface/tsconfig.spec.json",
-          "hash": "17859551126707004133"
+          "file": "apps/zeka/src/app/dahsboard/left-item-list/left-item-list.component.ts",
+          "hash": "9566974503830420432",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "apps/zeka/src/assets/images/zekalogotext.png",
+          "hash": "16988173936684585425"
         }
       ],
       "shared": [
@@ -1933,7 +1533,7 @@
         },
         {
           "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.html",
-          "hash": "1700590807162153306"
+          "hash": "14206399835809005574"
         },
         {
           "file": "libs/shared/src/lib/partner-details-box/partner-details-box.component.scss",
@@ -2024,6 +1624,444 @@
         {
           "file": "libs/shared/tsconfig.spec.json",
           "hash": "5336739058178520381"
+        }
+      ],
+      "zeka-e2e": [
+        {
+          "file": "apps/zeka-e2e/.eslintrc.json",
+          "hash": "15435685467925347887"
+        },
+        {
+          "file": "apps/zeka-e2e/cypress.json",
+          "hash": "4534483344189197351"
+        },
+        {
+          "file": "apps/zeka-e2e/src/fixtures/example.json",
+          "hash": "17341819486505642070"
+        },
+        {
+          "file": "apps/zeka-e2e/src/integration/app.spec.ts",
+          "hash": "17930578620994572607"
+        },
+        {
+          "file": "apps/zeka-e2e/src/plugins/index.js",
+          "hash": "958103339670479771",
+          "deps": [
+            "npm:@nrwl/cypress/plugins/preprocessor"
+          ]
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/app.po.ts",
+          "hash": "5364106453863571025"
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/commands.ts",
+          "hash": "11031723810997510506"
+        },
+        {
+          "file": "apps/zeka-e2e/src/support/index.ts",
+          "hash": "15928825062325902088"
+        },
+        {
+          "file": "apps/zeka-e2e/tsconfig.e2e.json",
+          "hash": "16207512718177857315"
+        },
+        {
+          "file": "apps/zeka-e2e/tsconfig.json",
+          "hash": "13003415357433107754"
+        }
+      ],
+      "core-data": [
+        {
+          "file": "libs/core-data/.eslintrc.json",
+          "hash": "13770091168398568363"
+        },
+        {
+          "file": "libs/core-data/README.md",
+          "hash": "13190609722090154082"
+        },
+        {
+          "file": "libs/core-data/jest.config.ts",
+          "hash": "11280888239478251818"
+        },
+        {
+          "file": "libs/core-data/src/index.ts",
+          "hash": "4063962569921398798"
+        },
+        {
+          "file": "libs/core-data/src/lib/core-data.module.ts",
+          "hash": "6467004346848152131",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/beneficiaries.service.spec.ts",
+          "hash": "5854710943743501225",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/beneficiaries.service.ts",
+          "hash": "12352669446725543111",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/beneficiary-formations.service.ts",
+          "hash": "4779724718716123259",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/beneficiary-suivis.service.ts",
+          "hash": "12463403769916501906",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "npm:rxjs",
+            "npm:rxjs/operators",
+            "api-interface"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/bilan.service.ts",
+          "hash": "16985208050746176264",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/candidacies.service.spec.ts",
+          "hash": "8016001353057055341",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/candidacies.service.ts",
+          "hash": "8478270366383867101",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/config.service.ts",
+          "hash": "10320771359055313961",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/documents.service.ts",
+          "hash": "7168664194735522838",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/home.service.ts",
+          "hash": "16869259977667152502",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/job-offers.service.spec.ts",
+          "hash": "17332491696772362458",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/job-offers.service.ts",
+          "hash": "3514947042577963538",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/jobs.service.spec.ts",
+          "hash": "9485041613150115952",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/jobs.service.ts",
+          "hash": "9963130257015030154",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/natureOfContract.service.ts",
+          "hash": "16051894169691772739",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/partners.service.spec.ts",
+          "hash": "16238792120284253001",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/partners.service.ts",
+          "hash": "5334535598476260775",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/professional-experiences.service.ts",
+          "hash": "13965487390554603353",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/professions.service.ts",
+          "hash": "11976234105553347307",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/schools.service.ts",
+          "hash": "14732897123891665005",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/services-isp.service.spec.ts",
+          "hash": "14191475817705959521",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/share.ts",
+          "hash": "8555695038134541331",
+          "deps": [
+            "npm:rxjs",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/staffmember.service.ts",
+          "hash": "2782283015679520081",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/supports.service.spec.ts",
+          "hash": "16200497659135378202",
+          "deps": [
+            "npm:@angular/core/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/supports.service.ts",
+          "hash": "2347661668586992955",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "api-interface",
+            "npm:rxjs",
+            "npm:rxjs/operators"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/teams.service.ts",
+          "hash": "4378827715632542199",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/trainingField.service.ts",
+          "hash": "13158150882225831062",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/trainingType.service.ts",
+          "hash": "13014317048915380308",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/trainings.service.ts",
+          "hash": "13354162703632009284",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "api-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/user.service.ts",
+          "hash": "2020537462679385698",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:rxjs/operators",
+            "npm:@angular/common/http",
+            "api-interface"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/lib/services/version.be.service.ts",
+          "hash": "5047275849018850312",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common/http",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/core-data/src/test-setup.ts",
+          "hash": "13957278976106148009",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest",
+            "npm:@angular/core/testing",
+            "npm:@angular/platform-browser-dynamic/testing"
+          ]
+        },
+        {
+          "file": "libs/core-data/tsconfig.json",
+          "hash": "10948883899869269534"
+        },
+        {
+          "file": "libs/core-data/tsconfig.lib.json",
+          "hash": "15377471018703630738"
+        },
+        {
+          "file": "libs/core-data/tsconfig.spec.json",
+          "hash": "17859551126707004133"
+        }
+      ],
+      "material": [
+        {
+          "file": "libs/material/.eslintrc.json",
+          "hash": "13770091168398568363"
+        },
+        {
+          "file": "libs/material/README.md",
+          "hash": "15813805337173482533"
+        },
+        {
+          "file": "libs/material/jest.config.ts",
+          "hash": "1564304547280541103"
+        },
+        {
+          "file": "libs/material/src/index.ts",
+          "hash": "9048117972835505143"
+        },
+        {
+          "file": "libs/material/src/lib/material.module.ts",
+          "hash": "4126851127311945056",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/flex-layout"
+          ]
+        },
+        {
+          "file": "libs/material/src/test-setup.ts",
+          "hash": "13957278976106148009",
+          "deps": [
+            "npm:jest-preset-angular/setup-jest",
+            "npm:@angular/core/testing",
+            "npm:@angular/platform-browser-dynamic/testing"
+          ]
+        },
+        {
+          "file": "libs/material/tsconfig.json",
+          "hash": "10948883899869269534"
+        },
+        {
+          "file": "libs/material/tsconfig.lib.json",
+          "hash": "15377471018703630738"
+        },
+        {
+          "file": "libs/material/tsconfig.spec.json",
+          "hash": "17859551126707004133"
         }
       ]
     }
